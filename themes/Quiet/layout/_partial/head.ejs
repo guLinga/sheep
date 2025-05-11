@@ -4,13 +4,15 @@ if (page.title) {
   title = page.title
 }
 %>
-<title><%= title %>-<%- theme.suffix %></title>
+<title><%= title %>-<%- page.title %></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="<%- theme.icon %>">
 <%- css('css/index.css') %>
-<% if(page.tags && page.tags.data.length) { 
+<meta property="og:description" content="<%- page.excerpt %>">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- <% if(page.tags && page.tags.data.length) {
   let text = ''
   %>
 <% page.tags.data.forEach((item, index) => {
@@ -21,11 +23,12 @@ if (page.title) {
 <% }else{ %>
 <meta name="keywords" content="<%- theme.keyword %>">
 <meta name="description" content="<%- theme.web_description %>">
-<% } %>
+<meta property="og:description" content="<%- page.excerpt %>">
+<% } %> -->
 <%- js('js/jquery.min.js') %>
 <%- js('js/index.js') %>
 <%- js('js/fancybox.umd.js') %>
 <%- js('js/fancybox-images.js') %>
 <%- js('js/gitalk.min.js') %>
-<%- js('js/hljs.min.js') %> 
+<%- js('js/hljs.min.js') %>
 <script>hljs.highlightAll();</script>
