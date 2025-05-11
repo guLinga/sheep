@@ -1,32 +1,41 @@
-@import "./public/color";
-@import "./public/header_background";
-@import "./public/content";
-@import "./public/article_cente";
-@import "./public/mixins";
+@import './public/color';
+@import './public/header_background';
+@import './public/content';
+@import './public/article_cente';
+@import './public/mixins';
 
-@import "./plugin/fancybox.css";
-@import "./plugin/gitalk.css";
+@import './plugin/fancybox.css';
+@import './plugin/gitalk.css';
 
-@import "./widget/food";
-@import "./widget/header";
-@import "./widget/header_body";
-@import "./widget/grouping";
+@import './widget/food';
+@import './widget/header';
+@import './widget/header_body';
+@import './widget/grouping';
 
-@import "./highlight/atom-one-dark";
+@import './highlight/atom-one-dark';
 
-@import "./pages/about";
-@import "./pages/archive";
-@import "./pages/categories";
-@import "./pages/home";
-@import "./pages/links";
-@import "./pages/post";
-@import "./pages/tag";
-@import "./pages/tags";
+@import './pages/about';
+@import './pages/archive';
+@import './pages/categories';
+@import './pages/home';
+@import './pages/links';
+@import './pages/post';
+@import './pages/tag';
+@import './pages/tags';
 
-
-.content-move{
-    .content-move-style();
+.content-move {
+  .content-move-style();
 }
 
-
-
+.header-body-background-content {
+  span {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

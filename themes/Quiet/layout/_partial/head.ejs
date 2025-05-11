@@ -3,8 +3,12 @@ var title = theme.title
 if (page.title) {
   title = page.title
 }
+var titleSuffix = ''
+if (page.title) {
+  titleSuffix = '-' + page.title;
+}
 %>
-<title><%= title %>-<%- page.title %></title>
+<title><%= title %><%- titleSuffix %></title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
