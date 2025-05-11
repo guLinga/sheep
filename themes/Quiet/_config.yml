@@ -1,11 +1,11 @@
 # 网站标题
-title: 恩典数算
+title: 迦南书简
 # 网站标题后缀
 suffix: Quiet
 # 作者名称
 author: 徐佳恩
 # 网站关键字
-keyword: hexo主题,hexo扁平化主题,Quiet主题
+keyword: 迦南书简
 #false是否开启文章背景图显示(随机图片)
 is_article_img: true
 # 网站描述
@@ -35,7 +35,7 @@ logo: /image/logo.png
 icon: /image/favicon.ico
 # 每个页面的展示的图标和一句话
 headers:
-  home: { message: '弟兄姐妹们主内平安', icon: '/image/logo.png' }
+  home: { message: '迦南书简', icon: '/image/logo.png' }
   archives: {
       # 这里会替换掉两个变量{ year 年，number 总数 } 当然也可以不写这两个变量
       message: '居然用了 year 年一共才写了 number 篇文章!',
@@ -92,4 +92,5 @@ linksList:
 #默认的cover (默认缩略图) 在没有填写（这里可以替换（可以是api也可以是固定的图））
 # https://api.ixiaowai.cn/gqapi/gqapi.php
 # https://tuapi.eees.cc/api.php?type=302&category=fengjing
-default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php
+# default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php
+default_cover: https://gulinga.github.io/image/cover.png
