@@ -93,4 +93,5 @@ linksList:
 # https://api.ixiaowai.cn/gqapi/gqapi.php
 # https://tuapi.eees.cc/api.php?type=302&category=fengjing
 # default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php
-default_cover: https://gulinga.github.io/image/cover.png
+# default_cover: https://gulinga.github.io/image/cover.png
+default_cover: https://gulinga-github-io.pages.dev/image/cover.png
