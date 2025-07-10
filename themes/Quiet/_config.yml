@@ -3,7 +3,7 @@ title: 迦南书简
 # 网站标题后缀
 suffix: Quiet
 # 作者名称
-author: 徐佳恩
+author: 迦南书简
 # 网站关键字
 keyword: 迦南书简
 #false是否开启文章背景图显示(随机图片)
@@ -14,20 +14,22 @@ web_description: 描述
 home_layout: block-card
 # 导航名称
 menus_title:
-  home: HOME
-  archive: ARCHIVE
-  categories: CATEGORIES
-  tags: TAGS
-  links: LINKS
-  about: ABOUT
+  home: 文章
+  picture: 相册
+  # archive: ARCHIVE
+  # categories: CATEGORIES
+  # tags: TAGS
+  # links: LINKS
+  # about: ABOUT
 # 导航 （不建议修改）
 menus:
   home: /
-  archive: /archives
-  categories: /categories
-  tags: /tags
-  links: /links
-  about: /about
+  picture: /picture
+  # archive: /archives
+  # categories: /categories
+  # tags: /tags
+  # links: /links
+  # about: /about
 
 # logo
 logo: /image/logo.png
