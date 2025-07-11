@@ -9,10 +9,15 @@ hexo.extend.generator.register('picture', function (locals) {
 
   posts.data = posts.data.filter((v) => v.index === 'picture')
 
+  posts.length = posts.data.length
+
   return pagination('/picture', posts, {
-    path: 'picture/index.html',
-    format: 'picture/page/%d%',
+    perPage: config.index_generator.per_page,
+    format: 'picture/%d%',
     layout: 'picture',
+    data: {
+      __index: true,
+    },
   })
 })
 
@@ -23,6 +28,8 @@ hexo.extend.generator.register('index', function (locals) {
   posts.data.sort((a, b) => (b.sticky || 0) - (a.sticky || 0))
 
   posts.data = posts.data.filter((v) => !v.index)
+
+  posts.length = posts.data.length
 
   const paginationDir =
     config.index_generator.pagination_dir || config.pagination_dir || 'page'
