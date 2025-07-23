@@ -16,6 +16,7 @@ home_layout: block-card
 menus_title:
   home: 文章
   picture: 相册
+  task: 任务
   # archive: ARCHIVE
   # categories: CATEGORIES
   # tags: TAGS
@@ -25,6 +26,7 @@ menus_title:
 menus:
   home: /
   picture: /picture
+  task: /task
   # archive: /archives
   # categories: /categories
   # tags: /tags

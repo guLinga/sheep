@@ -1,6 +1,16 @@
 <%- partial('_partial/header',{name:'post'}) %>
 <div class="post">
-    <%- partial('_partial/post_head') %>
-    <%- partial('_partial/post_centent') %>
+    <% if( page.index === undefined || page.index === 'picture'){ %>
+        <%- partial('_partial/post_head') %>
+    <% } %>
+    <% if( page.index === undefined || page.index === 'picture'){ %>
+        <%- partial('_partial/post_centent') %>
+    <% } %>
+    <% if( page.index === 'task'){ %>
+        <div style="height: 160px;"></div>
+    <% } %>
+    <% if( page.index === 'task'){ %>
+        <%- partial('_partial/task_centent') %>
+    <% } %>
     <%- partial('_partial/post_paging') %>
 </div>
