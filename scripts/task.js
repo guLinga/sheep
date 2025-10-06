@@ -13,7 +13,7 @@ hexo.extend.generator.register('task', function (locals) {
 
   return pagination('/task', posts, {
     perPage: config.index_generator.per_page,
-    format: 'task/%d%',
+    format: 'task/%d%/',
     layout: 'task',
     data: {
       __index: true,

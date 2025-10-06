@@ -13,7 +13,7 @@ hexo.extend.generator.register('picture', function (locals) {
 
   return pagination('/picture', posts, {
     perPage: config.index_generator.per_page,
-    format: 'picture/%d%',
+    format: 'picture/%d%/',
     layout: 'picture',
     data: {
       __index: true,
