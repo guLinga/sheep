@@ -17,6 +17,7 @@ menus_title:
   home: 文章
   picture: 相册
   task: 任务
+  plan: 读经计划
   # archive: ARCHIVE
   # categories: CATEGORIES
   # tags: TAGS
@@ -27,6 +28,7 @@ menus:
   home: /
   picture: /picture
   task: /task
+  plan: /plan
   # archive: /archives
   # categories: /categories
   # tags: /tags

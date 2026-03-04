@@ -1,0 +1,20 @@
+<%- partial('_partial/header',{name:'plan'}) %>
+<div class="home plan-page">
+  <%-
+  partial('_widget/header_body',{message:theme.headers.home.message,icon:theme.headers.home.icon})
+  %>
+  <div class="main plan-main">
+    <div class="plan-list" id="content">
+      <% (page.planList || []).forEach(function (item) { %>
+      <div class="plan-day">
+        <div class="plan-day-title">第 <%= item.day %> 天</div>
+        <div class="plan-chapters">
+          <% item.chapters.forEach(function (ch) { %>
+          <span class="plan-chapter-tag"><%= ch %></span>
+          <% }) %>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
