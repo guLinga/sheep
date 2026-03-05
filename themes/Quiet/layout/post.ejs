@@ -1,9 +1,9 @@
 <%- partial('_partial/header',{name:'post'}) %>
 <div class="post">
-    <% if( page.index === undefined || page.index === 'picture'){ %>
+    <% if( page.index === undefined || page.index === 'picture' || page.index === 'planAudio'){ %>
         <%- partial('_partial/post_head') %>
     <% } %>
-    <% if( page.index === undefined || page.index === 'picture'){ %>
+    <% if( page.index === undefined || page.index === 'picture' || page.index === 'planAudio'){ %>
         <%- partial('_partial/post_centent') %>
     <% } %>
     <% if( page.index === 'task'){ %>

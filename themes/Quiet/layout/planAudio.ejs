@@ -1,0 +1,22 @@
+<%- partial('_partial/header', { name: 'plan' }) %>
+<div class="home plan-page planAudio-page">
+  <%- partial('_widget/header_body', { message: '第 ' + page.day + ' 天 · 讲道', icon: theme.headers.home.icon }) %>
+  <div class="main plan-main">
+    <div class="planAudio-list" id="content">
+      <% if ((page.posts || []).length) { %>
+        <% page.posts.forEach(function (post) { %>
+        <a href="<%- url_for(post.path) %>" class="planAudio-item">
+          <h3 class="planAudio-item-title"><%= post.title %></h3>
+          <% if (post.excerpt) { %><p class="planAudio-item-excerpt"><%= post.excerpt %></p><% } %>
+          <div class="planAudio-item-meta">
+            <% if (post.author || post.aubot) { %><span class="planAudio-item-author"><%= post.author || post.aubot %></span><% } %>
+            <span class="planAudio-item-date"><%- date(post.date, 'YYYY-MM-DD') %></span>
+          </div>
+        </a>
+        <% }) %>
+      <% } else { %>
+        <p class="planAudio-empty">暂无该日讲道文章</p>
+      <% } %>
+    </div>
+  </div>
+</div>

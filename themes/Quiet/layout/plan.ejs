@@ -7,7 +7,10 @@
     <div class="plan-list" id="content">
       <% (page.planList || []).forEach(function (item) { %>
       <div class="plan-day">
-        <div class="plan-day-title">第 <%= item.day %> 天</div>
+        <div class="plan-day-header">
+          <div class="plan-day-title">第 <%= item.day %> 天</div>
+          <% if (item.sermonUrl) { %><a class="plan-day-sermon-btn" href="<%= item.sermonUrl %>"></a><% } %>
+        </div>
         <div class="plan-chapters">
           <% item.chapters.forEach(function (ch) { %>
           <span class="plan-chapter-tag"><%= ch %></span>
