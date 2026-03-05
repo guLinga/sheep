@@ -101,3 +101,7 @@ linksList:
 # default_cover: https://api.ixiaowai.cn/gqapi/gqapi.php
 # default_cover: https://gulinga.github.io/image/cover.png
 default_cover: https://gulinga-github-io.pages.dev/image/cover.png
+
+aplayer:
+  meting: true
+  asset_inject: true
