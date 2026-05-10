@@ -1,22 +1,22 @@
 <div class="header">
   <div class="header-top" id="header-top">
     <div class="h-left">
-      <a href="<%= theme.menus.home %>">
-        <img src="<%- theme.logo %>" alt="Quiet" />
+      <a href="<%= theme.baseUrl %><%= theme.menus.home %>">
+        <img src="<%= theme.baseUrl %><%- theme.logo %>" alt="Quiet" />
       </a>
     </div>
     <div class="h-right">
       <ul>
         <% for(const menu in theme.menus) { %> <% if( name==menu ) {%>
         <li class="select">
-          <a href="<%= theme.menus[menu] %>">
+          <a href="<%= theme.baseUrl %><%= theme.menus[menu] %>">
             <%= theme.menus_title[menu] %>
           </a>
           <span class="dot"></span>
         </li>
         <% }else{ %>
         <li>
-          <a href="<%= theme.menus[menu] %>">
+          <a href="<%= theme.baseUrl %><%= theme.menus[menu] %>">
             <%= theme.menus_title[menu] %>
           </a>
           <span class="dot"></span>

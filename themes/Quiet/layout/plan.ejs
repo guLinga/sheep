@@ -9,7 +9,7 @@
       <div class="plan-day">
         <div class="plan-day-header">
           <div class="plan-day-title">第 <%= item.day %> 天</div>
-          <% if (item.sermonUrl) { %><a class="plan-day-sermon-btn" href="<%= item.sermonUrl %>"></a><% } %>
+          <% if (item.sermonUrl) { %><a class="plan-day-sermon-btn" href="<%= theme.baseUrl %><%= item.sermonUrl %>"></a><% } %>
         </div>
         <div class="plan-chapters">
           <% item.chapters.forEach(function (ch) { %>

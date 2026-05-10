@@ -25,6 +25,7 @@ menus_title:
   # links: LINKS
   # about: ABOUT
 # 导航 （不建议修改）
+baseUrl: /sheep
 menus:
   home: /
   picture: /picture
@@ -67,7 +68,7 @@ headers:
   library:
     {
       message: '图书馆',
-      icon: '/image/logo.png',
+      icon: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgicon-remixicon.svg',
     }
 
 # 网页访问统计
