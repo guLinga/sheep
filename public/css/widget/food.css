@@ -1,7 +1,6 @@
 .footer {
   display: flex;
   padding: 0 calc((100% - 1160px)/2);
-  height: 80px;
 }
 .footer .Copyright {
   display: flex;
