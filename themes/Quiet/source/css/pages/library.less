@@ -150,7 +150,8 @@
     .library-weread-card {
       display: flex;
       flex-direction: column;
-      padding: 14px 12px 16px;
+      text-align: center;
+      padding: 18px 14px 16px;
       background: #fff;
       border-radius: 12px;
       border: 1px solid rgba(0, 0, 0, 0.06);
@@ -166,12 +167,16 @@
     }
 
     .library-weread-card-cover {
-      width: 100%;
+      width: 62%;
+      max-width: 120px;
+      margin: 0 auto 14px;
       aspect-ratio: 2 / 3;
-      border-radius: 8px;
+      border-radius: 6px;
       overflow: hidden;
       background: #eee;
-      margin-bottom: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      border: 1px solid rgba(0, 0, 0, 0.06);
 
       img {
         width: 100%;
@@ -210,9 +215,291 @@
       font-size: 12px;
       color: #888;
       background: #f3f4f6;
-      align-self: flex-start;
+      align-self: center;
       padding: 3px 8px;
       border-radius: 6px;
+    }
+
+    .library-weread-brand--with-back {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+
+    .library-weread-brand--with-back .library-weread-brand-text {
+      grid-column: 2;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .library-weread-nav-back {
+      grid-column: 1;
+      justify-self: start;
+      font-size: 14px;
+      font-weight: 500;
+      color: @libraryBlue;
+      text-decoration: none;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .library-weread-brand--with-back {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .library-weread-nav-back {
+        grid-column: 1;
+        justify-self: center;
+        white-space: normal;
+      }
+
+      .library-weread-brand--with-back .library-weread-brand-text {
+        grid-column: 1;
+      }
+    }
+
+    .library-breadcrumb--weread {
+      font-size: 14px;
+      color: #6b7280;
+
+      a {
+        color: @libraryBlue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .library-breadcrumb--weread .library-breadcrumb-sep {
+      color: #d1d5db;
+    }
+
+    .library-section-title--weread {
+      margin: 0 0 18px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    &.library-book-page,
+    &.library-note-page {
+      .library-book-hero,
+      .library-note-article {
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      }
+
+      .library-read-btn {
+        background: @libraryBlue;
+        border-radius: 999px;
+        padding: 12px 28px;
+        font-weight: 600;
+
+        &:hover {
+          background: darken(@libraryBlue, 8%);
+        }
+      }
+
+      .library-book-title {
+        color: #111;
+      }
+
+      .library-book-author {
+        color: @libraryTextMuted;
+      }
+
+      .library-reflection-card-author {
+        color: @libraryTextMuted;
+        font-weight: 400;
+      }
+
+      .library-note-byline {
+        color: @libraryTextMuted;
+      }
+
+      .library-note-back a {
+        color: @libraryBlue;
+      }
+
+      .library-md-content a {
+        color: @libraryBlue;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.library-pdf-page--fullscreen {
+      .library-pdf-main {
+        margin: 0;
+        padding: 0;
+      }
+
+      .library-weread--pdf-fullscreen {
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        max-height: 100dvh;
+        padding-top: 100px;
+        box-sizing: border-box;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .library-pdf-toolbar-open {
+        font-size: 12px;
+        color: @libraryTextMuted;
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 0 4px;
+
+        &:hover {
+          color: @libraryBlue;
+          text-decoration: underline;
+        }
+      }
+
+      .library-pdf-toolbar {
+        flex-shrink: 0;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+        min-height: 48px;
+        padding: 8px 16px;
+        background: @libraryGreyBg;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        box-sizing: border-box;
+      }
+
+      .library-pdf-toolbar-back {
+        font-size: 14px;
+        font-weight: 500;
+        color: @libraryBlue;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .library-pdf-toolbar-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #111;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 0;
+      }
+
+      .library-pdf-toolbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-self: end;
+      }
+
+      .library-pdf-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: #fff;
+        color: #374151;
+        cursor: pointer;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: inherit;
+        line-height: 1.2;
+
+        &:hover {
+          background: #f9fafb;
+          border-color: rgba(0, 0, 0, 0.12);
+        }
+      }
+
+      .library-pdf-btn--fs {
+        color: @libraryBlue;
+        border-color: rgba(59, 130, 246, 0.35);
+      }
+
+      .library-pdf-btn--link {
+        color: @libraryBlue;
+        border-color: rgba(59, 130, 246, 0.35);
+      }
+
+      .library-pdf-frame-wrap {
+        flex: 1;
+        min-height: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        background: #fff;
+        overflow: hidden;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .library-pdf-frame {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        border: none;
+        display: block;
+        background: #fff;
+        vertical-align: top;
+      }
+
+      .library-pdf-frame-wrap:fullscreen {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+
+        .library-pdf-frame {
+          flex: 1;
+          min-height: 0;
+          background: #fff;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .library-pdf-toolbar {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          text-align: center;
+        }
+
+        .library-pdf-toolbar-title {
+          order: -1;
+        }
+
+        .library-pdf-toolbar-actions {
+          justify-self: stretch;
+          justify-content: center;
+        }
+      }
     }
 
     .library-empty {

@@ -18,7 +18,7 @@ menus_title:
   picture: 相册
   task: 任务
   plan: 读经计划
-  # library: 图书馆
+  library: 图书馆
   # archive: ARCHIVE
   # categories: CATEGORIES
   # tags: TAGS
@@ -30,7 +30,7 @@ menus:
   picture: /picture
   task: /task
   plan: /plan
-  # library: /library
+  library: /library
   # archive: /archives
   # categories: /categories
   # tags: /tags

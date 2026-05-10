@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>迦南书简-另一本示例书名略长时会在卡片上省略显示</title>
+<title>迦南书简-论属世之心 · 阅读</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -77,6 +77,13 @@
           </a>
           <span class="dot"></span>
         </li>
+          
+        <li class="select">
+          <a href="/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
          
       </ul>
     </div>
@@ -116,6 +123,10 @@
     
     <li>
       <a href="/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/library">图书馆</a>
     </li>
     
   </ul>
@@ -253,51 +264,36 @@
 
 
 
-<div class="home library-page library-book-page">
-  <div class="header-body-background">
-  <div class="header-body-background-content">
-    <span>
-      <img src="/image/logo.png" alt="Quiet" />
-    </span>
 
-    <h2 style="color: black; font-size: 20px; font-weight: 600">
-      另一本示例书名略长时会在卡片上省略显示
-    </h2>
+<div class="home library-page library-page--weread library-pdf-page library-pdf-page--fullscreen">
+  <div class="main library-main library-pdf-main">
+    <div class="library-weread library-weread--pdf-fullscreen">
+      <div class="library-pdf-frame-wrap" id="content">
+        <iframe class="library-pdf-frame" id="library-pdf-iframe" style="margin-top: 55px;" src="https://gulinga.github.io/sheep_video/bookPdf/《论属世之心》.pdf" title="论属世之心 PDF"></iframe>
+      </div>
+    </div>
   </div>
 </div>
-
-  <div class="main library-main">
-    <nav class="library-breadcrumb">
-      <a href="/library/">图书馆</a>
-      <span class="library-breadcrumb-sep">/</span>
-      <span>另一本示例书名略长时会在卡片上省略显示</span>
-    </nav>
-
-    <header class="library-book-hero">
-      <div class="library-book-cover-wrap">
-        <img class="library-book-cover" src="https://gulinga-github-io.pages.dev/image/cover.png" alt="另一本示例书名略长时会在卡片上省略显示" loading="lazy" />
-      </div>
-      <div class="library-book-meta">
-        <h1 class="library-book-title" id="content">另一本示例书名略长时会在卡片上省略显示</h1>
-        
-        <p class="library-book-author">编辑部</p>
-        
-        
-        <div class="library-book-intro library-md-content"><p>仅封面外链的示例；未填 <code>readUrl</code> 时书详情页不显示「点击阅读」按钮。</p>
-</div>
-        
-        
-      </div>
-    </header>
-
-    <section class="library-reflections">
-      <h2 class="library-section-title">读书心得</h2>
-      
-      <p class="library-reflections-empty">暂无心得：在 <code>source/_library/demo-cover/</code> 下除 <code>index.md</code> 外添加其它 <code>.md</code> 文件即可。</p>
-      
-    </section>
-  </div>
-</div>
+<script>
+(function () {
+  var wrap = document.getElementById('content');
+  var btn = document.getElementById('library-pdf-fullscreen-btn');
+  if (!wrap || !btn) return;
+  function syncBtn() {
+    var fs = document.fullscreenElement === wrap;
+    btn.setAttribute('aria-pressed', fs ? 'true' : 'false');
+    btn.textContent = fs ? '退出全屏' : '全屏';
+  }
+  document.addEventListener('fullscreenchange', syncBtn);
+  btn.addEventListener('click', function () {
+    if (document.fullscreenElement === wrap) {
+      document.exitFullscreen().catch(function () {});
+    } else {
+      wrap.requestFullscreen().catch(function () {});
+    }
+  });
+})();
+</script>
 
 		<div class="footer">
   <!-- <div class="Copyright">

@@ -1,5 +1,11 @@
 const loadLibraryBooksFromMd = require('./lib/loadLibraryBooksFromMd')
 
+function isPdfReadUrl(readUrl) {
+  if (!readUrl || typeof readUrl !== 'string') return false
+  const pathOnly = readUrl.trim().split(/[?#]/)[0].toLowerCase()
+  return pathOnly.endsWith('.pdf')
+}
+
 hexo.extend.generator.register('library', async function () {
   let books = []
   try {
@@ -32,6 +38,18 @@ hexo.extend.generator.register('library', async function () {
         reflections,
       },
     })
+
+    if (isPdfReadUrl(book.readUrl)) {
+      routes.push({
+        path: `library/book/${bookId}/read/index.html`,
+        layout: 'library_pdf_reader',
+        data: {
+          title: `${book.name} · 阅读`,
+          book,
+          bookId,
+        },
+      })
+    }
 
     reflections.forEach((note) => {
       const noteId = note && note.id

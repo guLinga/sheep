@@ -55,7 +55,6 @@ async function loadBookDir(hexo, root, dirName) {
     name,
     cover,
     author: data.author || '',
-    listTag: data.listTag || '',
     readUrl: data.readUrl,
     introHtml,
     reflections,

@@ -1,0 +1,33 @@
+<%- partial('_partial/header',{name:'library'}) %>
+<% var book = page.book %>
+<% var raw = book.readUrl ? String(book.readUrl) : '' %>
+<% var pdfSrc = raw.indexOf('http') === 0 ? raw : url_for(raw) %>
+<div class="home library-page library-page--weread library-pdf-page library-pdf-page--fullscreen">
+  <div class="main library-main library-pdf-main">
+    <div class="library-weread library-weread--pdf-fullscreen">
+      <div class="library-pdf-frame-wrap" id="content">
+        <iframe class="library-pdf-frame" id="library-pdf-iframe" style="margin-top: 55px;" src="<%= pdfSrc %>" title="<%= book.name %> PDF"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var wrap = document.getElementById('content');
+  var btn = document.getElementById('library-pdf-fullscreen-btn');
+  if (!wrap || !btn) return;
+  function syncBtn() {
+    var fs = document.fullscreenElement === wrap;
+    btn.setAttribute('aria-pressed', fs ? 'true' : 'false');
+    btn.textContent = fs ? '退出全屏' : '全屏';
+  }
+  document.addEventListener('fullscreenchange', syncBtn);
+  btn.addEventListener('click', function () {
+    if (document.fullscreenElement === wrap) {
+      document.exitFullscreen().catch(function () {});
+    } else {
+      wrap.requestFullscreen().catch(function () {});
+    }
+  });
+})();
+</script>

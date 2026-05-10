@@ -1,11 +1,7 @@
 ---
-name: 示例书籍
-cover: /image/cover.png
-author: 佚名
-listTag: 大家都在读
-readUrl: /plan
+name: 论属世之心
+cover: https://gulinga.github.io/sheep_video/bookCover/%E8%AE%BA%E5%B1%9E%E4%B8%96%E4%B9%8B%E5%BF%83.png
+author: 耶利米·巴罗夫（Jeremiah Burroughs）著 警醒 译
+readUrl: https://gulinga.github.io/sheep_video/bookPdf/《论属世之心》.pdf
 ---
 
-这里写图书简介，支持 **Markdown**。
-
-第二段介绍内容。
