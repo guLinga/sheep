@@ -6,7 +6,10 @@
   <div class="main library-main library-pdf-main">
     <div class="library-weread library-weread--pdf-fullscreen">
       <div class="library-pdf-frame-wrap" id="content">
-        <iframe class="library-pdf-frame" id="library-pdf-iframe" style="margin-top: 55px;" src="<%= pdfSrc %>" title="<%= book.name %> PDF"></iframe>
+        <div class="library-pdf-scroll">
+          <p id="library-pdf-status" class="library-pdf-status" role="status">加载 PDF…</p>
+          <div id="library-pdf-viewer" class="library-pdf-viewer" hidden></div>
+        </div>
       </div>
     </div>
   </div>
@@ -28,6 +31,81 @@
     } else {
       wrap.requestFullscreen().catch(function () {});
     }
+  });
+})();
+</script>
+<script type="module">
+(function () {
+  var PDFJS_VER = '4.10.38';
+  var pdfUrl = <%- JSON.stringify(pdfSrc) %>;
+  var statusEl = document.getElementById('library-pdf-status');
+  var viewerEl = document.getElementById('library-pdf-viewer');
+  var scrollEl = document.querySelector('.library-pdf-scroll');
+  if (!statusEl || !viewerEl) return;
+
+  function setStatus(text, isError) {
+    statusEl.textContent = text;
+    statusEl.classList.toggle('library-pdf-status--error', !!isError);
+    statusEl.hidden = false;
+    viewerEl.hidden = true;
+  }
+
+  import('https://unpkg.com/pdfjs-dist@' + PDFJS_VER + '/build/pdf.mjs').then(function (pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://unpkg.com/pdfjs-dist@' + PDFJS_VER + '/build/pdf.worker.mjs';
+
+    var loadingTask = pdfjsLib.getDocument({
+      url: pdfUrl,
+      withCredentials: false,
+    });
+
+    return loadingTask.promise;
+  }).then(async function (pdf) {
+    statusEl.hidden = true;
+    viewerEl.hidden = false;
+    viewerEl.innerHTML = '';
+
+    var dpr = typeof window !== 'undefined' && window.devicePixelRatio ? window.devicePixelRatio : 1;
+    var baseWidth = scrollEl ? scrollEl.clientWidth - 24 : 360;
+    if (baseWidth < 200) baseWidth = Math.max(200, document.documentElement.clientWidth - 24);
+
+    for (var p = 1; p <= pdf.numPages; p++) {
+      var page = await pdf.getPage(p);
+      var baseViewport = page.getViewport({ scale: 1 });
+      var scale = baseWidth / baseViewport.width;
+      var viewport = page.getViewport({ scale: scale });
+
+      var canvas = document.createElement('canvas');
+      canvas.className = 'library-pdf-page-canvas';
+      canvas.setAttribute('role', 'img');
+      canvas.setAttribute('aria-label', '第 ' + p + ' 页');
+
+      var ctx = canvas.getContext('2d', { alpha: false });
+      var w = Math.floor(viewport.width * dpr);
+      var h = Math.floor(viewport.height * dpr);
+      canvas.width = w;
+      canvas.height = h;
+      canvas.style.width = Math.floor(viewport.width) + 'px';
+      canvas.style.height = Math.floor(viewport.height) + 'px';
+
+      var renderOpts = { canvasContext: ctx, viewport: viewport };
+      if (dpr !== 1) {
+        renderOpts.transform = [dpr, 0, 0, dpr, 0, 0];
+      }
+      await page.render(renderOpts).promise;
+
+      viewerEl.appendChild(canvas);
+    }
+  }).catch(function (err) {
+    console.error(err);
+    var msg = '无法加载 PDF。';
+    if (err && err.name === 'MissingPDFException') {
+      msg = '找不到该 PDF 文件。';
+    } else if (err && (err.name === 'UnexpectedResponseException' || /fetch/i.test(String(err.message || '')))) {
+      msg =
+        '无法拉取 PDF（常见于跨域：PDF 所在服务器需返回 Access-Control-Allow-Origin）。可尝试把 PDF 放到本站同域目录。';
+    }
+    setStatus(msg, true);
   });
 })();
 </script>

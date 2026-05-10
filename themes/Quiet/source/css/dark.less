@@ -300,10 +300,21 @@ html.dark-mode {
         color: @dark-text-muted;
       }
     }
+    .library-page--weread.library-book-page .library-read-btn--download {
+      background: @dark-bg-elevated !important;
+      color: #93c5fd !important;
+      border-color: rgba(147, 197, 253, 0.45) !important;
+
+      &:hover {
+        background: @dark-bg-soft !important;
+        color: #bfdbfe !important;
+        border-color: rgba(147, 197, 253, 0.65) !important;
+      }
+    }
     .library-pdf-page--fullscreen {
       .library-weread--pdf-fullscreen,
       .library-pdf-frame-wrap,
-      .library-pdf-frame {
+      .library-pdf-scroll {
         background: @dark-bg !important;
       }
       .library-pdf-toolbar {

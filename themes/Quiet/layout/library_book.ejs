@@ -32,7 +32,15 @@
               <% var isPdf = /\.pdf(\?|#|$)/i.test(ru.trim()) %>
               <% var rh = isPdf ? url_for('library/book/' + page.bookId + '/read/') : (ru.indexOf('http') === 0 ? ru : url_for(ru)) %>
               <% var ext = !isPdf && ru.indexOf('http') === 0 %>
-              <a class="library-read-btn" href="<%= rh %>"<% if (ext) { %> target="_blank" rel="noopener noreferrer"<% } %>>点击阅读</a>
+              <% var pdfDirect = isPdf ? (ru.indexOf('http') === 0 ? ru : url_for(ru)) : '' %>
+              <% var pdfDownloadName = ((book.name || 'book').replace(/[\\/:*?"<>|]/g, '_').trim() || 'book') + '.pdf' %>
+              <% var pdfDlExt = isPdf && pdfDirect.indexOf('http') === 0 %>
+              <div class="library-book-actions">
+                <a class="library-read-btn" href="<%= rh %>"<% if (ext) { %> target="_blank" rel="noopener noreferrer"<% } %>>在线阅读</a>
+                <% if (isPdf) { %>
+                <a class="library-read-btn library-read-btn--download" href="<%= pdfDirect %>" download="<%= pdfDownloadName %>"<% if (pdfDlExt) { %> target="_blank" rel="noopener noreferrer"<% } %>>下载 PDF</a>
+                <% } %>
+              </div>
               <% } %>
             </div>
           </header>

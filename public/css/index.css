@@ -1931,16 +1931,43 @@ hue-6-2: #e6c07b
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
+.library-page.library-page--weread.library-book-page .library-book-actions,
+.library-page.library-page--weread.library-note-page .library-book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
 .library-page.library-page--weread.library-book-page .library-read-btn,
 .library-page.library-page--weread.library-note-page .library-read-btn {
+  display: inline-block;
   background: #3b82f6;
   border-radius: 999px;
   padding: 12px 28px;
   font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .library-page.library-page--weread.library-book-page .library-read-btn:hover,
 .library-page.library-page--weread.library-note-page .library-read-btn:hover {
   background: #1469f4;
+  transform: translateY(-1px);
+}
+.library-page.library-page--weread.library-book-page .library-read-btn.library-read-btn--download,
+.library-page.library-page--weread.library-note-page .library-read-btn.library-read-btn--download {
+  color: #3b82f6;
+  background: #fff;
+  border-color: rgba(59, 130, 246, 0.45);
+}
+.library-page.library-page--weread.library-book-page .library-read-btn.library-read-btn--download:hover,
+.library-page.library-page--weread.library-note-page .library-read-btn.library-read-btn--download:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+  color: #0b63f3;
 }
 .library-page.library-page--weread.library-book-page .library-book-title,
 .library-page.library-page--weread.library-note-page .library-book-title {
@@ -2069,30 +2096,58 @@ hue-6-2: #e6c07b
   width: 100%;
   max-width: none;
   margin: 0;
-  background: #fff;
+  background: #3d3d3d;
   overflow: hidden;
   border: none;
   border-radius: 0;
   box-shadow: none;
-}
-.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-frame {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  border: none;
-  display: block;
-  background: #fff;
-  vertical-align: top;
-}
-.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-frame-wrap:fullscreen {
-  background: #fff;
   display: flex;
   flex-direction: column;
 }
-.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-frame-wrap:fullscreen .library-pdf-frame {
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-scroll {
   flex: 1;
   min-height: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-status {
+  margin: 24px 16px;
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-status.library-pdf-status--error {
+  color: #fecaca;
+}
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 12px 24px;
+  box-sizing: border-box;
+}
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-page-canvas {
+  margin-top: 92px;
+  display: block;
+  max-width: 100%;
+  height: auto;
   background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-frame-wrap:fullscreen {
+  background: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+}
+.library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-frame-wrap:fullscreen .library-pdf-scroll {
+  flex: 1;
+  min-height: 0;
 }
 @media (max-width: 560px) {
   .library-page.library-page--weread.library-pdf-page--fullscreen .library-pdf-toolbar {
@@ -2200,6 +2255,8 @@ hue-6-2: #e6c07b
   background: #d4380d;
   border-radius: 10px;
   text-decoration: none;
+  border: 1px solid transparent;
+  box-sizing: border-box;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 .library-page .library-read-btn:hover {
@@ -2639,9 +2696,19 @@ html.dark-mode .library-page .library-md-content blockquote {
   background: #232733;
   color: #9aa0ad;
 }
+html.dark-mode .library-page .library-page--weread.library-book-page .library-read-btn--download {
+  background: #1d2029 !important;
+  color: #93c5fd !important;
+  border-color: rgba(147, 197, 253, 0.45) !important;
+}
+html.dark-mode .library-page .library-page--weread.library-book-page .library-read-btn--download:hover {
+  background: #232733 !important;
+  color: #bfdbfe !important;
+  border-color: rgba(147, 197, 253, 0.65) !important;
+}
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-weread--pdf-fullscreen,
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame-wrap,
-html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame {
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-scroll {
   background: #14161c !important;
 }
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-toolbar {

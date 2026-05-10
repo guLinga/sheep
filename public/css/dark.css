@@ -270,9 +270,19 @@ html.dark-mode .library-page .library-md-content blockquote {
   background: #232733;
   color: #9aa0ad;
 }
+html.dark-mode .library-page .library-page--weread.library-book-page .library-read-btn--download {
+  background: #1d2029 !important;
+  color: #93c5fd !important;
+  border-color: rgba(147, 197, 253, 0.45) !important;
+}
+html.dark-mode .library-page .library-page--weread.library-book-page .library-read-btn--download:hover {
+  background: #232733 !important;
+  color: #bfdbfe !important;
+  border-color: rgba(147, 197, 253, 0.65) !important;
+}
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-weread--pdf-fullscreen,
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame-wrap,
-html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame {
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-scroll {
   background: #14161c !important;
 }
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-toolbar {
