@@ -5,7 +5,7 @@
   <ul>
     <% for(const menu in theme.menus) { %>
     <li>
-      <a href="<%= theme.menus[menu] %>"><%= theme.menus_title[menu] %></a>
+      <a href="<%= theme.baseUrl %><%= theme.menus[menu] %>"><%= theme.menus_title[menu] %></a>
     </li>
     <% } %>
   </ul>
