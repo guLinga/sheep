@@ -107,97 +107,98 @@
   <div class="site-gate-login-card">
     <h1 class="site-gate-login-title">迦南书简</h1>
     
-    <p class="site-gate-login-hint">请输入 8 个字符（字母、数字、符号等均可）</p>
+    <p class="site-gate-login-hint">请输入密码</p>
     <div class="site-gate-login-form" id="site-gate-form" autocomplete="off">
       <div class="site-gate-pin" id="site-gate-pin" role="group" aria-label="8 字符密码">
         <div class="site-gate-pin-rows">
-          <div class="site-gate-pin-row">
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="0"
-              aria-label="第 1 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-              autofocus
-            />
-            <span class="site-gate-pin-sep site-gate-pin-sep--space" aria-hidden="true" title="空格">&#x2423;</span>
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="1"
-              aria-label="第 2 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="2"
-              aria-label="第 3 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="3"
-              aria-label="第 4 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-          </div>
-          <div class="site-gate-pin-row">
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="4"
-              aria-label="第 5 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="5"
-              aria-label="第 6 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-            <span class="site-gate-pin-sep site-gate-pin-sep--colon" aria-hidden="true">:</span>
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="6"
-              aria-label="第 7 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="site-gate-pin-digit"
-              data-index="7"
-              aria-label="第 8 个字符"
-              autocomplete="off"
-              autocorrect="off"
-              spellcheck="false"
-            />
-          </div>
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="0"
+            aria-label="第 1 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+            autofocus
+          />
+          <span class="site-gate-pin-sep site-gate-pin-sep--space" aria-hidden="true" title="空格">&#x2423;</span>
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="1"
+            aria-label="第 2 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="2"
+            aria-label="第 3 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="3"
+            aria-label="第 4 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <span
+            class="site-gate-pin-sep site-gate-pin-sep--space site-gate-pin-sep--rowgap"
+            aria-hidden="true"
+            title="空格"
+            >&#x2423;</span>
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="4"
+            aria-label="第 5 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="5"
+            aria-label="第 6 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <span class="site-gate-pin-sep site-gate-pin-sep--colon" aria-hidden="true">:</span>
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="6"
+            aria-label="第 7 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+          <input
+            type="text"
+            maxlength="1"
+            class="site-gate-pin-digit"
+            data-index="7"
+            aria-label="第 8 个字符"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
         </div>
       </div>
       <p class="site-gate-login-error" id="site-gate-error" hidden>密码错误</p>
