@@ -15,23 +15,12 @@
 
       <div class="library-weread-body">
         <div class="library-weread-inner">
-          <nav class="library-breadcrumb library-breadcrumb--weread">
-            <a href="<%= url_for('/library/') %>">图书馆</a>
-            <span class="library-breadcrumb-sep">/</span>
-            <a href="<%= url_for('library/book/' + page.bookId + '/') %>"><%= book.name %></a>
-            <span class="library-breadcrumb-sep">/</span>
-            <span>心得</span>
-          </nav>
-
           <article class="library-note-article" id="content">
             <h1 class="library-note-heading"><%= note.title %></h1>
             <p class="library-note-byline"><%= note.author %></p>
             <% if (page.contentHtml) { %>
             <div class="library-note-body library-md-content"><%- page.contentHtml %></div>
             <% } %>
-            <p class="library-note-back">
-              <a href="<%= url_for('library/book/' + page.bookId + '/') %>">← 返回《<%= book.name %>》</a>
-            </p>
           </article>
         </div>
       </div>

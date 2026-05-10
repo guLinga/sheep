@@ -314,7 +314,7 @@
     <div class="library-weread library-weread--pdf-fullscreen">
       <div class="library-pdf-frame-wrap" id="content">
         <div class="library-pdf-scroll">
-          <p id="library-pdf-status" class="library-pdf-status" role="status">加载 PDF…</p>
+          <p id="library-pdf-status" class="library-pdf-status" role="status">加载 图书…</p>
           <div id="library-pdf-viewer" class="library-pdf-viewer" hidden></div>
         </div>
       </div>
@@ -405,12 +405,12 @@
     }
   }).catch(function (err) {
     console.error(err);
-    var msg = '无法加载 PDF。';
+    var msg = '无法加载 图书。';
     if (err && err.name === 'MissingPDFException') {
-      msg = '找不到该 PDF 文件。';
+      msg = '找不到该 图书。';
     } else if (err && (err.name === 'UnexpectedResponseException' || /fetch/i.test(String(err.message || '')))) {
       msg =
-        '无法拉取 PDF（常见于跨域：PDF 所在服务器需返回 Access-Control-Allow-Origin）。可尝试把 PDF 放到本站同域目录。';
+        '无法拉取 图书';
     }
     setStatus(msg, true);
   });

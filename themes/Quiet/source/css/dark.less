@@ -192,9 +192,38 @@ html.dark-mode {
     }
   }
 
-  // ===== 文章上下篇 =====
-  .post-paging a {
-    color: @dark-text;
+  // ===== 文章上下篇（在 .post-content 外，需单独覆盖浅色底与卡片） =====
+  .post-paging {
+    background: transparent !important;
+
+    p {
+      color: @dark-text;
+    }
+
+    a {
+      color: @dark-text;
+
+      .post-paging-last,
+      .post-paging-next {
+        opacity: 1;
+        background-color: @dark-bg-elevated;
+        border: 1px solid @dark-border;
+        box-sizing: border-box;
+
+        span {
+          color: @dark-text-muted;
+        }
+
+        p {
+          color: @dark-text;
+        }
+
+        &:hover {
+          box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+          border-color: @dark-border-strong;
+        }
+      }
+    }
   }
 
   // ===== 读经计划 plan =====
@@ -465,6 +494,8 @@ html.dark-mode,
 html.dark-mode body,
 html.dark-mode .header .header-top,
 html.dark-mode .post-content,
+html.dark-mode .post-paging a .post-paging-last,
+html.dark-mode .post-paging a .post-paging-next,
 html.dark-mode .home .main .post-card-display,
 html.dark-mode .home .main .post-block-content,
 html.dark-mode .plan-day,

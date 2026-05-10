@@ -169,8 +169,34 @@ html.dark-mode #article thead th {
 html.dark-mode #article tbody td {
   color: #9aa0ad;
 }
+html.dark-mode .post-paging {
+  background: transparent !important;
+}
+html.dark-mode .post-paging p {
+  color: #e6e8ee;
+}
 html.dark-mode .post-paging a {
   color: #e6e8ee;
+}
+html.dark-mode .post-paging a .post-paging-last,
+html.dark-mode .post-paging a .post-paging-next {
+  opacity: 1;
+  background-color: #1d2029;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+}
+html.dark-mode .post-paging a .post-paging-last span,
+html.dark-mode .post-paging a .post-paging-next span {
+  color: #9aa0ad;
+}
+html.dark-mode .post-paging a .post-paging-last p,
+html.dark-mode .post-paging a .post-paging-next p {
+  color: #e6e8ee;
+}
+html.dark-mode .post-paging a .post-paging-last:hover,
+html.dark-mode .post-paging a .post-paging-next:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 html.dark-mode .plan-page .plan-page-title,
 html.dark-mode .plan-page .plan-day-title {
@@ -398,6 +424,8 @@ html.dark-mode,
 html.dark-mode body,
 html.dark-mode .header .header-top,
 html.dark-mode .post-content,
+html.dark-mode .post-paging a .post-paging-last,
+html.dark-mode .post-paging a .post-paging-next,
 html.dark-mode .home .main .post-card-display,
 html.dark-mode .home .main .post-block-content,
 html.dark-mode .plan-day,
