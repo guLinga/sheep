@@ -1,0 +1,399 @@
+html.dark-mode {
+  background-color: #14161c;
+  color-scheme: dark;
+}
+html.dark-mode body {
+  background-color: #14161c;
+  color: #e6e8ee;
+}
+html.dark-mode .header .header-top {
+  background: rgba(20, 22, 28, 0.96) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+html.dark-mode .header .header-top .h-right ul li a {
+  color: #9aa0ad;
+}
+html.dark-mode .header .header-top .h-right ul li a:hover {
+  color: #e6e8ee;
+}
+html.dark-mode .header .header-top .h-right .select a {
+  color: #e6e8ee;
+}
+html.dark-mode .header .header-top .h-right-close svg path[fill] {
+  fill: #e6e8ee !important;
+}
+html.dark-mode .header .header-move1 {
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45);
+}
+html.dark-mode .header-body-background {
+  background: linear-gradient(to top, #1a1d27, #21242f) !important;
+}
+html.dark-mode .header-body-background-content p,
+html.dark-mode .header-body-background-content h1,
+html.dark-mode .header-body-background-content h2,
+html.dark-mode .header-body-background-content span {
+  color: #e6e8ee !important;
+}
+html.dark-mode .home .main .post-card-display,
+html.dark-mode .home .main .post-block-content,
+html.dark-mode .home .main .post-block-content1,
+html.dark-mode .post-content,
+html.dark-mode .archive-content,
+html.dark-mode .categories-content,
+html.dark-mode .tag-content,
+html.dark-mode .links-content {
+  background-color: #1d2029 !important;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.45);
+  color: #e6e8ee;
+}
+html.dark-mode .home .main .post-card-display a .post-card-title,
+html.dark-mode .home .main .post-block-content-info h2 {
+  color: #e6e8ee !important;
+}
+html.dark-mode .home .main .post-card-display a .post-card-title:hover,
+html.dark-mode .home .main .post-block-content-info h2:hover {
+  color: #fff !important;
+}
+html.dark-mode .home .main .post-card-display a img,
+html.dark-mode .home .main .post-block-content img {
+  background: linear-gradient(to top, #2a2e3a, #1f222b) !important;
+}
+html.dark-mode .home .main .post-card-meat .meat-info .info-auth a {
+  color: #9aa0ad;
+}
+html.dark-mode .home .main .post-card-meat .meat-info .info-data,
+html.dark-mode .home .main .post-block-content-info-excerpt {
+  color: #6f7480 !important;
+}
+html.dark-mode .home .change-page,
+html.dark-mode .home .change-page .p-page a,
+html.dark-mode .home .change-page .n-page a {
+  color: #e6e8ee;
+}
+html.dark-mode .home .change-page .previous,
+html.dark-mode .home .change-page .p-page a .previous,
+html.dark-mode .home .change-page .n-page a .previous,
+html.dark-mode .home .change-page .next,
+html.dark-mode .home .change-page .p-page a .next,
+html.dark-mode .home .change-page .n-page a .next {
+  color: #9aa0ad;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);
+  background: #1d2029;
+}
+html.dark-mode .sidebar {
+  background: #1d2029 !important;
+  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.7) !important;
+}
+html.dark-mode .sidebar ul li a {
+  color: #e6e8ee !important;
+}
+html.dark-mode .shelter {
+  background-color: #000 !important;
+}
+html.dark-mode .post-header-background {
+  background: linear-gradient(0deg, #1a1d27, #21242f) !important;
+}
+html.dark-mode .post-header-background-content h1 {
+  color: #e6e8ee !important;
+}
+html.dark-mode .post-header-background-content .post-header-tag li {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+html.dark-mode .post-header-background-content .post-header-tag li a {
+  color: #e6e8ee !important;
+}
+html.dark-mode .post-header-background-content .post-header-tag li:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+html.dark-mode .post-header-background-content .post-header-info-author span,
+html.dark-mode .post-header-background-content .post-header-info-author p,
+html.dark-mode .post-header-background-content .post-header-info-author span a {
+  color: #e6e8ee !important;
+}
+html.dark-mode .post-header-background-content .post-header-info-author-categories a {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #e6e8ee !important;
+}
+html.dark-mode .post-header-color {
+  background: linear-gradient(0deg, #1a1d27, #21242f) !important;
+}
+html.dark-mode #article {
+  color: #e6e8ee;
+}
+html.dark-mode #article h1,
+html.dark-mode #article h2,
+html.dark-mode #article h3,
+html.dark-mode #article h4,
+html.dark-mode #article h5,
+html.dark-mode #article h6 {
+  color: #e6e8ee !important;
+}
+html.dark-mode #article p {
+  color: #e6e8ee !important;
+}
+html.dark-mode #article a {
+  color: #6ea8ff;
+}
+html.dark-mode #article hr {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode #article blockquote {
+  background: #232733;
+  border-left-color: rgba(255, 255, 255, 0.16);
+}
+html.dark-mode #article blockquote p {
+  color: #9aa0ad !important;
+}
+html.dark-mode #article p code,
+html.dark-mode #article ul li code {
+  background: #232733;
+  color: #e0a8ff;
+}
+html.dark-mode #article table {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode #article table td:hover,
+html.dark-mode #article table tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+html.dark-mode #article table td {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.dark-mode #article thead tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.04);
+}
+html.dark-mode #article thead th {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e6e8ee;
+}
+html.dark-mode #article tbody td {
+  color: #9aa0ad;
+}
+html.dark-mode .post-paging a {
+  color: #e6e8ee;
+}
+html.dark-mode .plan-page .plan-page-title,
+html.dark-mode .plan-page .plan-day-title {
+  color: #e6e8ee;
+}
+html.dark-mode .plan-page .plan-day {
+  background: #1d2029;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+html.dark-mode .plan-page .plan-day:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+}
+html.dark-mode .plan-page .plan-day-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode .plan-page .plan-chapter-tag {
+  background: rgba(212, 56, 13, 0.18);
+  color: #ffb38a;
+}
+html.dark-mode .planAudio-page .planAudio-item {
+  background: #1d2029;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+html.dark-mode .planAudio-page .planAudio-item-title {
+  color: #e6e8ee;
+}
+html.dark-mode .planAudio-page .planAudio-item-excerpt {
+  color: #9aa0ad;
+}
+html.dark-mode .planAudio-page .planAudio-item-author,
+html.dark-mode .planAudio-page .planAudio-item-date {
+  color: #6f7480;
+}
+html.dark-mode .library-page {
+  color: #e6e8ee;
+}
+html.dark-mode .library-page .library-book-hero,
+html.dark-mode .library-page .library-note-article,
+html.dark-mode .library-page .library-reflection-card,
+html.dark-mode .library-page .library-weread-card,
+html.dark-mode .library-page .library-weread-search,
+html.dark-mode .library-page .library-weread-body {
+  background: #1d2029 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+html.dark-mode .library-page .library-weread-top {
+  background: #232733 !important;
+}
+html.dark-mode .library-page .library-weread-brand-text,
+html.dark-mode .library-page .library-weread-section-title,
+html.dark-mode .library-page .library-section-title,
+html.dark-mode .library-page .library-section-title--weread,
+html.dark-mode .library-page .library-book-title,
+html.dark-mode .library-page .library-note-heading,
+html.dark-mode .library-page .library-reflection-card-title,
+html.dark-mode .library-page .library-weread-card-title {
+  color: #e6e8ee !important;
+}
+html.dark-mode .library-page .library-weread-search-input {
+  color: #e6e8ee;
+}
+html.dark-mode .library-page .library-weread-search-input::placeholder {
+  color: #6f7480;
+}
+html.dark-mode .library-page .library-weread-card-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: #9aa0ad;
+}
+html.dark-mode .library-page .library-weread-card-cover {
+  background: #232733;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode .library-page .library-book-author,
+html.dark-mode .library-page .library-book-intro,
+html.dark-mode .library-page .library-reflection-card-excerpt,
+html.dark-mode .library-page .library-note-byline,
+html.dark-mode .library-page .library-note-body,
+html.dark-mode .library-page .library-md-content,
+html.dark-mode .library-page .library-empty,
+html.dark-mode .library-page .library-breadcrumb {
+  color: #9aa0ad !important;
+}
+html.dark-mode .library-page .library-md-content h1,
+html.dark-mode .library-page .library-md-content h2,
+html.dark-mode .library-page .library-md-content h3,
+html.dark-mode .library-page .library-md-content h4 {
+  color: #e6e8ee !important;
+}
+html.dark-mode .library-page .library-md-content code {
+  background: #232733;
+  color: #e0a8ff;
+}
+html.dark-mode .library-page .library-md-content blockquote {
+  background: #232733;
+  color: #9aa0ad;
+}
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-weread--pdf-fullscreen,
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame-wrap,
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame {
+  background: #14161c !important;
+}
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-toolbar {
+  background: #232733 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-toolbar-title {
+  color: #e6e8ee !important;
+}
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-btn {
+  background: #1d2029;
+  color: #e6e8ee;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-btn:hover {
+  background: #232733;
+}
+html.dark-mode .grouping a {
+  color: #e6e8ee;
+}
+html.dark-mode .grouping a:hover {
+  background: #232733;
+}
+html.dark-mode .links-content-data-item {
+  background: #232733 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.dark-mode .links-content-data-item a {
+  color: #e6e8ee !important;
+}
+html.dark-mode .links-content-data-item .card .user-link-info h1 {
+  color: #e6e8ee;
+}
+html.dark-mode .links-content-data-item .card .user-link-info span {
+  color: #9aa0ad;
+}
+html.dark-mode .links-content-data-item:hover {
+  background: #1d2029 !important;
+}
+html.dark-mode .gt-container .gt-header-textarea,
+html.dark-mode .gt-container .gt-comment-content,
+html.dark-mode .gt-container .gt-comment-admin .gt-comment-content {
+  background-color: #232733 !important;
+  color: #e6e8ee !important;
+}
+html.dark-mode .gt-container .gt-comments-null,
+html.dark-mode .gt-container .gt-comment-username,
+html.dark-mode .gt-container .gt-comment-date,
+html.dark-mode .gt-container .gt-counts,
+html.dark-mode .gt-container .gt-copyright,
+html.dark-mode .gt-container .gt-link {
+  color: #9aa0ad !important;
+}
+html.dark-mode .footer .Copyright {
+  color: #6f7480;
+}
+html.dark-mode .theme-toggle svg {
+  color: #e6e8ee;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 12px;
+  border: none;
+  background: transparent;
+  color: #12183a;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.3s ease;
+}
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.theme-toggle .theme-toggle-sun {
+  display: none;
+}
+.theme-toggle .theme-toggle-moon {
+  display: block;
+}
+html.dark-mode .theme-toggle {
+  color: #e6e8ee;
+}
+html.dark-mode .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode .theme-toggle .theme-toggle-sun {
+  display: block;
+}
+html.dark-mode .theme-toggle .theme-toggle-moon {
+  display: none;
+}
+.sidebar .theme-toggle-mobile-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.header .header-top .h-right .theme-toggle {
+  margin-left: 6px;
+}
+.header .header-top .h-right-close .theme-toggle {
+  margin-right: 4px;
+  margin-left: 0;
+}
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode .header .header-top,
+html.dark-mode .post-content,
+html.dark-mode .home .main .post-card-display,
+html.dark-mode .home .main .post-block-content,
+html.dark-mode .plan-day,
+html.dark-mode .planAudio-item,
+html.dark-mode .library-book-hero,
+html.dark-mode .library-note-article,
+html.dark-mode .library-reflection-card {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}

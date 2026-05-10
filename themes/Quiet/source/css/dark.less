@@ -1,0 +1,466 @@
+// ===== 暗黑模式样式覆盖 =====
+// 通过 html.dark-mode 全量覆盖浅色配色，颜色变量集中维护
+@dark-bg: #14161c;
+@dark-bg-elevated: #1d2029;
+@dark-bg-soft: #232733;
+@dark-text: #e6e8ee;
+@dark-text-muted: #9aa0ad;
+@dark-text-faint: #6f7480;
+@dark-border: rgba(255, 255, 255, 0.08);
+@dark-border-strong: rgba(255, 255, 255, 0.16);
+@dark-accent: #6ea8ff;
+
+html.dark-mode {
+  background-color: @dark-bg;
+  color-scheme: dark;
+
+  body {
+    background-color: @dark-bg;
+    color: @dark-text;
+  }
+
+  // ===== Header / 导航 =====
+  .header .header-top {
+    background: rgba(20, 22, 28, 0.96) !important;
+    box-shadow: 0 1px 0 @dark-border;
+  }
+  .header .header-top .h-right ul li a {
+    color: @dark-text-muted;
+    &:hover {
+      color: @dark-text;
+    }
+  }
+  .header .header-top .h-right .select a {
+    color: @dark-text;
+  }
+  .header .header-top .h-right-close svg path[fill] {
+    fill: @dark-text !important;
+  }
+  .header .header-move1 {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  // ===== Header body 背景渐变 =====
+  .header-body-background {
+    background: linear-gradient(to top, #1a1d27, #21242f) !important;
+  }
+  .header-body-background-content {
+    p,
+    h1,
+    h2,
+    span {
+      color: @dark-text !important;
+    }
+  }
+
+  // ===== 内容卡片 / 容器 =====
+  .home .main .post-card-display,
+  .home .main .post-block-content,
+  .home .main .post-block-content1,
+  .post-content,
+  .archive-content,
+  .categories-content,
+  .tag-content,
+  .links-content {
+    background-color: @dark-bg-elevated !important;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.45);
+    color: @dark-text;
+  }
+
+  .home .main .post-card-display a .post-card-title,
+  .home .main .post-block-content-info h2 {
+    color: @dark-text !important;
+    &:hover {
+      color: #fff !important;
+    }
+  }
+  .home .main .post-card-display a img,
+  .home .main .post-block-content img {
+    background: linear-gradient(to top, #2a2e3a, #1f222b) !important;
+  }
+  .home .main .post-card-meat .meat-info .info-auth a {
+    color: @dark-text-muted;
+  }
+  .home .main .post-card-meat .meat-info .info-data,
+  .home .main .post-block-content-info-excerpt {
+    color: @dark-text-faint !important;
+  }
+  .home .change-page,
+  .home .change-page .p-page a,
+  .home .change-page .n-page a {
+    color: @dark-text;
+    .previous,
+    .next {
+      color: @dark-text-muted;
+      box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);
+      background: @dark-bg-elevated;
+    }
+  }
+
+  // ===== 侧边栏（移动端） =====
+  .sidebar {
+    background: @dark-bg-elevated !important;
+    box-shadow: -6px 0 20px rgba(0, 0, 0, 0.7) !important;
+  }
+  .sidebar ul li a {
+    color: @dark-text !important;
+  }
+  .shelter {
+    background-color: #000 !important;
+  }
+
+  // ===== 文章正文 =====
+  .post-header-background {
+    background: linear-gradient(0deg, #1a1d27, #21242f) !important;
+  }
+  .post-header-background-content {
+    h1 {
+      color: @dark-text !important;
+    }
+    .post-header-tag li {
+      background: rgba(255, 255, 255, 0.08) !important;
+      a {
+        color: @dark-text !important;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.18) !important;
+      }
+    }
+    .post-header-info-author {
+      span,
+      p,
+      span a {
+        color: @dark-text !important;
+      }
+      &-categories a {
+        border-color: @dark-border-strong !important;
+        color: @dark-text !important;
+      }
+    }
+  }
+  .post-header-color {
+    background: linear-gradient(0deg, #1a1d27, #21242f) !important;
+  }
+
+  #article {
+    color: @dark-text;
+    h1, h2, h3, h4, h5, h6 {
+      color: @dark-text !important;
+    }
+    p {
+      color: @dark-text !important;
+    }
+    a {
+      color: @dark-accent;
+    }
+    hr {
+      background: @dark-border;
+    }
+    blockquote {
+      background: @dark-bg-soft;
+      border-left-color: @dark-border-strong;
+      p {
+        color: @dark-text-muted !important;
+      }
+    }
+    p code,
+    ul li code {
+      background: @dark-bg-soft;
+      color: #e0a8ff;
+    }
+    table {
+      border-color: @dark-border;
+      td:hover,
+      tr:hover {
+        background: rgba(255, 255, 255, 0.04);
+      }
+      td {
+        border-color: @dark-border !important;
+      }
+    }
+    thead {
+      tr:nth-child(odd) {
+        background: rgba(255, 255, 255, 0.04);
+      }
+      th {
+        background: rgba(255, 255, 255, 0.06);
+        color: @dark-text;
+      }
+    }
+    tbody td {
+      color: @dark-text-muted;
+    }
+  }
+
+  // ===== 文章上下篇 =====
+  .post-paging a {
+    color: @dark-text;
+  }
+
+  // ===== 读经计划 plan =====
+  .plan-page {
+    .plan-page-title,
+    .plan-day-title {
+      color: @dark-text;
+    }
+    .plan-day {
+      background: @dark-bg-elevated;
+      border-color: @dark-border;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      &:hover {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+      }
+    }
+    .plan-day-header {
+      border-bottom-color: @dark-border;
+    }
+    .plan-chapter-tag {
+      background: rgba(212, 56, 13, 0.18);
+      color: #ffb38a;
+    }
+  }
+  .planAudio-page {
+    .planAudio-item {
+      background: @dark-bg-elevated;
+      border-color: @dark-border;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .planAudio-item-title {
+      color: @dark-text;
+    }
+    .planAudio-item-excerpt {
+      color: @dark-text-muted;
+    }
+    .planAudio-item-author,
+    .planAudio-item-date {
+      color: @dark-text-faint;
+    }
+  }
+
+  // ===== 图书馆 library =====
+  .library-page {
+    color: @dark-text;
+    .library-book-hero,
+    .library-note-article,
+    .library-reflection-card,
+    .library-weread-card,
+    .library-weread-search,
+    .library-weread-body {
+      background: @dark-bg-elevated !important;
+      border-color: @dark-border !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    }
+    .library-weread-top {
+      background: @dark-bg-soft !important;
+    }
+    .library-weread-brand-text,
+    .library-weread-section-title,
+    .library-section-title,
+    .library-section-title--weread,
+    .library-book-title,
+    .library-note-heading,
+    .library-reflection-card-title,
+    .library-weread-card-title {
+      color: @dark-text !important;
+    }
+    .library-weread-search-input {
+      color: @dark-text;
+      &::placeholder {
+        color: @dark-text-faint;
+      }
+    }
+    .library-weread-card-tag {
+      background: rgba(255, 255, 255, 0.08);
+      color: @dark-text-muted;
+    }
+    .library-weread-card-cover {
+      background: @dark-bg-soft;
+      border-color: @dark-border;
+    }
+    .library-book-author,
+    .library-book-intro,
+    .library-reflection-card-excerpt,
+    .library-note-byline,
+    .library-note-body,
+    .library-md-content,
+    .library-empty,
+    .library-breadcrumb {
+      color: @dark-text-muted !important;
+    }
+    .library-md-content {
+      h1, h2, h3, h4 {
+        color: @dark-text !important;
+      }
+      code {
+        background: @dark-bg-soft;
+        color: #e0a8ff;
+      }
+      blockquote {
+        background: @dark-bg-soft;
+        color: @dark-text-muted;
+      }
+    }
+    .library-pdf-page--fullscreen {
+      .library-weread--pdf-fullscreen,
+      .library-pdf-frame-wrap,
+      .library-pdf-frame {
+        background: @dark-bg !important;
+      }
+      .library-pdf-toolbar {
+        background: @dark-bg-soft !important;
+        border-bottom-color: @dark-border !important;
+      }
+      .library-pdf-toolbar-title {
+        color: @dark-text !important;
+      }
+      .library-pdf-btn {
+        background: @dark-bg-elevated;
+        color: @dark-text;
+        border-color: @dark-border;
+        &:hover {
+          background: @dark-bg-soft;
+        }
+      }
+    }
+  }
+
+  // ===== 分组（grouping） =====
+  .grouping a {
+    color: @dark-text;
+    &:hover {
+      background: @dark-bg-soft;
+    }
+  }
+
+  // ===== 友情链接 =====
+  .links-content-data-item {
+    background: @dark-bg-soft !important;
+    border-color: @dark-border !important;
+    a {
+      color: @dark-text !important;
+    }
+    .card .user-link-info {
+      h1 {
+        color: @dark-text;
+      }
+      span {
+        color: @dark-text-muted;
+      }
+    }
+    &:hover {
+      background: @dark-bg-elevated !important;
+    }
+  }
+
+  // ===== 评论 (gitalk) 颜色微调 =====
+  .gt-container {
+    .gt-header-textarea,
+    .gt-comment-content,
+    .gt-comment-admin .gt-comment-content {
+      background-color: @dark-bg-soft !important;
+      color: @dark-text !important;
+    }
+    .gt-comments-null,
+    .gt-comment-username,
+    .gt-comment-date,
+    .gt-counts,
+    .gt-copyright,
+    .gt-link {
+      color: @dark-text-muted !important;
+    }
+  }
+
+  // ===== 页脚 =====
+  .footer .Copyright {
+    color: @dark-text-faint;
+  }
+
+  // ===== 主题切换按钮 =====
+  .theme-toggle svg {
+    color: @dark-text;
+  }
+}
+
+// ===== 主题切换按钮（亮/暗均生效） =====
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 12px;
+  border: none;
+  background: transparent;
+  color: #12183a;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.3s ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .theme-toggle-sun {
+    display: none;
+  }
+  .theme-toggle-moon {
+    display: block;
+  }
+}
+
+html.dark-mode .theme-toggle {
+  color: #e6e8ee;
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .theme-toggle-sun {
+    display: block;
+  }
+  .theme-toggle-moon {
+    display: none;
+  }
+}
+
+// 移动端侧边栏内的切换按钮容器（居中显示）
+.sidebar .theme-toggle-mobile-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+// PC 顶部 h-right 内：切换按钮已在 ul 旁边
+.header .header-top .h-right {
+  .theme-toggle {
+    margin-left: 6px;
+  }
+}
+
+// 移动端：顶部 h-right-close 区域内的切换按钮
+.header .header-top .h-right-close {
+  .theme-toggle {
+    margin-right: 4px;
+    margin-left: 0;
+  }
+}
+
+// 平滑过渡（限定关键属性，避免影响动效）
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode .header .header-top,
+html.dark-mode .post-content,
+html.dark-mode .home .main .post-card-display,
+html.dark-mode .home .main .post-block-content,
+html.dark-mode .plan-day,
+html.dark-mode .planAudio-item,
+html.dark-mode .library-book-hero,
+html.dark-mode .library-note-article,
+html.dark-mode .library-reflection-card {
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, box-shadow 0.25s ease;
+}

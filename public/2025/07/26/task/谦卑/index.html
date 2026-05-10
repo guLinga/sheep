@@ -7,6 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
 
 <link rel="stylesheet" href="/sheep/css/index.css">
 
@@ -86,8 +98,28 @@
         </li>
          
       </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
     </div>
     <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -130,6 +162,18 @@
     </li>
     
   </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
   <!-- <div class="my_foot">
         
         <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
@@ -276,7 +320,7 @@
         <div class="card_container">
           <p>弟兄姐妹们：</p>
           <p style="text-indent: 2em">大家主内平安！</p>
-          <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="谦卑"><a href="#谦卑" class="headerlink" title="谦卑"></a>谦卑</h2><h3 id="一、为什么要谦卑"><a href="#一、为什么要谦卑" class="headerlink" title="一、为什么要谦卑"></a>一、为什么要谦卑</h3><p>&ensp;&ensp;&ensp;&ensp;耶稣基督作为人的样式谦卑柔和，作为门徒，我们也当效法耶稣基督的行为。</p>
+          <h2 id="谦卑"><a href="#谦卑" class="headerlink" title="谦卑"></a>谦卑</h2><h3 id="一、为什么要谦卑"><a href="#一、为什么要谦卑" class="headerlink" title="一、为什么要谦卑"></a>一、为什么要谦卑</h3><p>&ensp;&ensp;&ensp;&ensp;耶稣基督作为人的样式谦卑柔和，作为门徒，我们也当效法耶稣基督的行为。</p>
 <blockquote>
 <p>【彼前 5:5】你们年幼的，也要顺服年长的。就是你们众人也都要以谦卑束腰，彼此顺服，因为　神阻挡骄傲的人，赐恩给谦卑的人。<br>【彼前 5:6】所以你们要自卑，服在　神大能的手下，到了时候，他必叫你们升高。<br>【路 18:17】我实在告诉你们：凡要承受　神国的，若不像小孩子，断不能进去。”</p>
 </blockquote>

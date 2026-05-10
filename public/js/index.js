@@ -47,3 +47,39 @@ function ready ( fn ) {
 
 // 执行动画
 ready(contentMove);
+
+// 暗黑模式切换
+const setTheme = (theme) => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+        root.classList.add('dark-mode');
+    } else {
+        root.classList.remove('dark-mode');
+    }
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+};
+
+const toggleTheme = () => {
+    const isDark = document.documentElement.classList.contains('dark-mode');
+    setTheme(isDark ? 'light' : 'dark');
+};
+
+const bindThemeToggles = () => {
+    const buttons = document.querySelectorAll('.theme-toggle');
+    buttons.forEach((btn) => btn.addEventListener('click', toggleTheme));
+};
+
+ready(bindThemeToggles);
+
+// 跟随系统主题变化（仅当用户未手动设置过时）
+if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const handler = (e) => {
+        try {
+            if (localStorage.getItem('theme')) return;
+        } catch (err) {}
+        setTheme(e.matches ? 'dark' : 'light');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', handler);
+    else if (mq.addListener) mq.addListener(handler);
+}

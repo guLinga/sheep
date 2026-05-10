@@ -7,6 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
 
 <link rel="stylesheet" href="/sheep/css/index.css">
 
@@ -86,8 +98,28 @@
         </li>
          
       </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
     </div>
     <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -130,6 +162,18 @@
     </li>
     
   </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
   <!-- <div class="my_foot">
         
         <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
@@ -276,7 +320,7 @@
         <div class="card_container">
           <p>弟兄姐妹们：</p>
           <p style="text-indent: 2em">大家主内平安！</p>
-          <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、什么是温柔"><a href="#一、什么是温柔" class="headerlink" title="一、什么是温柔"></a>一、什么是温柔</h2><h3 id="根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。"><a href="#根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。" class="headerlink" title="根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。"></a>根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。</h3><ol>
+          <h2 id="一、什么是温柔"><a href="#一、什么是温柔" class="headerlink" title="一、什么是温柔"></a>一、什么是温柔</h2><h3 id="根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。"><a href="#根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。" class="headerlink" title="根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。"></a>根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。</h3><ol>
 <li><p>源于上帝的性情：上帝本身是温柔的，耶稣基督“心里柔和谦卑”（马太福音11:29），信徒被呼召效法这种样式，让温柔成为圣灵所结的果子之一（加拉太书5:22-23）。</p>
 </li>
 <li><p>与谦卑相伴：温柔不是自我压抑，而是认识到自己的有限，依靠上帝的智慧待人，正如彼得前书3:4所言，要以“温柔、安静的心为装饰”，这种品格在上帝眼中极为宝贵。</p>

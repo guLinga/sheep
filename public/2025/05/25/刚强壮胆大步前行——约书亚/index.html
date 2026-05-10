@@ -7,6 +7,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
 
 <link rel="stylesheet" href="/sheep/css/index.css">
 
@@ -86,8 +98,28 @@
         </li>
          
       </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
     </div>
     <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -130,6 +162,18 @@
     </li>
     
   </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
   <!-- <div class="my_foot">
         
         <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
@@ -316,7 +360,7 @@
   <div id="article" class="post-content-info">
     
 
-    <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>&ensp;&ensp;&ensp;&ensp;今天我想同大家分享一个大家特别熟悉的人物约书亚，从约书亚的身上我们一同来学习他的美好品德。刚强壮胆是贯穿约书亚一生的词语，首先我们知道约书亚在圣经中就是信心勇气的代名词，约书亚在圣经故事中首先出现的地方就是在（埃及记 17:9 摩西对约书亚说：“你为我们选出人来，出去和亚玛力人争战”）当时正是以色列人在经历了旷野流浪没有水喝的事情之后以正值虚弱的时候亚玛力人来袭击以色列人，也是以色列百姓第一次学习了信心的功课后的第一次争战。是要相信，那使磐石出水、红海分开的神，也同样能带领他们争战得胜一场战争。而约书亚作为了走在战争前面的一个人，他也靠着信用刀杀了亚玛力王和他的百姓。可以看出来约书亚在开始就是一个有信心有胆量的人，前面也曾多次提出摩西的帮手嫩的儿子约书亚。他是一个被拣选出来的人，多次被神提出他与别人的不同（见下面经文）。在他生命中反复出现的一个词语就是你当刚强壮胆，那让我们一起来从三个方面来看看约书亚是如何靠着信心刚强壮胆带着以色列人占领迦南，活出神荣耀的彰显的吧。</p>
+    <p>&ensp;&ensp;&ensp;&ensp;今天我想同大家分享一个大家特别熟悉的人物约书亚，从约书亚的身上我们一同来学习他的美好品德。刚强壮胆是贯穿约书亚一生的词语，首先我们知道约书亚在圣经中就是信心勇气的代名词，约书亚在圣经故事中首先出现的地方就是在（埃及记 17:9 摩西对约书亚说：“你为我们选出人来，出去和亚玛力人争战”）当时正是以色列人在经历了旷野流浪没有水喝的事情之后以正值虚弱的时候亚玛力人来袭击以色列人，也是以色列百姓第一次学习了信心的功课后的第一次争战。是要相信，那使磐石出水、红海分开的神，也同样能带领他们争战得胜一场战争。而约书亚作为了走在战争前面的一个人，他也靠着信用刀杀了亚玛力王和他的百姓。可以看出来约书亚在开始就是一个有信心有胆量的人，前面也曾多次提出摩西的帮手嫩的儿子约书亚。他是一个被拣选出来的人，多次被神提出他与别人的不同（见下面经文）。在他生命中反复出现的一个词语就是你当刚强壮胆，那让我们一起来从三个方面来看看约书亚是如何靠着信心刚强壮胆带着以色列人占领迦南，活出神荣耀的彰显的吧。</p>
 <blockquote>
 <p>出埃及记(24:13)<br>摩西和他的帮手约书亚起来，上了神的山。（四十昼夜的完全领受神的律法）<br>出埃及记(33:11)<br>耶和华与摩西面对面说话，好像人与朋友说话一般。摩西转到营里去，惟有他的帮手一个少年人嫩的儿子约书亚，不离开会幕。<br>民数记(26:65)<br>因为耶和华论到他们说：“他们必要死在旷野”，所以，除了耶孚尼的儿子迦勒和嫩的儿子约书亚以外，连一个人也没有存留。</p>
 </blockquote>
