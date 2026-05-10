@@ -113,3 +113,15 @@ default_cover: https://gulinga-github-io.pages.dev/image/cover.png
 aplayer:
   meting: true
   asset_inject: true
+
+# 全站访问门禁（纯前端；登录 UI 为 8 格横排各 1 字符，拼成串后与下方哈希或明文一致）
+site_gate:
+  enable: true
+  # 登录成功后写入 localStorage 的值，请改为长随机串
+  session_token: 'change-me-to-a-long-random-string'
+  # 若填写则最优先（小写 hex，32 位）。生成: node -e "console.log(require('crypto').createHash('md5').update('你的密码','utf8').digest('hex'))"
+  password_md5: '30396E1F9721C5BC3A9CD7E729A7D1BB'
+  # 明文密码（会出现在登录页 HTML，仅适合个人站）；有 password_md5 时不会用到
+  password: ''
+  # 次优先 SHA-256（小写 hex）；有 password_md5 时不会用到
+  password_sha256: ''

@@ -1,0 +1,287 @@
+<%
+var sg = theme.site_gate || {};
+var sgOn = sg.enable && sg.session_token && (sg.password_md5 || sg.password_sha256 || sg.password);
+var gateBase = String(config.root || '/').replace(/\/+$/, '');
+if (!gateBase || gateBase === '/') gateBase = String(theme.baseUrl || '').replace(/\/+$/, '');
+%>
+<% if (sgOn) { %>
+<script>
+(function () {
+  var TOKEN = <%- JSON.stringify(String(sg.session_token)) %>;
+  var HOME = <%- JSON.stringify((gateBase || '') + String((theme.menus && theme.menus.home) || '/')) %>;
+  function safeRedirect(raw) {
+    if (!raw) {
+      location.replace(HOME);
+      return;
+    }
+    try {
+      var u = decodeURIComponent(raw);
+      if (u.charAt(0) === '/' && u.charAt(1) !== '/') location.replace(u);
+      else location.replace(HOME);
+    } catch (e) {
+      location.replace(HOME);
+    }
+  }
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) {
+      var sp = new URLSearchParams(location.search);
+      safeRedirect(sp.get('r'));
+    }
+  } catch (e) {}
+})();
+</script>
+<% } %>
+<div class="site-gate-login">
+  <div class="site-gate-login-card">
+    <h1 class="site-gate-login-title"><%= theme.title %></h1>
+    <% if (sgOn) { %>
+    <p class="site-gate-login-hint">请输入 8 个字符（字母、数字、符号等均可）</p>
+    <div class="site-gate-login-form" id="site-gate-form" autocomplete="off">
+      <div class="site-gate-pin" id="site-gate-pin" role="group" aria-label="8 字符密码">
+        <div class="site-gate-pin-rows">
+          <div class="site-gate-pin-row">
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="0"
+              aria-label="第 1 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+              autofocus
+            />
+            <span class="site-gate-pin-sep site-gate-pin-sep--space" aria-hidden="true" title="空格">&#x2423;</span>
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="1"
+              aria-label="第 2 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="2"
+              aria-label="第 3 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="3"
+              aria-label="第 4 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+          </div>
+          <div class="site-gate-pin-row">
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="4"
+              aria-label="第 5 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="5"
+              aria-label="第 6 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+            <span class="site-gate-pin-sep site-gate-pin-sep--colon" aria-hidden="true">:</span>
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="6"
+              aria-label="第 7 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="site-gate-pin-digit"
+              data-index="7"
+              aria-label="第 8 个字符"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+          </div>
+        </div>
+      </div>
+      <p class="site-gate-login-error" id="site-gate-error" hidden>密码错误</p>
+    </div>
+    <% } else { %>
+    <p class="site-gate-login-hint">未启用站点门禁。请在主题 <code>themes/Quiet/_config.yml</code> 中配置 <code>site_gate</code>（<code>enable</code>、<code>session_token</code>，以及 <code>password_md5</code> / <code>password_sha256</code> / <code>password</code> 之一）。</p>
+    <% } %>
+  </div>
+</div>
+<% if (sgOn && sg.password_md5) { %>
+<%- js('js/site-gate-md5.js') %>
+<% } %>
+<% if (sgOn) { %>
+<script>
+(function () {
+  var TOKEN = <%- JSON.stringify(String(sg.session_token)) %>;
+  var MD5H = <%- JSON.stringify(sg.password_md5 ? String(sg.password_md5).toLowerCase() : '') %>;
+  var HASH = <%- JSON.stringify(sg.password_sha256 ? String(sg.password_sha256).toLowerCase() : '') %>;
+  var PLAIN = <%- JSON.stringify(sg.password ? String(sg.password) : '') %>;
+  var HOME = <%- JSON.stringify((gateBase || '') + String((theme.menus && theme.menus.home) || '/')) %>;
+
+  function hex(buf) {
+    var h = [];
+    var v = new Uint8Array(buf);
+    for (var i = 0; i < v.length; i++) {
+      var x = v[i].toString(16);
+      h.push(x.length === 1 ? '0' + x : x);
+    }
+    return h.join('');
+  }
+
+  function sha256Hex(text) {
+    var enc = new TextEncoder();
+    return crypto.subtle.digest('SHA-256', enc.encode(text)).then(hex);
+  }
+
+  function safeRedirect(raw) {
+    if (!raw) {
+      location.replace(HOME);
+      return;
+    }
+    try {
+      var u = decodeURIComponent(raw);
+      if (u.charAt(0) === '/' && u.charAt(1) !== '/') location.replace(u);
+      else location.replace(HOME);
+    } catch (e) {
+      location.replace(HOME);
+    }
+  }
+
+  var form = document.getElementById('site-gate-form');
+  var err = document.getElementById('site-gate-error');
+  if (!form) return;
+  var inputs = form.querySelectorAll('.site-gate-pin-digit');
+  var PIN_LEN = 8;
+  var verifying = false;
+
+  function getPin() {
+    var s = '';
+    for (var i = 0; i < inputs.length; i++) s += inputs[i].value || '';
+    return s;
+  }
+
+  function clearPin() {
+    for (var i = 0; i < inputs.length; i++) inputs[i].value = '';
+    if (inputs[0]) inputs[0].focus();
+  }
+
+  function ok() {
+    try {
+      localStorage.setItem('site_gate_token', TOKEN);
+    } catch (x) {}
+    var sp = new URLSearchParams(location.search);
+    safeRedirect(sp.get('r'));
+  }
+
+  function fail() {
+    err.hidden = false;
+    verifying = false;
+    clearPin();
+  }
+
+  function tryVerify() {
+    var val = getPin();
+    if (val.length !== PIN_LEN || verifying) return;
+    err.hidden = true;
+
+    function runSync() {
+      if (MD5H) {
+        if (typeof window.siteGateMd5 !== 'function') {
+          fail();
+          return;
+        }
+        if (String(window.siteGateMd5(val)).toLowerCase() === MD5H) ok();
+        else fail();
+        return;
+      }
+      if (HASH) {
+        verifying = true;
+        sha256Hex(val)
+          .then(function (h) {
+            verifying = false;
+            if (h === HASH) ok();
+            else fail();
+          })
+          .catch(function () {
+            verifying = false;
+            fail();
+          });
+        return;
+      }
+      if (PLAIN && val === PLAIN) ok();
+      else fail();
+    }
+
+    runSync();
+  }
+
+  function onInput(i) {
+    return function () {
+      var el = inputs[i];
+      var v = String(el.value || '');
+      if (v.length > 1) v = v.slice(-1);
+      el.value = v;
+      if (v && i < PIN_LEN - 1) inputs[i + 1].focus();
+      if (getPin().length === PIN_LEN) tryVerify();
+    };
+  }
+
+  function onKeydown(i) {
+    return function (e) {
+      if (e.key === 'Backspace' && !inputs[i].value && i > 0) {
+        inputs[i - 1].focus();
+        inputs[i - 1].value = '';
+        e.preventDefault();
+      }
+    };
+  }
+
+  form.addEventListener('paste', function (e) {
+    var cd = e.clipboardData || window.clipboardData;
+    if (!cd) return;
+    var raw = String(cd.getData('text') || '');
+    var chars = Array.from(raw).slice(0, PIN_LEN);
+    if (!chars.length) return;
+    e.preventDefault();
+    for (var i = 0; i < PIN_LEN; i++) inputs[i].value = chars[i] || '';
+    var last = Math.min(chars.length, PIN_LEN) - 1;
+    if (inputs[last]) inputs[last].focus();
+    if (chars.length >= PIN_LEN) tryVerify();
+  });
+
+  for (var j = 0; j < inputs.length; j++) {
+    inputs[j].addEventListener('input', onInput(j));
+    inputs[j].addEventListener('keydown', onKeydown(j));
+  }
+})();
+</script>
+<% } %>

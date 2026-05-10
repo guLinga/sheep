@@ -1,0 +1,27 @@
+<%
+var sg = theme.site_gate || {};
+var sgOn = sg.enable && sg.session_token && (sg.password_md5 || sg.password_sha256 || sg.password);
+var gateBase = String(config.root || '/').replace(/\/+$/, '');
+if (!gateBase || gateBase === '/') gateBase = String(theme.baseUrl || '').replace(/\/+$/, '');
+%>
+<% if (sgOn) { %>
+<script>
+(function () {
+  var TOKEN = <%- JSON.stringify(String(sg.session_token)) %>;
+  var BASE = <%- JSON.stringify(gateBase) %>;
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+<% } %>

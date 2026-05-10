@@ -1,0 +1,149 @@
+.site-gate-login {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.site-gate-login-card {
+  width: 100%;
+  max-width: min(100%, 32rem);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: var(--color-card-bg, #fff);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.06));
+}
+
+.site-gate-login-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text, #1a1a1a);
+}
+
+.site-gate-login-hint {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--color-muted, #666);
+}
+
+.site-gate-login-form {
+  display: block;
+}
+
+.site-gate-pin {
+  width: 100%;
+  margin: 0 auto 0.35rem;
+}
+
+.site-gate-pin-rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.site-gate-pin-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+@media (min-width: 37.5rem) {
+  .site-gate-pin-rows {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-gate-pin-row {
+    display: contents;
+  }
+}
+
+.site-gate-pin-digit {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: min(3.35rem, 11.5vw);
+  aspect-ratio: 1;
+  min-width: 2.875rem;
+  min-height: 2.875rem;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(1.1rem, 4.5vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-input-bg, #fff);
+  color: var(--color-text, #1a1a1a);
+}
+
+.site-gate-pin-sep {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted, #888);
+  font-weight: 600;
+  user-select: none;
+  line-height: 1;
+}
+
+.site-gate-pin-sep--space {
+  font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+  opacity: 0.9;
+  min-width: 1.1rem;
+}
+
+.site-gate-pin-sep--colon {
+  font-size: clamp(1.2rem, 4vw, 1.55rem);
+  opacity: 0.95;
+  padding: 0 0.05rem;
+}
+
+.site-gate-pin-digit:focus {
+  outline: none;
+  border-color: var(--color-accent, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.site-gate-login-error {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #dc2626;
+}
+
+html.dark-mode .site-gate-login-card {
+  background: var(--color-card-bg, #1e1e1e);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+html.dark-mode .site-gate-login-title {
+  color: var(--color-text, #f3f3f3);
+}
+
+html.dark-mode .site-gate-login-hint {
+  color: var(--color-muted, #a3a3a3);
+}
+
+html.dark-mode .site-gate-pin-sep {
+  color: var(--color-muted, #9ca3af);
+}
+
+html.dark-mode .site-gate-pin-digit {
+  background: #2a2a2a;
+  border-color: #404040;
+  color: #f3f3f3;
+}
