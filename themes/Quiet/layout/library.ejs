@@ -1,0 +1,94 @@
+<%- partial('_partial/header',{name:'library'}) %>
+<div class="home library-page library-page--weread">
+  <div class="main library-main">
+    <div class="library-weread">
+    <div class="library-weread-top">
+      <div class="library-weread-inner">
+        <div class="library-weread-brand">
+          <span class="library-weread-brand-text"><%= theme.title %> · 图书馆</span>
+        </div>
+        <div class="library-weread-search-wrap">
+          <label class="library-weread-search" for="library-search">
+            <span class="library-weread-search-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            </span>
+            <input id="library-search" type="search" class="library-weread-search-input" placeholder="搜索书名或作者" autocomplete="off" />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="library-weread-body">
+      <div class="library-weread-inner">
+        <div class="library-weread-section-head" id="content">
+        </div>
+
+        <div class="library-weread-grid" id="library-book-grid">
+          <% (page.books || []).forEach(function (book) { %>
+          <% if (!book.id) { return } %>
+          <% var coverSrc = book.cover || theme.default_cover %>
+          <% var searchLower = (book.name + ' ' + (book.author || '')).toLowerCase() %>
+          <a
+            href="<%= url_for('library/book/' + book.id + '/') %>"
+            class="library-weread-card"
+            data-search="<%= searchLower %>"
+          >
+            <div class="library-weread-card-cover">
+              <img src="<%= coverSrc %>" alt="<%= book.name %>" loading="lazy" />
+            </div>
+            <h3 class="library-weread-card-title"><%= book.name %></h3>
+            <p class="library-weread-card-author"><%= book.author || '' %></p>
+            <% if (book.listTag) { %>
+            <span class="library-weread-card-tag"><%= book.listTag %></span>
+            <% } %>
+          </a>
+          <% }) %>
+        </div>
+
+        <% if (!(page.books || []).length) { %>
+        <p class="library-empty">暂无书目：在 <code>source/_library/</code> 下为每本书建一个文件夹，并在其中放置 <code>index.md</code>（须含 <code>cover</code> 等 front matter）。</p>
+        <% } %>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var input = document.getElementById('library-search');
+  var grid = document.getElementById('library-book-grid');
+  if (!input || !grid) return;
+  var cards = grid.querySelectorAll('.library-weread-card');
+  function norm(s) {
+    return (s || '').toLowerCase();
+  }
+  function apply() {
+    var q = norm(input.value.trim());
+    for (var i = 0; i < cards.length; i++) {
+      var el = cards[i];
+      var hay = norm(el.getAttribute('data-search'));
+      el.style.display = !q || hay.indexOf(q) !== -1 ? '' : 'none';
+    }
+  }
+  input.addEventListener('input', apply);
+  var shuffleBtn = document.getElementById('library-shuffle');
+  if (shuffleBtn && cards.length > 1) {
+    shuffleBtn.addEventListener('click', function () {
+      var frag = document.createDocumentFragment();
+      var arr = Array.prototype.slice.call(cards);
+      for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+      }
+      arr.forEach(function (n) {
+        frag.appendChild(n);
+      });
+      grid.appendChild(frag);
+      cards = grid.querySelectorAll('.library-weread-card');
+      apply();
+    });
+  }
+})();
+</script>

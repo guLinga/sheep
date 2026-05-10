@@ -1,0 +1,60 @@
+<%- partial('_partial/header',{name:'library'}) %>
+<% var book = page.book %>
+<% var coverSrc = book.cover || theme.default_cover %>
+<div class="home library-page library-book-page">
+  <%-
+  partial('_widget/header_body',{
+    message: book.name,
+    icon: theme.headers.library.icon
+  })
+  %>
+  <div class="main library-main">
+    <nav class="library-breadcrumb">
+      <a href="<%= url_for('/library/') %>">图书馆</a>
+      <span class="library-breadcrumb-sep">/</span>
+      <span><%= book.name %></span>
+    </nav>
+
+    <header class="library-book-hero">
+      <div class="library-book-cover-wrap">
+        <img class="library-book-cover" src="<%= coverSrc %>" alt="<%= book.name %>" loading="lazy" />
+      </div>
+      <div class="library-book-meta">
+        <h1 class="library-book-title" id="content"><%= book.name %></h1>
+        <% if (book.author) { %>
+        <p class="library-book-author"><%= book.author %></p>
+        <% } %>
+        <% if (page.introHtml) { %>
+        <div class="library-book-intro library-md-content"><%- page.introHtml %></div>
+        <% } %>
+        <% if (book.readUrl) { %>
+        <% var rh = String(book.readUrl).indexOf('http') === 0 ? book.readUrl : url_for(book.readUrl) %>
+        <% var ext = String(book.readUrl).indexOf('http') === 0 %>
+        <a class="library-read-btn" href="<%= rh %>"<% if (ext) { %> target="_blank" rel="noopener noreferrer"<% } %>>点击阅读</a>
+        <% } %>
+      </div>
+    </header>
+
+    <section class="library-reflections">
+      <h2 class="library-section-title">读书心得</h2>
+      <% if (!(page.reflections || []).length) { %>
+      <p class="library-reflections-empty">暂无心得：在 <code>source/_library/<%= page.bookId %>/</code> 下除 <code>index.md</code> 外添加其它 <code>.md</code> 文件即可。</p>
+      <% } else { %>
+      <ul class="library-reflection-list">
+        <% page.reflections.forEach(function (note) { %>
+        <% if (!note.id) { return } %>
+        <li>
+          <a class="library-reflection-card" href="<%= url_for('library/book/' + page.bookId + '/note/' + note.id + '/') %>">
+            <span class="library-reflection-card-title"><%= note.title %></span>
+            <span class="library-reflection-card-author"><%= note.author %></span>
+            <% if (note.excerpt) { %>
+            <span class="library-reflection-card-excerpt"><%= note.excerpt %></span>
+            <% } %>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+      <% } %>
+    </section>
+  </div>
+</div>
