@@ -1,8 +1,9 @@
 @import '../public/color';
 
-@libraryBlue: #3b82f6;
-@libraryGreyBg: #f5f6f8;
-@libraryTextMuted: #888888;
+@libraryAccent: @accentSolemn;
+@libraryGreyBg: @bgPage;
+@libraryTextMuted: @textMuted;
+@libraryAccentBorder: rgba(139, 115, 85, 0.42);
 
 .library-page {
   .library-main {
@@ -26,14 +27,19 @@
       background: @libraryGreyBg;
       width: 100vw;
       margin-left: calc(50% - 50vw);
-      padding: 120px 20px 36px;
+      padding: 24px 20px 20px;
       box-sizing: border-box;
+      border-bottom: 1px solid @accentLine;
     }
 
     .library-weread-inner {
       max-width: 980px;
       margin: 0 auto;
       padding: 0 16px;
+    }
+
+    .library-weread-subnav {
+      padding: 4px 0 8px;
     }
 
     .library-weread-brand {
@@ -45,25 +51,33 @@
     }
 
     .library-weread-brand-text {
-      font-size: 20px;
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+      font-size: clamp(20px, 2.4vw, 26px);
       font-weight: 600;
-      color: #111;
-      letter-spacing: 0.02em;
+      color: @textColorTheme;
+      letter-spacing: 0.12em;
     }
 
     .library-weread-search-wrap {
-      margin-bottom: 18px;
+      margin-bottom: 0;
+    }
+
+    .library-weread-search-icon {
+      display: flex;
+      align-items: center;
+      color: @libraryTextMuted;
+      flex-shrink: 0;
     }
 
     .library-weread-search {
       display: flex;
       align-items: center;
-      background: #fff;
-      border-radius: 999px;
-      padding: 0 18px;
-      height: 48px;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-      border: 1px solid rgba(0, 0, 0, 0.04);
+      background: @bgCard;
+      border-radius: 2px;
+      padding: 0 16px;
+      height: 46px;
+      box-shadow: 0 1px 3px rgba(26, 34, 51, 0.05);
+      border: 1px solid @accentLine;
     }
 
     .library-weread-search-input {
@@ -73,16 +87,16 @@
       font-size: 15px;
       margin-left: 10px;
       background: transparent;
-      color: #111;
+      color: @textColorTheme;
       min-width: 0;
 
       &::placeholder {
-        color: #9ca3af;
+        color: @libraryTextMuted;
       }
     }
 
     .library-weread-body {
-      background: #fff;
+      background: @libraryGreyBg;
       padding: 28px 0 56px;
     }
 
@@ -103,9 +117,11 @@
 
     .library-weread-section-title {
       margin: 0;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 600;
-      color: #111;
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+      color: @textColorTheme;
+      letter-spacing: 0.06em;
     }
 
     .library-weread-refresh {
@@ -119,13 +135,13 @@
       text-underline-offset: 3px;
 
       &:hover {
-        color: @libraryBlue;
+        color: @libraryAccent;
       }
     }
 
     .library-weread-link {
       font-size: 14px;
-      color: @libraryBlue;
+      color: @libraryAccent;
       text-decoration: none;
 
       &:hover {
@@ -152,17 +168,17 @@
       flex-direction: column;
       text-align: center;
       padding: 18px 14px 16px;
-      background: #fff;
-      border-radius: 12px;
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      background: @bgCard;
+      border-radius: 2px;
+      border: 1px solid @accentLine;
+      box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
       text-decoration: none;
       color: inherit;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
       &:hover {
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-        transform: translateY(-3px);
+        border-color: rgba(139, 115, 85, 0.45);
+        box-shadow: 0 6px 20px rgba(26, 34, 51, 0.08);
       }
     }
 
@@ -171,12 +187,12 @@
       max-width: 120px;
       margin: 0 auto 14px;
       aspect-ratio: 2 / 3;
-      border-radius: 6px;
+      border-radius: 2px;
       overflow: hidden;
-      background: #eee;
+      background: #e8e6e1;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 2px 8px rgba(26, 34, 51, 0.08);
+      border: 1px solid @accentLine;
 
       img {
         width: 100%;
@@ -190,8 +206,10 @@
       margin: 0 0 6px;
       font-size: 15px;
       font-weight: 600;
-      color: #111;
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+      color: @textColorTheme;
       line-height: 1.35;
+      letter-spacing: 0.04em;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -213,11 +231,11 @@
 
     .library-weread-card-tag {
       font-size: 12px;
-      color: #888;
-      background: #f3f4f6;
+      color: @libraryTextMuted;
+      background: rgba(139, 115, 85, 0.1);
       align-self: center;
       padding: 3px 8px;
-      border-radius: 6px;
+      border-radius: 2px;
     }
 
     .library-weread-brand--with-back {
@@ -239,7 +257,7 @@
       justify-self: start;
       font-size: 14px;
       font-weight: 500;
-      color: @libraryBlue;
+      color: @libraryAccent;
       text-decoration: none;
       max-width: 100%;
       overflow: hidden;
@@ -271,10 +289,10 @@
 
     .library-breadcrumb--weread {
       font-size: 14px;
-      color: #6b7280;
+      color: @libraryTextMuted;
 
       a {
-        color: @libraryBlue;
+        color: @libraryAccent;
         text-decoration: none;
 
         &:hover {
@@ -284,22 +302,24 @@
     }
 
     .library-breadcrumb--weread .library-breadcrumb-sep {
-      color: #d1d5db;
+      color: @accentLine;
     }
 
     .library-section-title--weread {
       margin: 0 0 18px;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 600;
-      color: #111;
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+      color: @textColorTheme;
+      letter-spacing: 0.06em;
     }
 
     &.library-book-page,
     &.library-note-page {
       .library-book-hero,
       .library-note-article {
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        border: 1px solid @accentLine;
+        box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
         margin: 0 auto;
       }
 
@@ -312,37 +332,37 @@
 
       .library-read-btn {
         display: inline-block;
-        background: @libraryBlue;
-        border-radius: 999px;
+        background: @textColorTheme;
+        border-radius: 2px;
         padding: 12px 28px;
         font-weight: 600;
-        color: #fff;
+        color: #faf8f4;
         text-decoration: none;
-        border: 1px solid transparent;
+        border: 1px solid @textColorTheme;
         box-sizing: border-box;
         font-size: 15px;
-        transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
         &:hover {
-          background: darken(@libraryBlue, 8%);
-          transform: translateY(-1px);
+          background: lighten(@textColorTheme, 8%);
+          border-color: lighten(@textColorTheme, 8%);
         }
 
         &.library-read-btn--download {
-          color: @libraryBlue;
-          background: #fff;
-          border-color: rgba(59, 130, 246, 0.45);
+          color: @libraryAccent;
+          background: @bgCard;
+          border-color: @libraryAccentBorder;
 
           &:hover {
-            background: #eff6ff;
-            border-color: @libraryBlue;
-            color: darken(@libraryBlue, 10%);
+            background: rgba(139, 115, 85, 0.08);
+            border-color: @libraryAccent;
+            color: darken(@libraryAccent, 10%);
           }
         }
       }
 
       .library-book-title {
-        color: #111;
+        color: @textColorTheme;
       }
 
       .library-book-author {
@@ -359,7 +379,7 @@
       }
 
       .library-md-content a {
-        color: @libraryBlue;
+        color: @libraryAccent;
 
         &:hover {
           text-decoration: underline;
@@ -392,7 +412,7 @@
         padding: 0 4px;
 
         &:hover {
-          color: @libraryBlue;
+          color: @libraryAccent;
           text-decoration: underline;
         }
       }
@@ -406,14 +426,14 @@
         min-height: 48px;
         padding: 8px 16px;
         background: @libraryGreyBg;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        border-bottom: 1px solid @accentLine;
         box-sizing: border-box;
       }
 
       .library-pdf-toolbar-back {
         font-size: 14px;
         font-weight: 500;
-        color: @libraryBlue;
+        color: @libraryAccent;
         text-decoration: none;
         white-space: nowrap;
 
@@ -425,7 +445,7 @@
       .library-pdf-toolbar-title {
         font-size: 15px;
         font-weight: 600;
-        color: #111;
+        color: @textColorTheme;
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -447,10 +467,10 @@
         padding: 8px 14px;
         font-size: 13px;
         font-weight: 500;
-        border-radius: 8px;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        background: #fff;
-        color: #374151;
+        border-radius: 2px;
+        border: 1px solid @accentLine;
+        background: @bgCard;
+        color: @textColorTheme;
         cursor: pointer;
         text-decoration: none;
         box-sizing: border-box;
@@ -458,19 +478,19 @@
         line-height: 1.2;
 
         &:hover {
-          background: #f9fafb;
-          border-color: rgba(0, 0, 0, 0.12);
+          background: rgba(139, 115, 85, 0.06);
+          border-color: rgba(139, 115, 85, 0.45);
         }
       }
 
       .library-pdf-btn--fs {
-        color: @libraryBlue;
-        border-color: rgba(59, 130, 246, 0.35);
+        color: @libraryAccent;
+        border-color: @libraryAccentBorder;
       }
 
       .library-pdf-btn--link {
-        color: @libraryBlue;
-        border-color: rgba(59, 130, 246, 0.35);
+        color: @libraryAccent;
+        border-color: @libraryAccentBorder;
       }
 
       .library-pdf-frame-wrap {
@@ -566,24 +586,24 @@
 
   .library-empty {
     text-align: center;
-    color: rgba(18, 24, 58, 0.6);
+    color: @libraryTextMuted;
     margin-top: 24px;
 
     code {
-      background: rgba(0, 0, 0, 0.06);
+      background: rgba(139, 115, 85, 0.1);
       padding: 2px 8px;
-      border-radius: 4px;
+      border-radius: 2px;
       font-size: 13px;
     }
   }
 
   .library-breadcrumb {
     font-size: 14px;
-    color: rgba(18, 24, 58, 0.55);
+    color: @libraryTextMuted;
     margin-bottom: 24px;
 
     a {
-      color: #d4380d;
+      color: @libraryAccent;
       text-decoration: none;
 
       &:hover {
@@ -594,7 +614,7 @@
 
   .library-breadcrumb-sep {
     margin: 0 8px;
-    color: rgba(18, 24, 58, 0.35);
+    color: @accentLine;
   }
 
   .library-book-hero {
@@ -602,11 +622,11 @@
     flex-wrap: wrap;
     gap: 32px 40px;
     align-items: flex-start;
-    background: #fff;
-    border-radius: 12px;
+    background: @bgCard;
+    border-radius: 2px;
     padding: 28px 32px;
-    box-shadow: 0 4px 20px rgba(50, 50, 50, 0.06);
-    border: 1px solid rgba(18, 24, 58, 0.06);
+    box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
+    border: 1px solid @accentLine;
     margin-bottom: 40px;
   }
 
@@ -620,9 +640,10 @@
     width: 100%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 2px;
     display: block;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 14px rgba(26, 34, 51, 0.1);
+    border: 1px solid @accentLine;
   }
 
   .library-book-meta {
@@ -634,20 +655,22 @@
     margin: 0 0 8px;
     font-size: 26px;
     font-weight: 600;
+    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
     color: @textColorTheme;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
   }
 
   .library-book-author {
     margin: 0 0 16px;
     font-size: 15px;
-    color: rgba(18, 24, 58, 0.55);
+    color: @libraryTextMuted;
   }
 
   .library-book-intro {
     font-size: 15px;
     line-height: 1.75;
-    color: rgba(18, 24, 58, 0.78);
+    color: @libraryTextMuted;
     margin-bottom: 20px;
 
     p {
@@ -664,17 +687,17 @@
     padding: 12px 28px;
     font-size: 15px;
     font-weight: 600;
-    color: #fff;
-    background: #d4380d;
-    border-radius: 10px;
+    color: #faf8f4;
+    background: @textColorTheme;
+    border-radius: 2px;
     text-decoration: none;
-    border: 1px solid transparent;
+    border: 1px solid @textColorTheme;
     box-sizing: border-box;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease;
 
     &:hover {
-      background: #ad2102;
-      transform: translateY(-1px);
+      background: lighten(@textColorTheme, 8%);
+      border-color: lighten(@textColorTheme, 8%);
     }
   }
 
@@ -682,18 +705,20 @@
     margin: 0 0 18px;
     font-size: 20px;
     font-weight: 600;
+    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
     color: @textColorTheme;
+    letter-spacing: 0.06em;
   }
 
   .library-reflections-empty {
     font-size: 14px;
-    color: rgba(18, 24, 58, 0.55);
+    color: @libraryTextMuted;
     margin: 0;
 
     code {
-      background: rgba(0, 0, 0, 0.06);
+      background: rgba(139, 115, 85, 0.1);
       padding: 2px 8px;
-      border-radius: 4px;
+      border-radius: 2px;
       font-size: 13px;
     }
   }
@@ -711,44 +736,46 @@
     flex-direction: column;
     gap: 8px;
     padding: 20px 22px;
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid rgba(18, 24, 58, 0.06);
-    box-shadow: 0 4px 16px rgba(50, 50, 50, 0.05);
+    background: @bgCard;
+    border-radius: 2px;
+    border: 1px solid @accentLine;
+    box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
     text-decoration: none;
     color: inherit;
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
-      box-shadow: 0 8px 28px rgba(50, 50, 50, 0.1);
-      transform: translateY(-2px);
+      border-color: rgba(139, 115, 85, 0.45);
+      box-shadow: 0 6px 20px rgba(26, 34, 51, 0.08);
     }
   }
 
   .library-reflection-card-title {
     font-size: 17px;
     font-weight: 600;
+    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
     color: @textColorTheme;
+    letter-spacing: 0.04em;
   }
 
   .library-reflection-card-author {
     font-size: 14px;
-    color: #d4380d;
+    color: @libraryAccent;
     font-weight: 500;
   }
 
   .library-reflection-card-excerpt {
     font-size: 14px;
     line-height: 1.55;
-    color: rgba(18, 24, 58, 0.65);
+    color: @libraryTextMuted;
   }
 
   .library-note-article {
-    background: #fff;
-    border-radius: 12px;
+    background: @bgCard;
+    border-radius: 2px;
     padding: 32px 36px 28px;
-    box-shadow: 0 4px 20px rgba(50, 50, 50, 0.06);
-    border: 1px solid rgba(18, 24, 58, 0.06);
+    box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
+    border: 1px solid @accentLine;
     max-width: 800px;
   }
 
@@ -756,21 +783,23 @@
     margin: 0 0 10px;
     font-size: 24px;
     font-weight: 600;
+    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
     color: @textColorTheme;
     line-height: 1.35;
+    letter-spacing: 0.06em;
   }
 
   .library-note-byline {
     margin: 0 0 28px;
     font-size: 15px;
-    color: #d4380d;
+    color: @libraryAccent;
     font-weight: 500;
   }
 
   .library-note-body {
     font-size: 16px;
     line-height: 1.85;
-    color: rgba(18, 24, 58, 0.88);
+    color: @textColorTheme;
 
     p {
       margin: 0 0 16px;
@@ -784,7 +813,7 @@
   .library-md-content {
     font-size: 15px;
     line-height: 1.8;
-    color: rgba(18, 24, 58, 0.88);
+    color: @textColorTheme;
 
     > *:first-child {
       margin-top: 0;
@@ -804,6 +833,7 @@
     h4 {
       margin: 20px 0 10px;
       font-weight: 600;
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
       color: @textColorTheme;
       line-height: 1.35;
     }
@@ -831,7 +861,7 @@
     }
 
     a {
-      color: #d4380d;
+      color: @libraryAccent;
       text-decoration: none;
 
       &:hover {
@@ -842,16 +872,16 @@
     code {
       font-size: 0.9em;
       padding: 2px 6px;
-      background: rgba(0, 0, 0, 0.06);
-      border-radius: 4px;
+      background: rgba(139, 115, 85, 0.1);
+      border-radius: 2px;
     }
 
     blockquote {
       margin: 14px 0;
       padding: 8px 16px;
-      border-left: 3px solid rgba(212, 56, 13, 0.35);
-      color: rgba(18, 24, 58, 0.7);
-      background: rgba(0, 0, 0, 0.02);
+      border-left: 3px solid @accentLine;
+      color: @libraryTextMuted;
+      background: rgba(139, 115, 85, 0.06);
     }
   }
 }

@@ -1,3 +1,5 @@
+@import './public/color.less';
+
 // ===== 暗黑模式样式覆盖 =====
 // 通过 html.dark-mode 全量覆盖浅色配色，颜色变量集中维护
 @dark-bg: #14161c;
@@ -32,6 +34,7 @@ html.dark-mode {
   }
   .header .header-top .h-right .select a {
     color: @dark-text;
+    border-bottom-color: rgba(200, 175, 130, 0.55);
   }
   .header .header-top .h-right-close svg path[fill] {
     fill: @dark-text !important;
@@ -40,16 +43,38 @@ html.dark-mode {
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45);
   }
 
-  // ===== Header body 背景渐变 =====
+  // ===== Header body：保留底图 + 更深蒙版 =====
   .header-body-background {
-    background: linear-gradient(to top, #1a1d27, #21242f) !important;
+    background-image: linear-gradient(
+        rgba(12, 14, 20, 0.78),
+        rgba(12, 14, 20, 0.78)
+      ),
+      url('../image/cover.png') !important;
+    background-size: cover !important;
+    background-position: center 40% !important;
+    background-repeat: no-repeat !important;
   }
+
+  .header-body-background::before {
+    display: none;
+  }
+
   .header-body-background-content {
     p,
     h1,
     h2,
     span {
       color: @dark-text !important;
+    }
+
+    .site-hero-title {
+      color: #f2efe8 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .site-hero-avatar {
+      border-color: rgba(255, 248, 240, 0.35);
+      background: rgba(0, 0, 0, 0.35);
     }
   }
 
@@ -63,7 +88,8 @@ html.dark-mode {
   .tag-content,
   .links-content {
     background-color: @dark-bg-elevated !important;
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.45);
+    box-shadow: none;
+    border: 1px solid @dark-border;
     color: @dark-text;
   }
 
@@ -92,8 +118,9 @@ html.dark-mode {
     .previous,
     .next {
       color: @dark-text-muted;
-      box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: none;
       background: @dark-bg-elevated;
+      border: 1px solid @dark-border;
     }
   }
 
@@ -192,6 +219,18 @@ html.dark-mode {
     }
   }
 
+  // ===== 任务页笔记本卡片（内联样式 .card 浅色底，需高于单类 .card 优先级；勿用 !important，保留侧边色条 colorClick 内联样式） =====
+  #article.post-content-info .card {
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      rgba(255, 255, 255, 0.11) 0 1.2rem
+    );
+    background-color: @dark-bg-soft;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05) inset,
+      2px 4px 12px 0 rgba(0, 0, 0, 0.35);
+    color: @dark-text;
+  }
+
   // ===== 文章上下篇（在 .post-content 外，需单独覆盖浅色底与卡片） =====
   .post-paging {
     background: transparent !important;
@@ -273,14 +312,17 @@ html.dark-mode {
     .library-note-article,
     .library-reflection-card,
     .library-weread-card,
-    .library-weread-search,
-    .library-weread-body {
+    .library-weread-search {
       background: @dark-bg-elevated !important;
       border-color: @dark-border !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+      box-shadow: none !important;
+    }
+    .library-weread-body {
+      background: @dark-bg !important;
     }
     .library-weread-top {
-      background: @dark-bg-soft !important;
+      background: @dark-bg !important;
+      border-bottom-color: @dark-border !important;
     }
     .library-weread-brand-text,
     .library-weread-section-title,
@@ -309,16 +351,25 @@ html.dark-mode {
     .library-book-author,
     .library-book-intro,
     .library-reflection-card-excerpt,
-    .library-note-byline,
     .library-note-body,
     .library-md-content,
     .library-empty,
     .library-breadcrumb {
       color: @dark-text-muted !important;
     }
+    .library-note-byline,
+    .library-reflection-card-author {
+      color: #c9b896 !important;
+    }
     .library-md-content {
       h1, h2, h3, h4 {
         color: @dark-text !important;
+      }
+      a {
+        color: #c9b896;
+        &:hover {
+          color: #e8dcc8;
+        }
       }
       code {
         background: @dark-bg-soft;
@@ -329,15 +380,26 @@ html.dark-mode {
         color: @dark-text-muted;
       }
     }
+    .library-book-page .library-read-btn:not(.library-read-btn--download),
+    .library-note-page .library-read-btn:not(.library-read-btn--download) {
+      background: @dark-text !important;
+      color: @dark-bg !important;
+      border-color: @dark-text !important;
+      &:hover {
+        background: #e8eaef !important;
+        color: @dark-bg !important;
+        border-color: #e8eaef !important;
+      }
+    }
     .library-page--weread.library-book-page .library-read-btn--download {
       background: @dark-bg-elevated !important;
-      color: #93c5fd !important;
-      border-color: rgba(147, 197, 253, 0.45) !important;
+      color: #c9b896 !important;
+      border-color: rgba(201, 184, 150, 0.45) !important;
 
       &:hover {
         background: @dark-bg-soft !important;
-        color: #bfdbfe !important;
-        border-color: rgba(147, 197, 253, 0.65) !important;
+        color: #e8dcc8 !important;
+        border-color: rgba(201, 184, 150, 0.55) !important;
       }
     }
     .library-pdf-page--fullscreen {
@@ -431,9 +493,9 @@ html.dark-mode {
   margin-left: 12px;
   border: none;
   background: transparent;
-  color: #12183a;
+  color: @textColorTheme;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 2px;
   transition: background 0.2s ease, color 0.2s ease, transform 0.3s ease;
 
   svg {
@@ -502,7 +564,8 @@ html.dark-mode .plan-day,
 html.dark-mode .planAudio-item,
 html.dark-mode .library-book-hero,
 html.dark-mode .library-note-article,
-html.dark-mode .library-reflection-card {
+html.dark-mode .library-reflection-card,
+html.dark-mode #article.post-content-info .card {
   transition: background-color 0.25s ease, color 0.25s ease,
     border-color 0.25s ease, box-shadow 0.25s ease;
 }

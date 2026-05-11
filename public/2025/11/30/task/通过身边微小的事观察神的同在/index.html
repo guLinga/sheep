@@ -29,6 +29,9 @@
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
 <link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
 <script>
   (function () {
@@ -433,10 +436,11 @@
 <script>
   function colorClick(color) {
     const cardList = document.querySelectorAll('.card')
+    const dark = document.documentElement.classList.contains('dark-mode')
+    const baseBg = dark ? '#232733' : '#e4e4e4'
     cardList.forEach((item) => {
-      console.log(item.style)
       item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
-      item.style.backgroundColor = '#e4e4e4'
+      item.style.backgroundColor = baseBg
     })
   }
   Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {

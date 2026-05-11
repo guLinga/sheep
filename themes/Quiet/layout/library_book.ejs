@@ -2,14 +2,14 @@
 <% var book = page.book %>
 <% var coverSrc = book.cover || theme.default_cover %>
 <div class="home library-page library-page--weread library-book-page">
+  <%- partial('_widget/header_body',{message:theme.headers.home.message,icon:theme.headers.home.icon}) %>
   <div class="main library-main">
     <div class="library-weread">
       <div class="library-weread-top">
         <div class="library-weread-inner">
-          <div class="library-weread-brand library-weread-brand--with-back">
+          <nav class="library-weread-subnav" aria-label="图书馆导航">
             <a href="<%= url_for('/library/') %>" class="library-weread-nav-back">← 图书馆</a>
-            <span class="library-weread-brand-text"><%= theme.title %> · 图书馆</span>
-          </div>
+          </nav>
         </div>
       </div>
 

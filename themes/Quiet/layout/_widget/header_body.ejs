@@ -1,11 +1,10 @@
 <div class="header-body-background">
   <div class="header-body-background-content">
-    <span>
-      <img src="<%= theme.baseUrl %><%- icon %>" alt="Quiet" />
-    </span>
-
-    <h2 style="color: black; font-size: 20px; font-weight: 600">
-      <%- message %>
-    </h2>
+    <div class="site-hero-brand">
+      <span class="site-hero-avatar">
+        <img src="<%= theme.baseUrl %><%- icon %>" alt="<%- message %>" />
+      </span>
+      <h1 class="site-hero-title"><%- message %></h1>
+    </div>
   </div>
 </div>

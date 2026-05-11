@@ -5,7 +5,7 @@
 .footer .Copyright {
   display: flex;
   margin-left: 18px;
-  color: #898fa0;
+  color: #5a6270;
   font-size: 14px;
   flex-basis: 0;
   justify-content: flex-start;
@@ -25,7 +25,7 @@
   margin-right: 10px;
   width: 30px;
   height: 30px;
-  color: #898fa0;
+  color: #5a6270;
   justify-content: center;
   align-items: center;
 }

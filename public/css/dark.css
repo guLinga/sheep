@@ -18,6 +18,7 @@ html.dark-mode .header .header-top .h-right ul li a:hover {
 }
 html.dark-mode .header .header-top .h-right .select a {
   color: #e6e8ee;
+  border-bottom-color: rgba(200, 175, 130, 0.55);
 }
 html.dark-mode .header .header-top .h-right-close svg path[fill] {
   fill: #e6e8ee !important;
@@ -26,13 +27,27 @@ html.dark-mode .header .header-move1 {
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45);
 }
 html.dark-mode .header-body-background {
-  background: linear-gradient(to top, #1a1d27, #21242f) !important;
+  background-image: linear-gradient(rgba(12, 14, 20, 0.78), rgba(12, 14, 20, 0.78)), url('../image/cover.png') !important;
+  background-size: cover !important;
+  background-position: center 40% !important;
+  background-repeat: no-repeat !important;
+}
+html.dark-mode .header-body-background::before {
+  display: none;
 }
 html.dark-mode .header-body-background-content p,
 html.dark-mode .header-body-background-content h1,
 html.dark-mode .header-body-background-content h2,
 html.dark-mode .header-body-background-content span {
   color: #e6e8ee !important;
+}
+html.dark-mode .header-body-background-content .site-hero-title {
+  color: #f2efe8 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+html.dark-mode .header-body-background-content .site-hero-avatar {
+  border-color: rgba(255, 248, 240, 0.35);
+  background: rgba(0, 0, 0, 0.35);
 }
 html.dark-mode .home .main .post-card-display,
 html.dark-mode .home .main .post-block-content,
@@ -43,7 +58,8 @@ html.dark-mode .categories-content,
 html.dark-mode .tag-content,
 html.dark-mode .links-content {
   background-color: #1d2029 !important;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.45);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: #e6e8ee;
 }
 html.dark-mode .home .main .post-card-display a .post-card-title,
@@ -77,8 +93,9 @@ html.dark-mode .home .change-page .next,
 html.dark-mode .home .change-page .p-page a .next,
 html.dark-mode .home .change-page .n-page a .next {
   color: #9aa0ad;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: none;
   background: #1d2029;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 html.dark-mode .sidebar {
   background: #1d2029 !important;
@@ -169,6 +186,12 @@ html.dark-mode #article thead th {
 html.dark-mode #article tbody td {
   color: #9aa0ad;
 }
+html.dark-mode #article.post-content-info .card {
+  background: repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), rgba(255, 255, 255, 0.11) 0 1.2rem);
+  background-color: #232733;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05) inset, 2px 4px 12px 0 rgba(0, 0, 0, 0.35);
+  color: #e6e8ee;
+}
 html.dark-mode .post-paging {
   background: transparent !important;
 }
@@ -239,14 +262,17 @@ html.dark-mode .library-page .library-book-hero,
 html.dark-mode .library-page .library-note-article,
 html.dark-mode .library-page .library-reflection-card,
 html.dark-mode .library-page .library-weread-card,
-html.dark-mode .library-page .library-weread-search,
-html.dark-mode .library-page .library-weread-body {
+html.dark-mode .library-page .library-weread-search {
   background: #1d2029 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: none !important;
+}
+html.dark-mode .library-page .library-weread-body {
+  background: #14161c !important;
 }
 html.dark-mode .library-page .library-weread-top {
-  background: #232733 !important;
+  background: #14161c !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 html.dark-mode .library-page .library-weread-brand-text,
 html.dark-mode .library-page .library-weread-section-title,
@@ -275,18 +301,27 @@ html.dark-mode .library-page .library-weread-card-cover {
 html.dark-mode .library-page .library-book-author,
 html.dark-mode .library-page .library-book-intro,
 html.dark-mode .library-page .library-reflection-card-excerpt,
-html.dark-mode .library-page .library-note-byline,
 html.dark-mode .library-page .library-note-body,
 html.dark-mode .library-page .library-md-content,
 html.dark-mode .library-page .library-empty,
 html.dark-mode .library-page .library-breadcrumb {
   color: #9aa0ad !important;
 }
+html.dark-mode .library-page .library-note-byline,
+html.dark-mode .library-page .library-reflection-card-author {
+  color: #c9b896 !important;
+}
 html.dark-mode .library-page .library-md-content h1,
 html.dark-mode .library-page .library-md-content h2,
 html.dark-mode .library-page .library-md-content h3,
 html.dark-mode .library-page .library-md-content h4 {
   color: #e6e8ee !important;
+}
+html.dark-mode .library-page .library-md-content a {
+  color: #c9b896;
+}
+html.dark-mode .library-page .library-md-content a:hover {
+  color: #e8dcc8;
 }
 html.dark-mode .library-page .library-md-content code {
   background: #232733;
@@ -296,15 +331,27 @@ html.dark-mode .library-page .library-md-content blockquote {
   background: #232733;
   color: #9aa0ad;
 }
+html.dark-mode .library-page .library-book-page .library-read-btn:not(.library-read-btn--download),
+html.dark-mode .library-page .library-note-page .library-read-btn:not(.library-read-btn--download) {
+  background: #e6e8ee !important;
+  color: #14161c !important;
+  border-color: #e6e8ee !important;
+}
+html.dark-mode .library-page .library-book-page .library-read-btn:not(.library-read-btn--download):hover,
+html.dark-mode .library-page .library-note-page .library-read-btn:not(.library-read-btn--download):hover {
+  background: #e8eaef !important;
+  color: #14161c !important;
+  border-color: #e8eaef !important;
+}
 html.dark-mode .library-page .library-page--weread.library-book-page .library-read-btn--download {
   background: #1d2029 !important;
-  color: #93c5fd !important;
-  border-color: rgba(147, 197, 253, 0.45) !important;
+  color: #c9b896 !important;
+  border-color: rgba(201, 184, 150, 0.45) !important;
 }
 html.dark-mode .library-page .library-page--weread.library-book-page .library-read-btn--download:hover {
   background: #232733 !important;
-  color: #bfdbfe !important;
-  border-color: rgba(147, 197, 253, 0.65) !important;
+  color: #e8dcc8 !important;
+  border-color: rgba(201, 184, 150, 0.55) !important;
 }
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-weread--pdf-fullscreen,
 html.dark-mode .library-page .library-pdf-page--fullscreen .library-pdf-frame-wrap,
@@ -377,9 +424,9 @@ html.dark-mode .theme-toggle svg {
   margin-left: 12px;
   border: none;
   background: transparent;
-  color: #12183a;
+  color: #1a2233;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 2px;
   transition: background 0.2s ease, color 0.2s ease, transform 0.3s ease;
 }
 .theme-toggle svg {
@@ -432,6 +479,7 @@ html.dark-mode .plan-day,
 html.dark-mode .planAudio-item,
 html.dark-mode .library-book-hero,
 html.dark-mode .library-note-article,
-html.dark-mode .library-reflection-card {
+html.dark-mode .library-reflection-card,
+html.dark-mode #article.post-content-info .card {
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }

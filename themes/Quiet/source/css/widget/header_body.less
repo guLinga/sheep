@@ -1,16 +1,13 @@
 @import '../public/header_background.less';
 
-.header-background() {
-  width: 100%;
-  display: flex;
-  flex-shrink: 0;
-  background: linear-gradient(to top, #f1f5fb, #f9fcff);
-  height: 466px;
-}
-
 .header-body-background {
   .header-background();
   &-content {
-    .base-header-content-style();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 100%;
   }
 }
