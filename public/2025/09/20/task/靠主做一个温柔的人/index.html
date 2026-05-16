@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-靠主做一个温柔的人</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<script>
+(function () {
+  var TOKEN = "change-me-to-a-long-random-string";
+  var BASE = "/sheep";
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/sheep/css/index.css">
+
+<meta property="og:description" content="靠主做一个温柔的人">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="靠主做一个温柔的人">
+ -->
+
+<script src="/sheep/js/jquery.min.js"></script>
+
+
+<script src="/sheep/js/index.js"></script>
+
+
+<script src="/sheep/js/fancybox.umd.js"></script>
+
+
+<script src="/sheep/js/fancybox-images.js"></script>
+
+
+<script src="/sheep/js/gitalk.min.js"></script>
+
+
+<script src="/sheep/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/sheep/">
+        <img src="/sheep/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/sheep/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+    </div>
+    <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/sheep/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/library">图书馆</a>
+    </li>
+    
+  </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <h2 id="一、什么是温柔"><a href="#一、什么是温柔" class="headerlink" title="一、什么是温柔"></a>一、什么是温柔</h2><h3 id="根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。"><a href="#根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。" class="headerlink" title="根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。"></a>根据圣经原则，温柔并非软弱，而是一种源于对上帝顺服、对他人存谦卑与怜悯的心志，在言行中展现出节制、恩慈与包容的生命特质。</h3><ol>
+<li><p>源于上帝的性情：上帝本身是温柔的，耶稣基督“心里柔和谦卑”（马太福音11:29），信徒被呼召效法这种样式，让温柔成为圣灵所结的果子之一（加拉太书5:22-23）。</p>
+</li>
+<li><p>与谦卑相伴：温柔不是自我压抑，而是认识到自己的有限，依靠上帝的智慧待人，正如彼得前书3:4所言，要以“温柔、安静的心为装饰”，这种品格在上帝眼中极为宝贵。</p>
+</li>
+<li><p>体现对他人的爱与包容：面对冲突或他人的过犯，温柔的人会选择以恩慈回应，而非急躁或报复，正如以弗所书4:2所劝勉的，“凡事谦虚、温柔、忍耐，用爱心互相宽容”。</p>
+</li>
+<li><p>带来生命的果效：圣经应许“温柔的人必承受地土”（马太福音5:5），这里的“承受地土”象征得着上帝所赐的丰盛生命与属天的福气，也指向温柔的人能在人际关系中建立和平，反映上帝的和睦。</p>
+</li>
+</ol>
+<h2 id="二、怎么做一个温柔的人"><a href="#二、怎么做一个温柔的人" class="headerlink" title="二、怎么做一个温柔的人"></a>二、怎么做一个温柔的人</h2><h3 id="根据圣经教导，成为温柔的人核心在于效法上帝的性情、依靠圣灵更新，并在生活中践行具体的真理，可从以下方面实践："><a href="#根据圣经教导，成为温柔的人核心在于效法上帝的性情、依靠圣灵更新，并在生活中践行具体的真理，可从以下方面实践：" class="headerlink" title="根据圣经教导，成为温柔的人核心在于效法上帝的性情、依靠圣灵更新，并在生活中践行具体的真理，可从以下方面实践："></a>根据圣经教导，成为温柔的人核心在于效法上帝的性情、依靠圣灵更新，并在生活中践行具体的真理，可从以下方面实践：</h3><ol>
+<li><p>先追求内心对上帝的顺服与谦卑：温柔的根源是认识到自己的有限，愿意让上帝掌管生命。正如耶稣“心里柔和谦卑”（马太福音11:29），祂的温柔源于对天父旨意的完全顺服。我们需通过祷告、研读圣经，放下自我中心的骄傲，承认“离了上帝，我们不能做什么”（约翰福音15:5），让谦卑的生命态度成为温柔的基础。</p>
+</li>
+<li><p>以恩慈对待他人，克制情绪与私欲：面对他人的冒犯、误解或冲突时，圣经劝勉“各人要快快地听，慢慢地说，慢慢地动怒”（雅各书1:19）。温柔不是纵容错误，而是不被急躁、愤怒控制，选择用爱心回应——比如耐心倾听他人观点，不轻易指责，即使纠正别人也带着“温柔的心”（歌罗西书4:6）。</p>
+</li>
+<li><p>效法圣灵所结的果子，让温柔自然流露：圣经指出，温柔是“圣灵所结的果子”之一（加拉太书5:22-23），不是靠自己勉强伪装，而是靠圣灵在生命中工作。我们需常常亲近上帝，顺服圣灵的引导，逐渐摆脱自私、暴躁的旧生命，让温柔成为言行的自然表现，而非刻意的“表演”。</p>
+</li>
+<li><p>以耶稣为榜样，活出舍己的爱：耶稣的温柔体现在祂对罪人的接纳（如与税吏撒该同席，路加福音19:1-10）、对软弱者的怜悯（如医治患病的人，马可福音1:40-41），以及面对十字架的顺服。成为温柔的人，就是效法祂“不求自己的益处，只求别人的益处”（哥林多前书10:24），在小事上愿意让步，用行动彰显上帝的爱与和平。</p>
+</li>
+</ol>
+<h2 id="三、与神、与人"><a href="#三、与神、与人" class="headerlink" title="三、与神、与人"></a>三、与神、与人</h2><h3 id="基督徒的温柔不是单一情境的“脾气好”，而是在与神、与人的核心关系中，以基督为榜样活出的生命态度，在以下关键方面践行："><a href="#基督徒的温柔不是单一情境的“脾气好”，而是在与神、与人的核心关系中，以基督为榜样活出的生命态度，在以下关键方面践行：" class="headerlink" title="基督徒的温柔不是单一情境的“脾气好”，而是在与神、与人的核心关系中，以基督为榜样活出的生命态度，在以下关键方面践行："></a>基督徒的温柔不是单一情境的“脾气好”，而是在与神、与人的核心关系中，以基督为榜样活出的生命态度，在以下关键方面践行：</h3><ol>
+<li><p>对神：在顺服中显温柔——信靠祂的主权，不凭血气对抗<br>对神的温柔，核心是“承认祂的主权高于自己的意愿”，不因环境、计划不符而抱怨或悖逆，而是以顺服的心接纳祂的带领：<br>面对神的“延迟”或“不同带领”时（如祷告未即时应允、人生计划被改变），不急躁质问“为什么”，而是温柔祷告“主啊，我虽不明白，但相信你的安排最美，求你带领我顺服”，正如耶稣在客西马尼园的祷告“不要照我的意思，只要照你的意思”（太26:39），显明对神主权的全然信靠；<br>面对神的管教或提醒时（如圣灵指出自己的罪、圣经真理纠正错误观念），不抗拒或辩解，而是温柔悔改“主啊，求你赦免我的悖逆，我愿意按你的话调整生命”，不凭血气维护“老我”，而是以谦卑的心顺服神的光照。</p>
+</li>
+<li><p>对家人：在相爱中显温柔——包容软弱，拒绝苛责<br>家人是神赐下的核心关系，温柔需在日常互动中具体流露，避免因“亲近”而放纵血气：<br>对配偶：不因熟悉而忽视尊重，比如面对意见分歧时，不强行说服或冷战，而是温柔倾听“我理解你的想法，我们一起祷告求主给智慧”；面对对方的疏忽（如家务遗漏），不指责“你总不放在心上”，而是包容“没关系，我们一起补做”；<br>对子女：不凭情绪管教，比如孩子犯错时，不暴躁打骂或贴标签，而是温柔教导，用耐心代替催逼，用接纳代替挑剔；<br>对父母：不因“长大”而轻慢，比如面对父母的传统观念或唠叨时，不打断或反驳，而是温柔回应，尊重他们的经历，包容认知差异。</p>
+</li>
+<li><p>对弟兄姊妹：在相爱中显温柔——扶持软弱，拒绝论断<br>教会是基督的身体，温柔是维系肢体合一的关键，需在真理中带着爱心相待：<br>面对弟兄姊妹的软弱时（如灵修懈怠、服事失误、偶尔犯罪），不指责“你怎么不追求”，而是按圣经教导“用温柔的心把他挽回过来”（加6:1），我们可以一起定个简单计划，互相提醒”，用同理和扶持代替批评；<br>面对信仰观点差异时（如查经时的不同领受、服事方式的分歧），不强行争辩或结党，而是温柔分享“你的看法给我很多启发，我也谈谈我的领受，我们一起求主光照”，在真理中保持开放，不凭血气划分“对与错”；<br>面对弟兄姊妹的求助时（如生活困难、心灵低谷），不冷漠推诿，而是温柔回应“我愿意陪你祷告，也可以帮你做些什么”，用实际行动彰显“彼此相爱”的诫命，不因忙碌或麻烦而拒绝伸出援手。</p>
+</li>
+<li><p>对世人：在见证中显温柔——以爱回应，拒绝对立<br>对非信徒的温柔，是福音见证的重要部分，需避免因“信仰差异”而产生对立，以温柔彰显基督的爱：<br>面对非信徒的质疑或误解时（如对基督教的偏见、对信仰的嘲讽），不急于反驳或争辩，而是先倾听对方的顾虑，再温柔分享，用生命见证代替“辩论”，让对方感受到信仰的温度；<br>面对不公或冒犯时（如职场被排挤、生活中被误解），不凭血气报复或指责，而是靠主忍耐，用温柔的行为回应，比如被冤枉时不急于辩解，而是说“我知道你可能有误会，我们可以慢慢沟通”，正如彼得劝勉“你们的言语要常常带着和气，好像用盐调和，就可知道该怎样回答各人”（西4:6），让温柔成为福音的“桥梁”。</p>
+</li>
+<li><p>对自己：在恩典中显温柔——接纳不完美，拒绝苛责<br>温柔不仅对他人，也包括对自己——不因“没做到完美”而自我否定，而是以神的恩典接纳软弱：<br>当自己犯错或没活出温柔时（如对家人发脾气、对他人论断），不陷入“我永远改不了”的绝望，而是温柔向神认罪“主啊，我又靠自己跌倒了，求你赦免我，再赐我力量重新开始”，明白神的恩典大于一切过犯，接纳“成长需要过程”，不凭血气自我攻击；<br>当面对自己的局限时（如能力不足、时间有限，无法满足所有人的期待），不焦虑自责，而是温柔祷告“主啊，我知道自己有限，求你带领我尽我所能，也接纳我做不到的部分”，不被“完美主义”辖制，以神的眼光看待自己的价值。</p>
+</li>
+</ol>
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><h3 id="温柔的核心——“凡事以神为中心，以爱心为根基”"><a href="#温柔的核心——“凡事以神为中心，以爱心为根基”" class="headerlink" title="温柔的核心——“凡事以神为中心，以爱心为根基”"></a>温柔的核心——“凡事以神为中心，以爱心为根基”</h3><p>&ensp;&ensp;&ensp;&ensp;基督徒需践行温柔的每一个方面，本质都是“让基督的生命透过我们流露”：对神的温柔是顺服主权，对家人的温柔是包容相爱，对弟兄姊妹的温柔是肢体扶持，对世人的温柔是福音见证，对自己的温柔是恩典接纳。这一切都不是靠自己的脾气修炼，而是靠圣灵治死血气，让“基督在我里面活着”（加2:20），才能在每一个关系、每一个情境中，自然活出以神为中心的温柔生命。</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2025年09月20日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    const dark = document.documentElement.classList.contains('dark-mode')
+    const baseBg = dark ? '#232733' : '#e4e4e4'
+    cardList.forEach((item) => {
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = baseBg
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+     
+  <a href="/sheep/2025/10/05/task/%E5%BF%8D%E8%80%90/">
+    <div class="post-paging-last">
+      <span>上一篇</span>
+      <p>忍耐</p>
+    </div>
+  </a>
+     
+  <a href="/sheep/2025/09/07/task/%E9%9D%A0%E4%B8%BB%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E8%87%AA%E6%88%91%E7%BA%A6%E6%9D%9F%E7%9A%84%E4%BA%BA/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>靠主成为一个自我约束的人</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/sheep/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+
