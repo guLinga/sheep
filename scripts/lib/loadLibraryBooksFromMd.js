@@ -4,6 +4,11 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('hexo-front-matter').parse
 
+/** hexo-front-matter 的正则只认 \\n；Windows CRLF 会导致整篇被当作 _content */
+function normalizeEol(text) {
+  return String(text).replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+}
+
 async function renderMd(hexo, text) {
   const t = (text || '').trim()
   if (!t) return ''
@@ -12,7 +17,7 @@ async function renderMd(hexo, text) {
 
 async function loadNote(hexo, filePath, noteId) {
   const raw = fs.readFileSync(filePath, 'utf8')
-  const data = matter(raw)
+  const data = matter(normalizeEol(raw))
   const body = data._content || ''
   const id = data.id || noteId
   const title = data.title || id
@@ -28,10 +33,11 @@ async function loadBookDir(hexo, root, dirName) {
   if (!fs.existsSync(indexPath)) return null
 
   const raw = fs.readFileSync(indexPath, 'utf8')
-  const data = matter(raw)
+  const data = matter(normalizeEol(raw))
   const body = data._content || ''
   const bookId = dirName
   const cover = data.cover
+  
   if (!cover) {
     hexo.log.warn('[library] 跳过 %s：index.md 缺少 front matter 字段 cover', bookId)
     return null
