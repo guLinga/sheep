@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-徐佳恩的论属世之心心得</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<script>
+(function () {
+  var TOKEN = "change-me-to-a-long-random-string";
+  var BASE = "/sheep";
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/sheep/css/index.css">
+
+<meta property="og:description" content="">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="">
+ -->
+
+<script src="/sheep/js/jquery.min.js"></script>
+
+
+<script src="/sheep/js/index.js"></script>
+
+
+<script src="/sheep/js/fancybox.umd.js"></script>
+
+
+<script src="/sheep/js/fancybox-images.js"></script>
+
+
+<script src="/sheep/js/gitalk.min.js"></script>
+
+
+<script src="/sheep/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/sheep/">
+        <img src="/sheep/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/sheep/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/sheep/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li class="select">
+          <a href="/sheep/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+    </div>
+    <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/sheep/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/sheep/library">图书馆</a>
+    </li>
+    
+  </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+
+
+<div class="home library-page library-page--weread library-note-page">
+  <div class="header-body-background">
+  <div class="header-body-background-content">
+    <div class="site-hero-brand">
+      <span class="site-hero-avatar">
+        <img src="/sheep/image/logo.png" alt="迦南书简" />
+      </span>
+      <h1 class="site-hero-title">迦南书简</h1>
+    </div>
+  </div>
+</div>
+
+  <div class="main library-main">
+    <div class="library-weread">
+      <div class="library-weread-top">
+        <div class="library-weread-inner">
+          <nav class="library-weread-subnav" aria-label="图书内导航">
+            <a href="/sheep/library/book/sample-book/" class="library-weread-nav-back">← 论属世之心</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="library-weread-body">
+        <div class="library-weread-inner">
+          <article class="library-note-article" id="content">
+            <h1 class="library-note-heading">徐佳恩的论属世之心心得</h1>
+            <p class="library-note-byline">徐佳恩</p>
+            
+            <div class="library-note-body library-md-content"><h1 id="论属世之心读书笔记"><a href="#论属世之心读书笔记" class="headerlink" title="论属世之心读书笔记"></a>论属世之心读书笔记</h1><h2 id="1引言"><a href="#1引言" class="headerlink" title="1引言"></a>1引言</h2><p>天堂是什么？天堂就是在耶稣基督里与神的联合和交通。这是今生可以做到的事情。但是我们会发现，活在世上，有很多的事情来妨碍我们同时活在天上。</p>
+<p>新约的使徒们，他们在世上就是与神联合的：</p>
+<ul>
+<li><strong>约翰</strong>：“我们乃是与父并他儿子耶稣基督相交的”</li>
+<li><strong>保罗</strong>：“我们却是天上的国民”</li>
+<li><strong>保罗</strong>：“现在活着的不再是我，乃是基督在我里面活着；并且我如今肉身活着，是因信神的儿子而活。”</li>
+</ul>
+<p>使徒们活在地上，与我们一样受困于软弱，然而他们可以在地上活在天上。</p>
+<p>如今的世界，它的力量和权柄非但没有推进基督国度的荣耀，反倒大肆毁坏和遮盖。从来没有哪个时代能像我们这个时代，为我们陈设出如此之多的世俗虚幻的模样。</p>
+<p>面对这样的世界，我们应当放弃追求一切无法存到永远的事物，使徒也给出了十分充分有力的理由，那就是 <strong>“时候减少了”</strong>。</p>
+<blockquote>
+<p>“从此以后，那有妻子的，要像没有妻子；哀哭的，要像不哀哭；快乐的，要像不快乐；置买的，要像无有所得；用世物的，要像不用世物；因为这世界的样子将要过去了。”（林前 7:29-31）</p>
+</blockquote>
+<p>时候减少了，万物的结局近了。所以，尽管我们仍然活在地上，仍然享有这个世界给我们的许多安慰，但我们却要以客旅的眼光看待一切世物所带来的满足，这一切只为提升他的灵魂，使其更加圣洁、谦卑、合用、舍己，与神同行。</p>
+<p><strong>这本书的目的：</strong> 把我们的心带离那些注定消亡的虚空之事，安放在真实而永恒的事上。</p>
+<hr>
+<h2 id="2经文"><a href="#2经文" class="headerlink" title="2经文"></a>2经文</h2><blockquote>
+<p>“他们……专以地上的事为念。”——腓立比书 3:19</p>
+</blockquote>
+<p>这节经文特别针对反对福音的恶人，他们被称为是基督十字架的仇敌。保罗在18节说“许多人行事是基督十字架的仇敌。”</p>
+<h3 id="“地上的事”是什么？"><a href="#“地上的事”是什么？" class="headerlink" title="“地上的事”是什么？"></a>“地上的事”是什么？</h3><p>地上的事就是世界上的那些事，不论它们是：</p>
+<ul>
+<li>地上的美</li>
+<li>地上的荣耀</li>
+<li>地上的繁华</li>
+<li>地上的利益</li>
+<li>世俗的快乐和荣誉</li>
+</ul>
+<p>凡专以这其中任何事为念的人，都是地上的国民。</p>
+<blockquote>
+<p>紧接着20节说：“我们却是天上的国民”</p>
+</blockquote>
+<p>原文的意思可以理解为：“天国是我们的，我们是其中的公民，我们享有其中的权益。”既然我们是天国的公民，那么，我们的行为举止就要超越这地上的事。</p>
+<h3 id="教义性的真理"><a href="#教义性的真理" class="headerlink" title="教义性的真理"></a>教义性的真理</h3><p><strong>恶人与敬虔人存在着巨大差异。</strong> 恶人专以地上的事为念，敬虔人则按照天上的国民身份行事为人。</p>
+<hr>
+<h3 id="什么是恶人？"><a href="#什么是恶人？" class="headerlink" title="什么是恶人？"></a>什么是恶人？</h3><p>恶人就是基督十字架和敬虔之道的仇敌。细分的话又分为两种人：</p>
+<ol>
+<li><p><strong>第一种：</strong> “他们的神就是自己的肚腹”——这类人极其好色、醉酒、不洁，一切都是为了满足自己肉体的情欲。</p>
+</li>
+<li><p><strong>第二种：</strong> 看上去并非如此堕落，但他们也是专以地上的事为念，只顾享受地上的事。这些人正是基督十字架的隐秘仇敌，随着时间推移，他们的本性也必显露无疑。</p>
+</li>
+</ol>
+<hr>
+<h3 id="什么是“专以地上的事为念”？"><a href="#什么是“专以地上的事为念”？" class="headerlink" title="什么是“专以地上的事为念”？"></a>什么是“专以地上的事为念”？</h3><h4 id="重要澄清"><a href="#重要澄清" class="headerlink" title="重要澄清"></a>重要澄清</h4><p>“专以地上的事为念”的人，<strong>并不是指所有的享受地上事物的人</strong>。使用事物并不能被定罪为“专以地上的事为念”。保罗自己在腓立比书 4:12 中写道，他“知道怎样处卑贱，也知道怎样处丰富”。一个人拥有地上事物，并且是通过正当方式获取的应得之物，就不能被指控为恶人。</p>
+<hr>
+<h2 id="3属世之心的特征"><a href="#3属世之心的特征" class="headerlink" title="3属世之心的特征"></a>3属世之心的特征</h2><h3 id="特征一：看地上之事是最重要的"><a href="#特征一：看地上之事是最重要的" class="headerlink" title="特征一：看地上之事是最重要的"></a>特征一：看地上之事是最重要的</h3><p><strong>例子：</strong> “若我能与别人一样拥有这样或那样东西，我该多么幸福啊。那些人拥有自己的房子，家具众多，收入丰盈……这些事都极其美好，令人快乐。人活得幸福快乐，皆取决于此。”</p>
+<p>当一个人可以在任何属世之事上获得幸福，他就是在“专以地上的事为念”。神从未赋予世物如此突出的地位。</p>
+<p><strong>测试方法：</strong> 什么是你最看重的？人的心与人所看重的是一致的。</p>
+<h3 id="创世记的对比（创-27-28-39）"><a href="#创世记的对比（创-27-28-39）" class="headerlink" title="创世记的对比（创 27:28-39）"></a>创世记的对比（创 27:28-39）</h3><table>
+<thead>
+<tr>
+<th>对象</th>
+<th>祝福顺序</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>雅各（敬虔人）</td>
+<td>“天上的甘露”在前，“地上的肥土”在后</td>
+<td>最关注天上的甘露</td>
+</tr>
+<tr>
+<td>以扫（属世之人）</td>
+<td>“地上的肥土”在前，“天上的甘露”在后</td>
+<td>最关注地上的祝福</td>
+</tr>
+</tbody></table>
+<p>敬虔人也需要地上之物（基督说过“你们所需用的，你们的天父早已知道了”），但对敬虔人来说，最为关注的首先是天上的甘露，其次才是地上的祝福。</p>
+<hr>
+<h3 id="特征二：非暗示性的心思或想法"><a href="#特征二：非暗示性的心思或想法" class="headerlink" title="特征二：非暗示性的心思或想法"></a>特征二：非暗示性的心思或想法</h3><p>藉着想法了解自己的内心，比藉着自己的言行更能清楚地明白自己的内心。想法被称为“心的长子”。</p>
+<blockquote>
+<p>“他心怎样思量，他为人就是怎样。”（箴 23:7）</p>
+</blockquote>
+<p><strong>最佳省察方法：</strong> 在内室省察，看你自己私下里的内在想法是什么。</p>
+<p><strong>为什么说“非暗示性”？</strong> 因为魔鬼有时会把邪恶的念头放到最圣洁之人的心里。这里指的心思或想法是指你自己认为哪些想法对灵魂来说特别甜美有益——你的灵魂会从其中得到甜蜜和满足。</p>
+<p>如果你的所思所想聚焦在地上之事，而且这些事似乎比任何东西都能满足你的心，你就是在“专以地上的事为念”。</p>
+<hr>
+<h3 id="特征三：紧贴地面或紧贴尘土"><a href="#特征三：紧贴地面或紧贴尘土" class="headerlink" title="特征三：紧贴地面或紧贴尘土"></a>特征三：紧贴地面或紧贴尘土</h3><p>意思是<strong>尽情品味尘世的事物</strong>。</p>
+<p><strong>比喻：</strong> 就如恋爱中男人的心紧紧爱着女人一样（像参孙的心紧贴大利拉），无论你如何谈论这个女人不好，如何讲说其他女人的优点，他的心仍紧紧贴近这个女人。同样，面对世上的事，别人向你说这多不好，你仍然尽情地品味。</p>
+<hr>
+<h3 id="特征四：心里满是地上的忧虑"><a href="#特征四：心里满是地上的忧虑" class="headerlink" title="特征四：心里满是地上的忧虑"></a>特征四：心里满是地上的忧虑</h3><p>忧虑什么呢？吃什么、喝什么、穿什么、如何养活自己和家人、以后该怎么办。</p>
+<h4 id="导致人为世俗事物忧虑的两件事："><a href="#导致人为世俗事物忧虑的两件事：" class="headerlink" title="导致人为世俗事物忧虑的两件事："></a>导致人为世俗事物忧虑的两件事：</h4><table>
+<thead>
+<tr>
+<th>原因</th>
+<th>属世之人的反应</th>
+<th>属灵之人的反应</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>对巨大灾难的恐惧</strong></td>
+<td>惧怕失败，失败是他们最不能忍受的灾难</td>
+<td>世上的事在心中没有太多停留，即便失去一切，安危仍在（如约伯）</td>
+</tr>
+<tr>
+<td><strong>认为避免灾难的手段不可靠</strong></td>
+<td>即便赚取了很多保障，仍然认为一切手段不可靠</td>
+<td>知道外在因素都不可靠，但可以依靠神的应许：“我总不撇下你，也不丢弃你”（来13:5）</td>
+</tr>
+</tbody></table>
+<p>一个心存尘世的人，心里满了忧虑烦扰；如果他在这世界上失败了，他就一事无成；除了受造物的供应之外，他别无所依。</p>
+<hr>
+<h3 id="特征五：毕生的奋斗都围绕在地上的事"><a href="#特征五：毕生的奋斗都围绕在地上的事" class="headerlink" title="特征五：毕生的奋斗都围绕在地上的事"></a>特征五：毕生的奋斗都围绕在地上的事</h3><p>有人可以将毕生的奋斗都围绕在地上，为要在地上做成自己伟大的事业。他热切而贪婪地追求世俗之物，整个身心都投入到这个世界；世界是他灵魂的唯一渴望。</p>
+<p><strong>可能的质疑：</strong> “敬虔人也忙于自己的工作，就如你所说的以地上之事为念的人一样。”</p>
+<p><strong>回答：</strong> 不错，但敬虔人忙于自己的工作是<strong>因顺服神</strong>。他们也不会把这些事作为完全吸引和占据灵魂全部力量的事。</p>
+<p><strong>比喻：</strong> 父母陪孩子做他喜欢的事情（如一项运动），孩子把全部力量投入其中，但父母只是陪孩子玩一会儿，这些快乐并不足以填满他们的灵魂。</p>
+<p>属灵之人会保留精力，是为了与神交通；属世之人会耗尽自己全部的力量在世界上。</p>
+<hr>
+<h3 id="特征六：即使看起来未过分关注属世之事，但若追求财物只是为了自身利益，也是以地上之事为念"><a href="#特征六：即使看起来未过分关注属世之事，但若追求财物只是为了自身利益，也是以地上之事为念" class="headerlink" title="特征六：即使看起来未过分关注属世之事，但若追求财物只是为了自身利益，也是以地上之事为念"></a>特征六：即使看起来未过分关注属世之事，但若追求财物只是为了自身利益，也是以地上之事为念</h3><h4 id="对比："><a href="#对比：" class="headerlink" title="对比："></a>对比：</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>敬虔人</th>
+<th>属世之人</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>经营事业的角度</strong></td>
+<td>向神表明顺服，为要在这个世代更好地服侍神</td>
+<td>期盼从事业中得着世俗利益，为自己和儿女获取更多</td>
+</tr>
+<tr>
+<td><strong>做善事的目的</strong></td>
+<td>出于对神的顺服</td>
+<td>为了追求世物（赢得尊重、遮掩罪恶、出于形式或潮流、抚慰良心）</td>
+</tr>
+</tbody></table>
+<p><strong>重要观察：</strong></p>
+<ul>
+<li><strong>属世之人</strong>在属灵的事上也是属世的——做属灵的事时也带着属世的目的</li>
+<li><strong>属灵之人</strong>在地上的事上也是属灵的——做最平凡的工作（砍树、挖沟、拉绳）也是属天的、属灵的</li>
+</ul>
+<hr>
+<h3 id="特征七：对第六点的补充"><a href="#特征七：对第六点的补充" class="headerlink" title="特征七：对第六点的补充"></a>特征七：对第六点的补充</h3><p>即便是最好的圣徒在属灵的事上也会掺杂属世的意念；但我说的是那些让属世之心占主导地位的人——当这样的心思意念支配了他的心，就算是在履行属灵的责任，他的目的仍在地上。</p>
+<hr>
+<h3 id="特征八：鱼不会厌倦水，属世之人不会厌倦追求属世之事"><a href="#特征八：鱼不会厌倦水，属世之人不会厌倦追求属世之事" class="headerlink" title="特征八：鱼不会厌倦水，属世之人不会厌倦追求属世之事"></a>特征八：鱼不会厌倦水，属世之人不会厌倦追求属世之事</h3><p>他会在寒风中早起，甚至去到国外，做世上的任何事。海上的风暴，陆上的危险，早出晚归，费心劳力——他从不抱怨辛苦，也不觉得困难。他们对于世界之事风雨无阻，但对于属灵之事，很小的困难都是一座山峰。</p>
+<p><strong>对比完成度：</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>属世之人</th>
+<th>属灵之人</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>地上之事</strong></td>
+<td>持续工作，最终完成</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>属灵之事</strong></td>
+<td>尚未完成一半就搁置一边，很少能完美完成</td>
+<td>开始任何一项属灵的事，就会坚持到底</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="特征九：用属世的方式或经历来理解神的话语"><a href="#特征九：用属世的方式或经历来理解神的话语" class="headerlink" title="特征九：用属世的方式或经历来理解神的话语"></a>特征九：用属世的方式或经历来理解神的话语</h3><p>一个属世的人，可能他也相信罪得赦免、与神和好的必要性，但他是<strong>以地上的方式理解</strong>——就像两个人争吵之后的和好，就像从所冒犯之人那里取得原谅。</p>
+<table>
+<thead>
+<tr>
+<th>对比</th>
+<th>属世之人的理解</th>
+<th>属灵之人的理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>神</strong></td>
+<td>把神当作赐地上美物的神</td>
+<td>把神当神，以神自己来认识神，看到神的面</td>
+</tr>
+<tr>
+<td><strong>天堂</strong></td>
+<td>荣华富贵、快乐无忧，从感官角度理解</td>
+<td>期盼与神和耶稣基督在天上相交，渴望和神在天上一起生活</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>“一个人对另一个人的认识，与一头野兽对一个人的认识，这两者之间有着极大的差异。”</p>
+</blockquote>
+<hr>
+<h2 id="4属世之心的恶"><a href="#4属世之心的恶" class="headerlink" title="4属世之心的恶"></a>4属世之心的恶</h2><h3 id="第一种恶：属灵的淫乱"><a href="#第一种恶：属灵的淫乱" class="headerlink" title="第一种恶：属灵的淫乱"></a>第一种恶：属灵的淫乱</h3><blockquote>
+<p>“你们这些淫乱的人哪，岂不知与世俗为友就是与神为敌吗？”（雅 4:4）</p>
+</blockquote>
+<p>若一个男人倾心于其他女人超过自己的妻子，这在主眼中就是奸淫。同样，我们既然是与基督联姻，承认他是我们的丈夫，内心却追随其他事物超过主耶稣基督，我们就犯了属灵淫乱。</p>
+<hr>
+<h3 id="第二种恶：拜偶像"><a href="#第二种恶：拜偶像" class="headerlink" title="第二种恶：拜偶像"></a>第二种恶：拜偶像</h3><blockquote>
+<p>“有贪心的，就与拜偶像一样。”（弗 5:5）</p>
+</blockquote>
+<p>你的心最看重什么，什么就是你的神。</p>
+<p><strong>严重性对比：</strong></p>
+<ul>
+<li>异教徒敬拜太阳、月亮、星辰</li>
+<li>埃及人甚至敬拜猫、狗、洋葱这类卑贱之物</li>
+</ul>
+<p>人们欣赏的东西越下流，他们的偶像崇拜就越下流。</p>
+<blockquote>
+<p>“他们就行淫离弃神。”（何 4:12）</p>
+</blockquote>
+<p><strong>比喻：</strong> 一个人离开世上最美丽的女王，而把自己的心献给粪堆灰尘中的肮脏女子，这岂不是对美丽女王的极大羞辱吗？同样，当你离开当受称颂的永恒之神，而选择属世之物时，你就是在侮辱神。地是神所造万物的“下水沟”，而你却离开当受称颂的永恒的那一位，把属世之物当作你的神。</p>
+<hr>
+<h3 id="第三种恶：与神为敌"><a href="#第三种恶：与神为敌" class="headerlink" title="第三种恶：与神为敌"></a>第三种恶：与神为敌</h3><blockquote>
+<p>“岂不知与世俗为友就是与神为敌吗？”（雅 4:4）</p>
+</blockquote>
+<p>以地上之事为念会让人与属灵的美好之事为敌，因此圣灵称之为与神为敌。</p>
+<hr>
+<h3 id="第四种恶：抵挡恩典，违背神在人心所作的工作"><a href="#第四种恶：抵挡恩典，违背神在人心所作的工作" class="headerlink" title="第四种恶：抵挡恩典，违背神在人心所作的工作"></a>第四种恶：抵挡恩典，违背神在人心所作的工作</h3><p>属世之心与恩典的本质和心中敬虔的力量对抗。</p>
+<h4 id="恩典在人心中的工作："><a href="#恩典在人心中的工作：" class="headerlink" title="恩典在人心中的工作："></a>恩典在人心中的工作：</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>恩典的工作</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>光照</strong></td>
+<td>将一束新光照进灵魂中，属灵的神圣之光被点亮</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>新造</strong></td>
+<td>“新造的人”——所有的一切都是新的，旧事已过</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>提升</strong></td>
+<td>使人心超越自身、超越万物，在世界之上；而属世之心沉于低级卑贱之事中</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>扩张</strong></td>
+<td>扩张心灵，以至任何属世之物都不再能满足心灵</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>分别为圣</strong></td>
+<td>使人脱离世上通常的功用，首先将自己献给神</td>
+</tr>
+</tbody></table>
+<p>基督首先的要求是：“若有人要跟从我，就当舍己，背起他的十字架，来跟从我。”舍己就是舍去一切自然的满足、天然的自我、有罪的自我。</p>
+<hr>
+<h3 id="第五种恶：将人置于极大的试探之中"><a href="#第五种恶：将人置于极大的试探之中" class="headerlink" title="第五种恶：将人置于极大的试探之中"></a>第五种恶：将人置于极大的试探之中</h3><blockquote>
+<p>“但那些想要发财的人，就陷在迷惑、落在网罗和许多无知有害的私欲里，叫人沉在败坏和灭亡中。”（提前 6:9）</p>
+</blockquote>
+<p>如果良心明明告诉人做某件事绝对冒犯神，人就不去做，就不会落入网罗。魔鬼在坑上放一些青草，使人无法发现危险，属世的人就如此落入试探网罗中。</p>
+<hr>
+<h3 id="第六种恶：阻碍了从圣道的事工之中受益"><a href="#第六种恶：阻碍了从圣道的事工之中受益" class="headerlink" title="第六种恶：阻碍了从圣道的事工之中受益"></a>第六种恶：阻碍了从圣道的事工之中受益</h3><p>耶稣对马大说的话：马利亚坐在耶稣脚前听道，但马大“伺候的事多，心里忙乱”。</p>
+<blockquote>
+<p>“他们来到你这里如同民来聚会，坐在你面前仿佛是我的民。他们听你的话却不去行；因为他们的口多显爱情，心却追随财利。”（结 33:31）</p>
+</blockquote>
+<p>他们可能会称赞这篇道，口中多显爱情，但是他们的心却仍在追求地上的事。圣道的事工并不能给他们带来什么好处。</p>
+<hr>
+<h3 id="第七种恶：产生无知的私欲"><a href="#第七种恶：产生无知的私欲" class="headerlink" title="第七种恶：产生无知的私欲"></a>第七种恶：产生无知的私欲</h3><ol>
+<li><p><strong>使人追随低劣卑贱的事物</strong>——把不朽之灵魂的力量用在根本没有价值的事物上</p>
+</li>
+<li><p><strong>使你成为你仆人的奴仆</strong>——属世的人尊敬一个人，并非因他的优点或美德，而是只因他的财富</p>
+</li>
+<li><p><strong>让你在地上可能得到更少</strong>——如果你少些属世之心，你或许能指望神赐予你更多地上美好的事物。正是你属世之心让神挪走了这些</p>
+</li>
+<li><p><strong>你给世界的东西比世界更价值千倍</strong>——你为世上事所花费的心思、意念、情感和努力，如果用在神的事情上，可能拯救你的灵魂进入永恒！</p>
+</li>
+<li><p><strong>去做那些必须放手的事情是愚昧的</strong>——你可能用狡猾欺诈的手段谋得地上的好处，但你必须回头。一切忧伤和忏悔都于事无补。一个人不可能为某罪真正悔改，却仍然故意继续犯这罪！</p>
+</li>
+<li><p><strong>在拥有属世事物之前就失去了从它们而来的安慰</strong>——过分留恋地上东西的人，心中多多生出罪疚。即使之后神把那样东西赐给他，他那知罪的良心也会说：“我是在神的忿怒中得到的。”</p>
+</li>
+</ol>
+<hr>
+<h3 id="第八种恶：属世之心是背道的根源"><a href="#第八种恶：属世之心是背道的根源" class="headerlink" title="第八种恶：属世之心是背道的根源"></a>第八种恶：属世之心是背道的根源</h3><p>通常在彻底背道之前，人的灵性会对善表现出麻木和冷漠。</p>
+<hr>
+<h3 id="第九种恶：让人的祷告之心死亡"><a href="#第九种恶：让人的祷告之心死亡" class="headerlink" title="第九种恶：让人的祷告之心死亡"></a>第九种恶：让人的祷告之心死亡</h3><p>当你们把自己的心交与属世之事，忙于世上事务时，然后来到神面前享受与他的交通时，你会发现自己的心是多么的死！一颗充满渣滓的心必然在属天之事上是一颗死心。</p>
+<hr>
+<h3 id="第十种恶：凡以地上事为念的人，都有理由惧怕神"><a href="#第十种恶：凡以地上事为念的人，都有理由惧怕神" class="headerlink" title="第十种恶：凡以地上事为念的人，都有理由惧怕神"></a>第十种恶：凡以地上事为念的人，都有理由惧怕神</h3><blockquote>
+<p>“耶和华以色列的盼望啊，凡离弃你的必至蒙羞。耶和华说：‘离开我的，他们的名字必写在土里，因为他们离弃我这活水的泉源。’”（耶 17:13）</p>
+</blockquote>
+<hr>
+<h3 id="第十一种恶：被属世之心吞噬的人，身上有对蛇的诅咒"><a href="#第十一种恶：被属世之心吞噬的人，身上有对蛇的诅咒" class="headerlink" title="第十一种恶：被属世之心吞噬的人，身上有对蛇的诅咒"></a>第十一种恶：被属世之心吞噬的人，身上有对蛇的诅咒</h3><p>蛇受诅咒，在地上爬行，以泥土为食。你的灵魂在罪中连于地，以泥土为食。</p>
+<p>而圣徒却以耶稣基督为粮——他们吃基督的肉，喝基督的血，领受隐藏的吗哪、天使的食物，得那天上之粮的滋养。</p>
+<hr>
+<h3 id="第十二种恶：专以地上的事为念，是对神的羞辱，也是对信仰的玷污"><a href="#第十二种恶：专以地上的事为念，是对神的羞辱，也是对信仰的玷污" class="headerlink" title="第十二种恶：专以地上的事为念，是对神的羞辱，也是对信仰的玷污"></a>第十二种恶：专以地上的事为念，是对神的羞辱，也是对信仰的玷污</h3><p>你既宣称有份于基督，难道没有任何从神而来的东西，能高过你心所注重的那些卑贱之物吗？</p>
+<p><strong>影响：</strong></p>
+<ul>
+<li>你无法借着你的行为说服任何人</li>
+<li>你永远不能吸引任何人热爱敬虔之道</li>
+<li>外人见到你的行为的属世程度与没有信仰的人并无二致，就会认为信仰不过是嘴上功夫</li>
+</ul>
+<p>你为神的事报了恶信，就像窥探迦南地的探子一样。</p>
+<hr>
+<h3 id="第十三种恶：它让死亡到来变得极其悲伤"><a href="#第十三种恶：它让死亡到来变得极其悲伤" class="headerlink" title="第十三种恶：它让死亡到来变得极其悲伤"></a>第十三种恶：它让死亡到来变得极其悲伤</h3><p>属世之心极大地阻碍了人为死亡作准备，它很可能让死亡的到来变得极其悲伤和可怕。因为人去世之时，对他个人而言，基督已经再来了。死亡之日对于个人而言，就是审判之日。</p>
+<p><strong>临死时的痛苦：</strong> “我曾经费神劳心地追求这些东西，现在对我有什么好处？我积攒的财富比我的邻居多得多，这有什么益处？在我所享受的一切美好事物中，我能得到什么安慰呢？”</p>
+<p>基督徒的人生岂不就是不断为死亡做准备吗？坟墓是圣徒的床，他们可以放下所有的，轻松并平安地睡去。</p>
+<hr>
+<h3 id="第十四种恶：专以地上的事为念带来最终的灭亡，因为它会将你的灵魂拖进地狱"><a href="#第十四种恶：专以地上的事为念带来最终的灭亡，因为它会将你的灵魂拖进地狱" class="headerlink" title="第十四种恶：专以地上的事为念带来最终的灭亡，因为它会将你的灵魂拖进地狱"></a>第十四种恶：专以地上的事为念带来最终的灭亡，因为它会将你的灵魂拖进地狱</h3><p>一个人很可能会因为贪恋世俗而毁灭，就像奸淫、酗酒、谋杀等任何臭名昭著的罪一样，被诅咒且永远灭亡。</p>
+<p><strong>比喻：</strong> 地狱就像粪堆。在这粪堆上，不仅有肮脏污秽的亵渎者、嫖客和小偷这些“腐肉”，还有从神面前被丢进地狱的属世之人——就好像从房子里清扫出来的灰尘。</p>
+<p>不要满足于你们不像其他人那样沉溺于那些肮脏可憎的情欲。倘若你们拥有肮脏的属世之心，你也会像那些活在最可怕罪恶中的人，被丢在粪堆之上。<strong>务要警惕属世之心。</strong></p>
+<hr>
+<h2 id="5属世之心的证据"><a href="#5属世之心的证据" class="headerlink" title="5属世之心的证据"></a>5属世之心的证据</h2><h3 id="证据一：依靠世上之事获取期望的好处"><a href="#证据一：依靠世上之事获取期望的好处" class="headerlink" title="证据一：依靠世上之事获取期望的好处"></a>证据一：依靠世上之事获取期望的好处</h3><p>如果一个人倚靠世上之事的支持和帮助，获取他所期望的好处，一旦得着，他的心就仿佛插上翅膀，愉悦至极。</p>
+<p>但是，一个人生命的安慰<strong>不在于他所享受的任何属世之物</strong>。</p>
+<p>你可以从世上的事物得安慰，只要神乐意通过这些事物让他自己成为安慰；但如果你的心倚靠这些事物，却不寻求它们之上更高的安慰，那么你的心肯定是属世之心。</p>
+<hr>
+<h3 id="证据二：对儿女是否看顾他的灵魂"><a href="#证据二：对儿女是否看顾他的灵魂" class="headerlink" title="证据二：对儿女是否看顾他的灵魂"></a>证据二：对儿女是否看顾他的灵魂</h3><p>人们不论为自己还是为子女，所提供最多保障的都是属世之物。</p>
+<p><strong>自问：</strong> 你是否更热衷于为他们置备财产，而不是教导他们敬畏神？你不愿意在自己尚未给儿女积攒足够的钱财时就死去——那你是否更不愿意不曾看到恩典在你儿女心中动工就死去呢？</p>
+<hr>
+<h3 id="证据三：属世之人只需要轻微的属灵保障就满足"><a href="#证据三：属世之人只需要轻微的属灵保障就满足" class="headerlink" title="证据三：属世之人只需要轻微的属灵保障就满足"></a>证据三：属世之人只需要轻微的属灵保障就满足</h3><p>一个人对属天之事稍有一丝把握就能满足，而对于地上之事，他却从不如此满足。他对世上之事小心谨慎，确保它们绝对可靠。</p>
+<p><strong>总结：</strong> 属世之人对关乎他灵魂的事，只需轻微的保障就能让他满意；而对于地上之事，却没有哪种保障可以满足他。</p>
+<hr>
+<h3 id="证据四：属世的人只会满足于一点点的成圣"><a href="#证据四：属世的人只会满足于一点点的成圣" class="headerlink" title="证据四：属世的人只会满足于一点点的成圣"></a>证据四：属世的人只会满足于一点点的成圣</h3><p>一个属世的人，只会满足于一点点的成圣，但对这个世上之物却是多多益善。</p>
+<p>他渴望在今生达到领域中最杰出之人的高度，但在信仰的事情上，他向最差劲的基督徒看齐——低至这些人的水平就足以使他满足。</p>
+<hr>
+<h3 id="证据五：对世事聪明，对属灵之事愚钝"><a href="#证据五：对世事聪明，对属灵之事愚钝" class="headerlink" title="证据五：对世事聪明，对属灵之事愚钝"></a>证据五：对世事聪明，对属灵之事愚钝</h3><p>许多人——在信仰的事上十分无知，让他们谈论得救的知识，他们说的话就像小孩子一样。再看看属世的事，这些人多么有智慧！他们可以理解、记忆、构想事物，但若让他们默想信仰的主题，他们就会停滞不前。</p>
+<p><strong>测试：</strong> 当你穿过田野的时候，试着定下心来默想基督，看看你能否全程持续地默想。毫不意外的是，你不论旅途多远都可以一直思索属世之事。</p>
+<hr>
+<h3 id="证据六：在神要分别的时候，思想谈论属世之事"><a href="#证据六：在神要分别的时候，思想谈论属世之事" class="headerlink" title="证据六：在神要分别的时候，思想谈论属世之事"></a>证据六：在神要分别的时候，思想谈论属世之事</h3><blockquote>
+<p>“他们是属世界的，所以论世界的事，世人也听从他们。”（约一 4:5）</p>
+</blockquote>
+<p>如果你在工作的时间谈论公事，那无可厚非，但是你祈祷时这样，听道时这样。</p>
+<hr>
+<h3 id="证据七：因一件小事，属灵的事要让步"><a href="#证据七：因一件小事，属灵的事要让步" class="headerlink" title="证据七：因一件小事，属灵的事要让步"></a>证据七：因一件小事，属灵的事要让步</h3><p>在任何一件小事上，属灵的事都必须让位给属世的事。如果你有什么事情要做，你可能会牺牲祷告的时间，或者缩减一些交通或听道的时间。</p>
+<p><strong>对比：</strong></p>
+<ul>
+<li><strong>属世之灵：</strong> 天堂必须站在一边等待，直到属地得到满足</li>
+<li><strong>属天之灵：</strong> 早晨醒来时做的第一件事就是用属灵之事调和你的心</li>
+</ul>
+<hr>
+<h3 id="证据八：一个人不关心教会如何，只求自己在地上顺利"><a href="#证据八：一个人不关心教会如何，只求自己在地上顺利" class="headerlink" title="证据八：一个人不关心教会如何，只求自己在地上顺利"></a>证据八：一个人不关心教会如何，只求自己在地上顺利</h3><p>一个人如果不关心教会如何，不关心耶稣基督的国度，只求他在地上的事一切顺利，这就是他属世的一个证据。</p>
+<p><strong>对比：</strong> 在战争时期，以利因为神的约柜而坐在那里战兢发抖。他不是因为非利士人可能得胜占领他的家园而不安，而是因为神的约柜——这是以利的心属灵的证据。</p>
+<hr>
+<h3 id="证据九：越是属灵的真理，越不能打动他的心"><a href="#证据九：越是属灵的真理，越不能打动他的心" class="headerlink" title="证据九：越是属灵的真理，越不能打动他的心"></a>证据九：越是属灵的真理，越不能打动他的心</h3><p>一些真理或许会打动他，但是那些特别属灵的真理对他来说，不过是格言而已，完全不放在心上。越是属灵的诫命，他的灵就越不为所动。</p>
+<p>如果他来听道，发现其中混杂了一些地上的、自然的优秀特质（如普遍性的智慧、机敏、口才、学识），那就会打动他。他可能更喜欢有趣的故事，而不是圣经启示的宝贵真理。</p>
+<hr>
+<h2 id="6属世之心的原因"><a href="#6属世之心的原因" class="headerlink" title="6属世之心的原因"></a>6属世之心的原因</h2><h3 id="原因一：地上之事对他们显得更真实"><a href="#原因一：地上之事对他们显得更真实" class="headerlink" title="原因一：地上之事对他们显得更真实"></a>原因一：地上之事对他们显得更真实</h3><blockquote>
+<p>“你岂要定睛在虚无的钱财上吗？”（箴 23:5）</p>
+</blockquote>
+<p>世上的财富都是虚无，没有真实在其中。而对一个属世的人来说，这些物质财富是实实在在的真实，所以他们才会重视它们。</p>
+<h3 id="原因二：他们把地上的事看作是必需的"><a href="#原因二：他们把地上的事看作是必需的" class="headerlink" title="原因二：他们把地上的事看作是必需的"></a>原因二：他们把地上的事看作是必需的</h3><p>尽管圣经告诉我们，真正必不可少的只有一件。大多数人的想法何等愚蠢！他们认为属灵和属天之事不是当下必需的，然而事实上，我们由这些构成的生命就活在当下！<strong>这就是永生。</strong></p>
+<h3 id="原因三：地上的事最适合人心"><a href="#原因三：地上的事最适合人心" class="headerlink" title="原因三：地上的事最适合人心"></a>原因三：地上的事最适合人心</h3><p>他的安慰与其说是来自他所渴慕之事的美好，不如说是来自他所渴慕之事与他官能的契合。属世之人与属世之事相契合。</p>
+<h3 id="原因四：地上之事在外在方面大大吸引人的肉体"><a href="#原因四：地上之事在外在方面大大吸引人的肉体" class="headerlink" title="原因四：地上之事在外在方面大大吸引人的肉体"></a>原因四：地上之事在外在方面大大吸引人的肉体</h3><p>使徒说，那些假教师希图外貌体面——他们期望自己的一切都如此完美，在世人的眼中格外亮丽。</p>
+<h3 id="原因五：人生来不知道什么东西比地上之事更好"><a href="#原因五：人生来不知道什么东西比地上之事更好" class="headerlink" title="原因五：人生来不知道什么东西比地上之事更好"></a>原因五：人生来不知道什么东西比地上之事更好</h3><p>地牢中出生的孩子，会在地牢中高高兴兴地玩耍，因为他们并不知道还有什么更好的地方。除非主开了他们心灵的眼睛，他们才会关心更好的东西。</p>
+<h3 id="原因六：人与属世的人交往，就不断被灌输属世的法则"><a href="#原因六：人与属世的人交往，就不断被灌输属世的法则" class="headerlink" title="原因六：人与属世的人交往，就不断被灌输属世的法则"></a>原因六：人与属世的人交往，就不断被灌输属世的法则</h3><h3 id="原因七：他们对属世之事的甜蜜有亲身的体验"><a href="#原因七：他们对属世之事的甜蜜有亲身的体验" class="headerlink" title="原因七：他们对属世之事的甜蜜有亲身的体验"></a>原因七：他们对属世之事的甜蜜有亲身的体验</h3><hr>
+<h2 id="7摆脱属世之心的十一点提醒"><a href="#7摆脱属世之心的十一点提醒" class="headerlink" title="7摆脱属世之心的十一点提醒"></a>7摆脱属世之心的十一点提醒</h2><h3 id="提醒一：最小的罪也比一生的益处更严重"><a href="#提醒一：最小的罪也比一生的益处更严重" class="headerlink" title="提醒一：最小的罪也比一生的益处更严重"></a>提醒一：最小的罪也比一生的益处更严重</h3><p>即使你能得到你头脑和心灵所关注的世间万物，它们带来的益处并不足以抵消那最小的罪所带来的恶果。你心中哪怕只有任何一丝罪恶的想法，其害处都会远超过你一生得到的所有益处。</p>
+<h3 id="提醒二：属世之事主要是被弃绝之人的份"><a href="#提醒二：属世之事主要是被弃绝之人的份" class="headerlink" title="提醒二：属世之事主要是被弃绝之人的份"></a>提醒二：属世之事主要是被弃绝之人的份</h3><p>如果王国和帝国都是那些被弃绝之人的份，那你为何还要如此关注那些低等之事？</p>
+<h3 id="提醒三：神造人的目的确确实实高于地上之事"><a href="#提醒三：神造人的目的确确实实高于地上之事" class="headerlink" title="提醒三：神造人的目的确确实实高于地上之事"></a>提醒三：神造人的目的确确实实高于地上之事</h3><p>神造人必定另有目的，不只是为了吃喝拉撒。倘若人受造没有其他目的，只为了挖掘地上之事，那么神对人的看法是非常卑贱低下的。</p>
+<h3 id="提醒四：人有尊贵的天性，不应将力量耗费在属世之事上"><a href="#提醒四：人有尊贵的天性，不应将力量耗费在属世之事上" class="headerlink" title="提醒四：人有尊贵的天性，不应将力量耗费在属世之事上"></a>提醒四：人有尊贵的天性，不应将力量耗费在属世之事上</h3><h3 id="提醒五：一切属世之物的不确定性"><a href="#提醒五：一切属世之物的不确定性" class="headerlink" title="提醒五：一切属世之物的不确定性"></a>提醒五：一切属世之物的不确定性</h3><p>任何意外都可能夺走你心中所挂念的地上财富。通常来说，当一个人把他最多的心思投入到属世之事的时候，就是神在那些事上打击他们的时候。</p>
+<p><strong>例子：</strong> 福音书中那位财主对自己的灵魂呼喊：“灵魂哪，你有许多财物积存，可作多年的费用，只管安安逸逸地吃喝快乐吧！”圣经接下来说，当晚就有话临到他：“无知的人哪，今夜必要你的灵魂；你所预备的要归谁呢？”（路 12:19-20）</p>
+<h3 id="提醒六：想一想那些在地上享有最多产业的属世之人的下场"><a href="#提醒六：想一想那些在地上享有最多产业的属世之人的下场" class="headerlink" title="提醒六：想一想那些在地上享有最多产业的属世之人的下场"></a>提醒六：想一想那些在地上享有最多产业的属世之人的下场</h3><p>从前生活在这里的人，在他们的年代那样耀武扬威，但现在他们怎么样了？亚基帕和百尼基的盛况和荣耀如今在哪里？他们的表演已经谢幕，离开了世界大舞台。</p>
+<h3 id="提醒七：想想你在这个世界上的时间是多么短暂"><a href="#提醒七：想想你在这个世界上的时间是多么短暂" class="headerlink" title="提醒七：想想你在这个世界上的时间是多么短暂"></a>提醒七：想想你在这个世界上的时间是多么短暂</h3><p>我们的时间有限，要做的事情却很多。我们必须在这短暂的冬日为永恒的生命做准备。你们有那么多时间把灵魂耗费在这地上之事上吗？</p>
+<h3 id="提醒八：我们需要的只要有一丁点世物，就足以度过今世"><a href="#提醒八：我们需要的只要有一丁点世物，就足以度过今世" class="headerlink" title="提醒八：我们需要的只要有一丁点世物，就足以度过今世"></a>提醒八：我们需要的只要有一丁点世物，就足以度过今世</h3><blockquote>
+<p>“只要有衣有食，就当知足。”（提前 6:8）</p>
+</blockquote>
+<p>厄科兰帕迪乌斯去世的时候非常贫穷，他宣称自己不想比现在拥有的更多，因为他知道财产对他来说是多么大的障碍，而贫穷则可以让他更轻松、更平和地离开这个世界。</p>
+<h3 id="提醒九：在地上没有安慰"><a href="#提醒九：在地上没有安慰" class="headerlink" title="提醒九：在地上没有安慰"></a>提醒九：在地上没有安慰</h3><blockquote>
+<p>“不要仗势欺人，也不要因抢夺而骄傲；若财宝加增，不要放在心上。……神说了一次、两次，我都听见，就是能力都属乎神。”（诗 62:10-11）</p>
+</blockquote>
+<p>不要把你的心思意念放在财富或任何属世的东西身上。幸福不在财富中，一切的能力都属乎神。</p>
+<h3 id="提醒十：神已应许供应你在地上所需的一切"><a href="#提醒十：神已应许供应你在地上所需的一切" class="headerlink" title="提醒十：神已应许供应你在地上所需的一切"></a>提醒十：神已应许供应你在地上所需的一切</h3><p>小孩子不会关注世俗事务，因为他们知道有父亲养活他们。圣徒有一位天父供养他们，天和地都属于主。你应该关注你对天父的责任，而不是操心地上的事情。</p>
+<h3 id="提醒十一：一切信神之人向世界都是死的"><a href="#提醒十一：一切信神之人向世界都是死的" class="headerlink" title="提醒十一：一切信神之人向世界都是死的"></a>提醒十一：一切信神之人向世界都是死的</h3><blockquote>
+<p>“你们要思念上面的事，不要思念地上的事。因为你们已经死了，你们的生命与基督一同藏在神里面。”（西 3:2-3）</p>
+</blockquote>
+<p>向世界好像死人，这是基督徒的信仰告白。</p>
+<hr>
+<h3 id="劝勉"><a href="#劝勉" class="headerlink" title="劝勉"></a>劝勉</h3><p>在福音的时代做一个属世的人，比其他时代更糟糕。</p>
+<ul>
+<li><strong>律法时代：</strong> 神的一切应许都以属世的方式实现——金银等属世之物。对天堂的应许表现为住在迦南（天堂的预表）。</li>
+<li><strong>福音时代：</strong> 属天之事已经显明，那从上头来的已经住在我们中间。天已经开了，天上的荣光照耀着教会。<strong>福音之光放大了贪恋世俗的罪。</strong></li>
+</ul>
+<hr>
+<h2 id="8摆脱属世之心的五个指引"><a href="#8摆脱属世之心的五个指引" class="headerlink" title="8摆脱属世之心的五个指引"></a>8摆脱属世之心的五个指引</h2><h3 id="指引一：尽可能默想属灵之事"><a href="#指引一：尽可能默想属灵之事" class="headerlink" title="指引一：尽可能默想属灵之事"></a>指引一：尽可能默想属灵之事</h3><p>多数人认为人的思想可以自由驰骋——但你要知道，你的思想会在不知不觉间对你的心产生极大的影响。要谨慎留意你的思想，将它限制在圣经的范围内。</p>
+<h3 id="指引二：多多地为罪谦卑"><a href="#指引二：多多地为罪谦卑" class="headerlink" title="指引二：多多地为罪谦卑"></a>指引二：多多地为罪谦卑</h3><p>让神把罪的重担加在人的灵魂上，这会让人尽快脱离地上之事。那些在世上顺风顺水，从未因为罪而良心不安的人，已经在属世的满足中变得麻木。</p>
+<h3 id="指引三：以过去圣徒为榜样"><a href="#指引三：以过去圣徒为榜样" class="headerlink" title="指引三：以过去圣徒为榜样"></a>指引三：以过去圣徒为榜样</h3><blockquote>
+<p>“这些人都是存着信心死的，并没有得着所应许的，却从远处望见，且欢喜迎接，又承认自己在世上是客旅，是寄居的。”（来 11:13）</p>
+</blockquote>
+<h3 id="指引四：考虑将来要为所有属世的事交账"><a href="#指引四：考虑将来要为所有属世的事交账" class="headerlink" title="指引四：考虑将来要为所有属世的事交账"></a>指引四：考虑将来要为所有属世的事交账</h3><p>你以往只看重它们带来的属世安慰，但现在你应该注意到，你必须为它们交账。</p>
+<h3 id="指引五：最要紧的是，常常将耶稣基督摆在面前，默想他的死"><a href="#指引五：最要紧的是，常常将耶稣基督摆在面前，默想他的死" class="headerlink" title="指引五：最要紧的是，常常将耶稣基督摆在面前，默想他的死"></a>指引五：最要紧的是，常常将耶稣基督摆在面前，默想他的死</h3><blockquote>
+<p>“我也将万事当作有损的，因我以认识我主基督耶稣为至宝。我为他已经丢弃万事，看作粪土，为要得着基督。……使我认识基督，晓得他复活的大能，并且晓得和他一同受苦，效法他的死。”（腓 3:8,10）</p>
+</blockquote>
+<p>保罗把基督的死摆在眼前，这种默想对他的灵魂产生了极大影响。为了与基督的死联合，他把万物都看作渣滓、当作野狗的食物。</p>
+<hr>
+<h2 id="9结语"><a href="#9结语" class="headerlink" title="9结语"></a>9结语</h2><p>人可能在一些事情上尽情投入自己的思想和情感，这显出世上之事的虚空，但人要留意自己在其中投入了多少心思——他不能不带着恐惧享受这世上的安慰。</p>
+<p>不要因为神命令我们不可专注属世之事就心中不适。既然神命令我们不要关注这些，这些事情就必然没那么重要。</p>
+<p><strong>真正的卓越，是藏在那些属天、属灵之事中。圣徒的一言一行都应在天上。</strong></p>
+</div>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/sheep/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+
