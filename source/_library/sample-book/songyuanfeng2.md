@@ -6,7 +6,7 @@ excerpt: 属世之心的九个特质
 index: planAudio
 ---
 
-{% aplayer "属世之心的九个特质" "宋袁峰" "https://gulinga.github.io/sheep_video/planAudio/属世之心的九个特质.mp3" "" %}
+{% aplayer "属世之心的九个特质" "宋袁峰" "https://gulinga.github.io/sheep_video/bookVideo/sample-book/属世之心的九个特质.mp3" "" %}
 
 
 **弟兄姊妹，主内平安！**
