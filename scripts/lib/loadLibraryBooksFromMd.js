@@ -12,7 +12,8 @@ function normalizeEol(text) {
 async function renderMd(hexo, text) {
   const t = (text || '').trim()
   if (!t) return ''
-  return hexo.render.render({ text: t, engine: 'markdown' })
+  const { content } = await hexo.post.render(null, { content: t, engine: 'markdown' })
+  return content
 }
 
 async function loadNote(hexo, filePath, noteId) {
