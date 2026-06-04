@@ -1,9 +1,8 @@
 ---
 title: 袁峰-属世之心的九个特质
-date: 2026-06-03 7:49:00
-aubot: 宋袁峰
-excerpt: 属世之心的九个特质
-index: planAudio
+author: 宋袁峰
+data: 2026-06-03 07:49:00
+excerpt: 心得
 ---
 
 {% aplayer "属世之心的九个特质" "宋袁峰" "https://gulinga.github.io/sheep_video/bookVideo/sample-book/属世之心的九个特质.mp3" "" %}

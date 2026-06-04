@@ -307,9 +307,13 @@ html.dark-mode .library-page .library-empty,
 html.dark-mode .library-page .library-breadcrumb {
   color: #9aa0ad !important;
 }
-html.dark-mode .library-page .library-note-byline,
+html.dark-mode .library-page .library-note-byline-author,
 html.dark-mode .library-page .library-reflection-card-author {
   color: #c9b896 !important;
+}
+html.dark-mode .library-page .library-note-byline-date,
+html.dark-mode .library-page .library-reflection-card-date {
+  color: #9aa0ad !important;
 }
 html.dark-mode .library-page .library-md-content h1,
 html.dark-mode .library-page .library-md-content h2,

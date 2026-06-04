@@ -758,10 +758,22 @@
     letter-spacing: 0.04em;
   }
 
-  .library-reflection-card-author {
+  .library-reflection-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
     font-size: 14px;
+  }
+
+  .library-reflection-card-author {
     color: @libraryAccent;
     font-weight: 500;
+  }
+
+  .library-reflection-card-date {
+    color: @libraryTextMuted;
+    font-weight: 400;
   }
 
   .library-reflection-card-excerpt {
@@ -790,10 +802,22 @@
   }
 
   .library-note-byline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
     margin: 0 0 28px;
     font-size: 15px;
+  }
+
+  .library-note-byline-author {
     color: @libraryAccent;
     font-weight: 500;
+  }
+
+  .library-note-byline-date {
+    color: @libraryTextMuted;
+    font-weight: 400;
   }
 
   .library-note-body {

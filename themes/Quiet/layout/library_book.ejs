@@ -56,7 +56,10 @@
               <li>
                 <a class="library-reflection-card" href="<%= url_for('library/book/' + page.bookId + '/note/' + note.id + '/') %>">
                   <span class="library-reflection-card-title"><%= note.title %></span>
-                  <span class="library-reflection-card-author"><%= note.author %></span>
+                  <span class="library-reflection-card-meta">
+                    <% if (note.author) { %><span class="library-reflection-card-author"><%= note.author %></span><% } %>
+                    <% if (note.date) { %><time class="library-reflection-card-date" datetime="<%- date(note.date, 'YYYY-MM-DD') %>"><%- date(note.date, 'YYYY-MM-DD') %></time><% } %>
+                  </span>
                   <% if (note.excerpt) { %>
                   <span class="library-reflection-card-excerpt"><%= note.excerpt %></span>
                   <% } %>

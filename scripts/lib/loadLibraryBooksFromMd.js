@@ -24,8 +24,9 @@ async function loadNote(hexo, filePath, noteId) {
   const title = data.title || id
   const author = data.author || ''
   const excerpt = data.excerpt || ''
+  const date = data.date || data.data || ''
   const contentHtml = await renderMd(hexo, body)
-  return { id, title, author, excerpt, contentHtml }
+  return { id, title, author, excerpt, date, contentHtml }
 }
 
 async function loadBookDir(hexo, root, dirName) {
