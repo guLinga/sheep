@@ -17,7 +17,12 @@
         <div class="library-weread-inner">
           <article class="library-note-article" id="content">
             <h1 class="library-note-heading"><%= note.title %></h1>
-            <p class="library-note-byline"><%= note.author %></p>
+            <% if (note.author || note.date) { %>
+            <p class="library-note-byline">
+              <% if (note.author) { %><span class="library-note-byline-author"><%= note.author %></span><% } %>
+              <% if (note.date) { %><time class="library-note-byline-date" datetime="<%- date(note.date, 'YYYY-MM-DD') %>"><%- date(note.date, 'YYYY-MM-DD') %></time><% } %>
+            </p>
+            <% } %>
             <% if (page.contentHtml) { %>
             <div class="library-note-body library-md-content"><%- page.contentHtml %></div>
             <% } %>

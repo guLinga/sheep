@@ -12,7 +12,8 @@ function normalizeEol(text) {
 async function renderMd(hexo, text) {
   const t = (text || '').trim()
   if (!t) return ''
-  return hexo.render.render({ text: t, engine: 'markdown' })
+  const { content } = await hexo.post.render(null, { content: t, engine: 'markdown' })
+  return content
 }
 
 async function loadNote(hexo, filePath, noteId) {
@@ -23,8 +24,9 @@ async function loadNote(hexo, filePath, noteId) {
   const title = data.title || id
   const author = data.author || ''
   const excerpt = data.excerpt || ''
+  const date = data.date || data.data || ''
   const contentHtml = await renderMd(hexo, body)
-  return { id, title, author, excerpt, contentHtml }
+  return { id, title, author, excerpt, date, contentHtml }
 }
 
 async function loadBookDir(hexo, root, dirName) {

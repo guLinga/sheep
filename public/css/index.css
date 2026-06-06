@@ -2307,10 +2307,20 @@ hue-6-2: #e6c07b
   color: #1a2233;
   letter-spacing: 0.04em;
 }
-.library-page .library-reflection-card-author {
+.library-page .library-reflection-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
   font-size: 14px;
+}
+.library-page .library-reflection-card-author {
   color: #8b7355;
   font-weight: 500;
+}
+.library-page .library-reflection-card-date {
+  color: #5a6270;
+  font-weight: 400;
 }
 .library-page .library-reflection-card-excerpt {
   font-size: 14px;
@@ -2335,10 +2345,20 @@ hue-6-2: #e6c07b
   letter-spacing: 0.06em;
 }
 .library-page .library-note-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
   margin: 0 0 28px;
   font-size: 15px;
+}
+.library-page .library-note-byline-author {
   color: #8b7355;
   font-weight: 500;
+}
+.library-page .library-note-byline-date {
+  color: #5a6270;
+  font-weight: 400;
 }
 .library-page .library-note-body {
   font-size: 16px;
@@ -2895,9 +2915,13 @@ html.dark-mode .library-page .library-empty,
 html.dark-mode .library-page .library-breadcrumb {
   color: #9aa0ad !important;
 }
-html.dark-mode .library-page .library-note-byline,
+html.dark-mode .library-page .library-note-byline-author,
 html.dark-mode .library-page .library-reflection-card-author {
   color: #c9b896 !important;
+}
+html.dark-mode .library-page .library-note-byline-date,
+html.dark-mode .library-page .library-reflection-card-date {
+  color: #9aa0ad !important;
 }
 html.dark-mode .library-page .library-md-content h1,
 html.dark-mode .library-page .library-md-content h2,
