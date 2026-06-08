@@ -25,7 +25,7 @@ menus_title:
   # links: LINKS
   # about: ABOUT
 # 导航 （不建议修改）
-baseUrl: /sheep
+baseUrl: /
 menus:
   home: /
   picture: /picture

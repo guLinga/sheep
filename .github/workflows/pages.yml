@@ -32,7 +32,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://gulinga.github.io/sheep/
+      url: https://canaan.1cor1514.site/
     runs-on: ubuntu-latest
     needs: build
     steps:
