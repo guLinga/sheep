@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-祷告</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<script>
+(function () {
+  var TOKEN = "change-me-to-a-long-random-string";
+  var BASE = "";
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="祷告">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="祷告">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+    </div>
+    <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/library">图书馆</a>
+    </li>
+    
+  </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/sheep/assets/css/APlayer.min.css"><script src="/sheep/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、祷告的重要性"><a href="#一、祷告的重要性" class="headerlink" title="一、祷告的重要性"></a>一、祷告的重要性</h2><ol>
+<li>祷告是与上帝建立亲密关系的途径</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;《圣经》中，耶稣亲自为门徒示范祷告（即主祷文），引导人们如何与天父沟通。如《马太福音》6:9-13 记载，耶稣教导门徒以“我们在天上的父”开篇祷告，既明确了祷告时与上帝的父子般的亲密关系，也为信徒祷告提供了核心方向，让信徒知晓可坦然向神倾诉、敬拜。此外，《约翰福音》15:7 提到“你们若常在我里面，我的话也常在你们里面，凡你们所愿意的，祈求就给你们成就”，表明持续的祷告能让信徒与上帝保持紧密联结，这是维系信仰关系的核心方式。</p>
+<ol start="2">
+<li>祷告能使信徒获得力量，抵御试探与邪恶</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;信徒在世间常面临各种诱惑与困境，而祷告是获取上帝力量、摆脱困境的重要方式。《马太福音》26:41 记载耶稣劝诫门徒：“总要警醒祷告，免得入了迷惑。你们心灵固然愿意，肉体却软弱了”，提醒信徒通过祷告保持清醒，避免陷入诱惑。《路加福音》22:46 中，耶稣在客西马尼园祷告后，内心坚定地面对即将到来的十字架苦难，这也为信徒树立了榜样，表明祷告能让人获得承受苦难、抵御邪恶的力量。</p>
+<ol start="3">
+<li>祷告可求得宽恕，释放内心的亏欠</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;祷告是信徒向神忏悔、寻求罪得赦免的重要途径，同时也能促使信徒宽恕他人。主祷文中“免我们的债，如同我们免了人的债”这一内容，既体现了信徒通过祷告祈求上帝赦免自身过错的诉求，也强调了祷告与宽恕他人的关联。《约翰一书》1:9 也提到“我们若认自己的罪，神是信实的，是公义的，必要赦免我们的罪，洗净我们一切的不义”，而认罪往往通过祷告的形式进行，这让信徒能放下内心的罪责感，获得心灵的洁净。</p>
+<ol start="4">
+<li>祷告能让信徒求得所需，获得上帝的指引</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;无论是生活中的物质需求，还是人生选择上的方向困惑，祷告都能让信徒获得上帝的供应与引导。《腓立比书》4:6 - 7 记载：“应当一无挂虑，只要凡事借着祷告、祈求和感谢，将你们所要的告诉神。神所赐出人意外的平安，必在基督耶稣里保守你们的心怀意念”。旧约中也有相关事例，亚伯拉罕的老仆为替以撒寻妻，向上帝祷告祈求指引，最终顺利找到符合上帝旨意的利百加，这一故事印证了祷告时向上帝祈求指引，必能得到相应的带领。</p>
+<ol start="5">
+<li>祷告是荣耀上帝、践行神的旨意的方式</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;祷告不仅是信徒向神索取，更是对神的敬拜与顺服，以此荣耀上帝。主祷文中“愿人都尊你的名为圣，愿你的国降临，愿你的旨意行在地上，如同行在天上”，体现了祷告的核心之一是彰显上帝的荣耀、推动神的旨意成就。《历代志下》7:14 提到“这称为我名下的子民，若是自卑、祷告，寻求我的面，转离他们的恶行，我必从天上垂听，赦免他们的罪，医治他们的地”，这里的祷告包含了信徒对上帝的敬畏与顺服，当信徒以祷告回应神的旨意时，也是在荣耀神的权能。</p>
+<h2 id="二、在每天操练祷告"><a href="#二、在每天操练祷告" class="headerlink" title="二、在每天操练祷告"></a>二、在每天操练祷告</h2><ol>
+<li>固定时间祷告，建立持续习惯</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;《诗篇》5:3 记载“耶和华啊，早晨你必听我的声音；早晨我必向你陈明我的心意，并要警醒”，明确了晨祷的重要性。耶稣也常清晨独自退到旷野祷告（马可福音 1:35），为信徒树立了固定时段亲近神的榜样。可选择早晨起床后、晚上睡前或工作间隙的固定时间，避免因忙碌忽略祷告，让与神的沟通成为日常节律。</p>
+<ol start="2">
+<li>以圣经为祷告的根基，不偏离神的旨意</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;祷告不应只凭个人私欲，而要以神的话语为引导。《诗篇》119:169 求告“愿我的祷告如香陈列在你面前；愿我的举手祈求，如献晚祭”，而这样的祷告需建立在对圣经的认识上。可选取当日读经的经文作为祷告内容，为遵行神的话语祈求力量，或为圣经中教导的福分、赦免等向神回应，让祷告与神的心意对齐。</p>
+<ol start="3">
+<li>包含敬拜、认罪、感恩与祈求，全面亲近神</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;圣经中的祷告是多维度的，并非单一的“求告”。</p>
+<ul>
+<li>敬拜：如《启示录》4:11 所彰显的，为神的荣耀、权能和属性献上赞美；</li>
+<li>认罪：照着《约翰一书》1:9 的教导，坦诚自身过犯，祈求洁净；</li>
+<li>感恩：效法《腓立比书》4:6“凡事谢恩”的劝勉，为大小恩典感恩；</li>
+<li>祈求：带着《腓立比书》4:6“将你们所要的告诉神”的信心，求告自身与他人的需要。</li>
+</ul>
+<ol start="4">
+<li>带着谦卑与顺服的心，而非强求私欲</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;祷告的核心是“愿神的旨意成就”，而非让神满足自己的私欲。耶稣在客西马尼园的祷告（马太福音 26:39）“不要照我的意思，只要照你的意思”，为信徒树立了顺服的榜样。操练祷告时，当放下自我中心的态度，承认神的智慧高过自己，即使所求未得，仍相信神的安排是最好的。</p>
+<ol start="5">
+<li>为他人代祷，践行爱人如己的命令</li>
+</ol>
+<p>&ensp;&ensp;&ensp;&ensp;圣经教导信徒要为他人祷告，这是爱的体现。《雅各书》5:16 劝勉“你们要彼此认罪，互相代求，使你们可以得医治”；保罗也常为教会信徒祷告（如以弗所书 1:15-19）。每天可列出需要代祷的对象，包括家人（信仰、属灵状况、关系）、教会（教会的复兴、逼迫、弟兄姊妹的属灵状况和难处、人与神和人与人之间的关系、为宣教士祷告）、世界（为身边的人和环境祷告）等，通过代祷践行“爱人如己”的诫命，也让祷告超越个人范围。</p>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>&ensp;&ensp;&ensp;&ensp;祷告是圣经吩咐、耶稣示范的蒙福途径，是我们与天父亲密联结的生命线。圣经启示，祷告能让我们得洁净、获力量、领指引、享供应，更能荣耀神、成就祂的旨意。保罗劝勉 “不住地祷告”，这是神的期许，也是为我们预备的祝福。我们要时刻反省自己，好让我们在基督台前交账。愿我们将祷告融入日常，以圣经为根基，带着信心与顺服恒切寻求。相信只要转向天父，必能经历祂的同在，得着出人意外的平安。</p>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2025年11月16日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    const dark = document.documentElement.classList.contains('dark-mode')
+    const baseBg = dark ? '#232733' : '#e4e4e4'
+    cardList.forEach((item) => {
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = baseBg
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+     
+  <a href="/2025/11/30/task/%E9%80%9A%E8%BF%87%E8%BA%AB%E8%BE%B9%E5%BE%AE%E5%B0%8F%E7%9A%84%E4%BA%8B%E8%A7%82%E5%AF%9F%E7%A5%9E%E7%9A%84%E5%90%8C%E5%9C%A8/">
+    <div class="post-paging-last">
+      <span>上一篇</span>
+      <p>通过身边微小的事观察神的同在</p>
+    </div>
+  </a>
+     
+  <a href="/2025/11/02/task/%E4%B8%8D%E5%8F%AF%E8%B4%AA%E5%BF%83/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>不可贪心</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

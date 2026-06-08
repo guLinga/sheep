@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-徐佳晨的论属世之心心得</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<script>
+(function () {
+  var TOKEN = "change-me-to-a-long-random-string";
+  var BASE = "";
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li class="select">
+          <a href="/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+    </div>
+    <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/library">图书馆</a>
+    </li>
+    
+  </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+
+
+<div class="home library-page library-page--weread library-note-page">
+  <div class="header-body-background">
+  <div class="header-body-background-content">
+    <div class="site-hero-brand">
+      <span class="site-hero-avatar">
+        <img src="/image/logo.png" alt="迦南书简" />
+      </span>
+      <h1 class="site-hero-title">迦南书简</h1>
+    </div>
+  </div>
+</div>
+
+  <div class="main library-main">
+    <div class="library-weread">
+      <div class="library-weread-top">
+        <div class="library-weread-inner">
+          <nav class="library-weread-subnav" aria-label="图书内导航">
+            <a href="/library/book/sample-book/" class="library-weread-nav-back">← 论属世之心</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="library-weread-body">
+        <div class="library-weread-inner">
+          <article class="library-note-article" id="content">
+            <h1 class="library-note-heading">徐佳晨的论属世之心心得</h1>
+            
+            <p class="library-note-byline">
+              <span class="library-note-byline-author">徐佳晨</span>
+              <time class="library-note-byline-date" datetime="2026-05-26">2026-05-26</time>
+            </p>
+            
+            
+            <div class="library-note-body library-md-content"><p><strong>《论属世之心》读书感悟</strong></p>
+<p>当我们认真去读这本书时，它可以让我们重新去看待自己内心与世界的关系，为我们以后的道路指明方向——该怎么去做？怎么去行？</p>
+<p>从书中我们可以明白：<strong>属世并不等同于活在世间。</strong> 并不是追求信仰，就必须逃离物质生活、隔绝世俗交往。真正的属世之心，从不是自身存在于世界当中，而是内心充满了世界。它是将内心的安全感、价值感，以及自己人生的目标与追求，全部寄托于世俗的财富与地位，让世上短暂易逝的事物成为生命的终极追求，让世俗欲望占据着自己的内心。</p>
+<p>属世之心并非一蹴而就的堕落，而是在日常生活的习惯中滋生的。内心的欲望、思想上的满足，都可能使我们在坚守信仰上逐渐堕落。我们不能把在信仰上所做的工当做人生的附属品，不应该在生活的空闲时间才去坚守信仰，而将时间优先分配给刷短视频，将属世的享受占据自己的日常。这些只会慢慢侵蚀我们对永恒价值的渴望，让我们的目光越来越短浅，心灵越来越浮躁，最终在世俗的洪流中随波逐流，逐渐忘记自己内心所坚守的信仰。</p>
+<p>面对这么大的挑战，我们不应去逃避，而是要去依靠神，尽自己最大的努力去对抗属世之心。这从来不是要我们去逃离世界，而是要我们在世界，却不属世界。可以去使用物质，但不能够被物质所奴役；可以去追求成就，享受生活，但应始终保持对更高信仰的追求。</p>
+<p>真正的丰盛与幸福，不在于世俗的奖赏，而是心灵的平安与对永恒的盼望。我们应该记住：在世界上一切所做的，都是为了荣耀神。当我们得着成就时，要学会感恩上帝；当我们遇到困难时，要学会求助于上帝。不去纠结于他人对我们的评价，坚持做自己认为正确的事。内心的从容，远比他人的赞美更有力。当我们将目光从世俗的浮华转向信仰的真理时，那些曾经困扰我们的焦虑与迷茫，都渐渐消散。</p>
+<p>这本书让我的内心多了一份清醒与力量。它让我明白：我们无法脱离世界而活，却可以选择不被世界所定义、所纠缠。属世之心的诱惑从未消失，但我们可以通过不断自省与坚守，在世俗的洪流中守住心灵的方向。</p>
+<p>真正的自由，不是随心所欲地追逐内心的欲望，而是能够主动选择将心灵回归于永恒的价值。真正的富足，不是腰缠万贯，而是在平凡的生活中依然能看见信仰的光。</p>
+</div>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-要常常喜乐</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<script>
+(function () {
+  var TOKEN = "change-me-to-a-long-random-string";
+  var BASE = "";
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="要常常喜乐">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="要常常喜乐">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+    </div>
+    <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/library">图书馆</a>
+    </li>
+    
+  </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+    
+    
+        <div style="height: 160px;"></div>
+    
+    
+        <div class="card-content post-content" id="content">
+  <div id="article" class="post-content-info">
+    <div class="card">
+      <div class="card__content">
+        <div class="card_container">
+          <p>弟兄姐妹们：</p>
+          <p style="text-indent: 2em">大家主内平安！</p>
+          <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/sheep/assets/css/APlayer.min.css"><script src="/sheep/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、重新定义喜乐："><a href="#一、重新定义喜乐：" class="headerlink" title="一、重新定义喜乐："></a>一、重新定义喜乐：</h2><p>圣经中的 “喜乐” 并非依赖环境的 “快乐”（比如顺利时的开心），而是根植于与神关系的、不受处境影响的生命状态：</p>
+<ul>
+<li><p>它是 “圣灵所结的果子”（加拉太书 5:22），是神住在人生命里的自然流露；</p>
+</li>
+<li><p>是即使在苦难中，仍因信靠神的应许而有的 “说不出来、满有荣光的大喜乐”（彼得前书 1:8）；比如保罗在监狱中仍能 “靠主喜乐”（腓立比书 4:4），并非他处境舒适，而是因确信神的同在与救赎。</p>
+</li>
+</ul>
+<p>喜乐是“因神本身而满足”，是 “回应神恩典的生命流露”，而非索取外在事物。</p>
+<h2 id="二、为什么要喜乐？"><a href="#二、为什么要喜乐？" class="headerlink" title="二、为什么要喜乐？"></a>二、为什么要喜乐？</h2><h5 id="1、这是神对信徒的明确命令"><a href="#1、这是神对信徒的明确命令" class="headerlink" title="1、这是神对信徒的明确命令"></a>1、这是神对信徒的明确命令</h5><p>圣经中“要常常喜乐” 并非建议，而是神的诫命（帖撒罗尼迦前书 5:16）。神的命令本质是对信徒益处的预备 —— 就像父母吩咐孩子 “注意安全”，是出于爱；神让我们喜乐，是因为这是与祂心意对齐的生命状态。</p>
+<h5 id="2、喜乐是心灵与身体的“属灵良药”"><a href="#2、喜乐是心灵与身体的“属灵良药”" class="headerlink" title="2、喜乐是心灵与身体的“属灵良药”"></a>2、喜乐是心灵与身体的“属灵良药”</h5><p>箴言 17:22 明确说 “喜乐的心乃是良药，忧伤的灵使骨枯干”：心灵层面：喜乐能驱散焦虑、愁苦，让我们的心思被神的平安充满（腓立比书 4:7）；</p>
+<ul>
+<li>身体层面：医学也印证“情绪影响健康”，而圣经早已指出喜乐对身体的滋养作用。</li>
+</ul>
+<h5 id="3、喜乐是与基督同受苦难的“荣耀记号”"><a href="#3、喜乐是与基督同受苦难的“荣耀记号”" class="headerlink" title="3、喜乐是与基督同受苦难的“荣耀记号”"></a>3、喜乐是与基督同受苦难的“荣耀记号”</h5><p>彼得前书 4:12-13 说：“亲爱的弟兄啊，有火炼的试验临到你们，不要以为奇怪…… 倒要欢喜，因为你们是与基督一同受苦，使你们在他荣耀显现的时候，也可以欢喜快乐。”当我们在苦难中仍喜乐，不是 “假装没事”，而是确信：此刻的苦楚与基督的苦难相连，将来必与祂同得荣耀 —— 这是对 “永恒盼望” 的活见证。</p>
+<h5 id="4、喜乐是向世界见证神的信实"><a href="#4、喜乐是向世界见证神的信实" class="headerlink" title="4、喜乐是向世界见证神的信实"></a>4、喜乐是向世界见证神的信实</h5><p>当信徒在困境中（比如保罗被监禁、司提反被 石头打死）仍能喜乐，世界会看见：“他们的平安不是来自环境，而是来自那位真神”（腓立比书 4:12-13）。这种 “不按常理” 的喜乐，本身就是对福音的无声传讲。</p>
+<h2 id="三、为什么我们做不到常常喜乐"><a href="#三、为什么我们做不到常常喜乐" class="headerlink" title="三、为什么我们做不到常常喜乐"></a>三、为什么我们做不到常常喜乐</h2><p>&ensp;&ensp;&ensp;&ensp;基督徒难以做到常常喜乐，并非神的应许失效，也不是信仰的根基动摇，而是源于旧人生命的惯性牵引、属灵生命成长的渐进性，以及属灵争战的现实搅扰 —— 我们虽因信成为新造的人，但旧人的性情仍会让我们在遭遇苦难、挫折、委屈时，先被忧愁、抱怨的天然情绪裹挟，容易被眼前看得见的压力、病痛、人际矛盾等暂时处境遮蔽对永恒基业的盼望，忘记定睛于神的同在与应许；同时，“常常喜乐” 本就是属灵生命成熟的标志，需要在日复一日的祷告、默想神的话语、凡事谢恩的操练中扎根，可很多时候我们对神的真理仍停留在头脑认知，尚未在具体的难处中亲身经历神的信实与恩典，没能养成随时靠主支取力量的习惯，反而容易陷入抱怨的惯性；再加上属灵争战里撒旦的刻意搅扰，它会借着环境的艰难植入怀疑的意念，又会在我们软弱时用自我定罪的想法让我们偏离对基督恩典的仰望，让我们暂时偏离 “靠主喜乐” 的路径，但这绝非信仰的失败，反而是生命真实的模样，恰恰提醒我们，喜乐从来不是靠自己的努力达成，而是要在一次次软弱中更深地回转、紧紧地依靠神的恩典，在不断的信靠操练中让信心被逐渐坚固。
+ </p>
+<h2 id="四、怎么可以做到常常喜乐？"><a href="#四、怎么可以做到常常喜乐？" class="headerlink" title="四、怎么可以做到常常喜乐？"></a>四、怎么可以做到常常喜乐？</h2><h5 id="1、锚定-“在主里面”-的身份，不靠自己努力"><a href="#1、锚定-“在主里面”-的身份，不靠自己努力" class="headerlink" title="1、锚定 “在主里面” 的身份，不靠自己努力"></a>1、锚定 “在主里面” 的身份，不靠自己努力</h5><p>腓立比书 4:4 说 “你们要靠主常常喜乐”——“靠主” 不是 “辅助工具”，而是 “唯一根基”。比如保罗在监狱里喜乐，不是因为他 “心态好”，而是他知道 “我活着就是基督”（腓立比书 1:21）：他的生命与基督连为一体，基督的喜乐就是他的喜乐。</p>
+<h5 id="2、以-“不住祷告-恳切祈求”-替换忧虑"><a href="#2、以-“不住祷告-恳切祈求”-替换忧虑" class="headerlink" title="2、以 “不住祷告+恳切祈求” 替换忧虑"></a>2、以 “不住祷告+恳切祈求” 替换忧虑</h5><p>腓立比书 4:6-7 补充了喜乐的路径：“应当一无挂虑，只要凡事借着祷告、祈求，和感谢，将你们所要的告诉神。神所赐、出人意外的平安，必在基督耶稣里保守你们的心怀意念。”</p>
+<ul>
+<li><p>具体做法：不是 “遇到大事才祷告”，而是把每一件小事（比如今天的工作、与人的摩擦）都带到神面前；</p>
+</li>
+<li><p>祷告时不仅 “求”，更要 “感谢”（哪怕还没看到结果），因为相信神已经掌权。</p>
+</li>
+</ul>
+<h5 id="3、操练-“凡事谢恩”，把焦点转向神的主权"><a href="#3、操练-“凡事谢恩”，把焦点转向神的主权" class="headerlink" title="3、操练 “凡事谢恩”，把焦点转向神的主权"></a>3、操练 “凡事谢恩”，把焦点转向神的主权</h5><p>帖撒罗尼迦前书 5:18 说 “凡事谢恩，因为这是神在基督耶稣里向你们所定的旨意”——“凡事” 包括顺境，也包括逆境。比如：遇到挫折时，不是抱怨 “为什么发生在我身上”，而是感谢神 “你要借着这件事塑造我”；遇到顺利时，感谢神 “这是你的恩典，不是我的能力”。当我们的焦点从 “环境的好坏” 转向 “神的美意”，喜乐会自然涌流。</p>
+<h5 id="4、默想神的话语"><a href="#4、默想神的话语" class="headerlink" title="4、默想神的话语"></a>4、默想神的话语</h5><p>用真理取代负面心思**诗篇 119:11 说 “我将你的话藏在心里，免得我得罪你”—— 神的话语是喜乐的 “燃料”。比如：当你感到沮丧时，默想 “耶和华是我的牧者，我必不至缺乏”（诗篇 23:1）；当你感到孤独时，默想 “我总不撇下你，也不丢弃你”（希伯来书 13:5）。把神的应许 “存记在心里”，就能在情绪波动时，用真理稳住自己。</p>
+<h5 id="5、在信徒团契中彼此“激发喜乐”"><a href="#5、在信徒团契中彼此“激发喜乐”" class="headerlink" title="5、在信徒团契中彼此“激发喜乐”"></a>5、在信徒团契中彼此“激发喜乐”</h5><p>希伯来书 10:24-25 说 “你们不可停止聚会，好像那些停止惯了的人，倒要彼此劝勉。既知道那日子临近，就更当如此。”信徒的相交不是 “闲聊”，而是彼此分享 “神在自己生命中的作为”：比如 A 分享 “我这周遇到困难，但神帮我解决了”，B 就能从 A 的见证中重新得力；同理，你也可以用自己的经历鼓励他人 —— 团契的 “彼此建造”，会让喜乐被放大。</p>
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>基督徒的常常喜乐，从来不是脱离现实的强颜欢笑，而是扎根于神永恒应许的生命姿态，这份喜乐与盼望密不可分、相互滋养。</p>
+<ol>
+<li><p>从逻辑关联看：盼望是喜乐的前提与根基。我们之所以能在苦难中拥有 “说不出来、满有荣光的大喜乐”，不是因为处境安逸，而是因信靠神的应许，生出对永恒的盼望 —— 确信神永远同在、苦难会炼净信心、圣灵必赐下力量、天上存有不朽坏的基业。正如彼得前书串联的真理：神赐下的 “活泼的盼望”，让我们在百般试炼中仍能涌出喜乐；保罗在监狱里靠主喜乐，也正是因他的盼望锚定在神的掌权与永恒荣耀之上，而非眼前的锁链。</p>
+</li>
+<li><p>从实践路径看：抓住盼望，才能践行 “常常喜乐”。“靠主喜乐” 的关键，是将生命的锚定在神的应许而非自身努力上：通过不住祷告把忧虑交托给神，以凡事谢恩的眼光看见神在逆境中的美意，用神的话语填满心思、坚固对永恒的盼望，在团契中彼此见证神的信实以激发喜乐。这些实践的核心，都是让我们的眼光从地上的暂时处境，转向天上的永恒盼望 —— 唯有盼望稳固，喜乐才不会被环境摇动。</p>
+</li>
+<li><p>从价值意义看：由盼望而生的喜乐，是神的诫命，也是美好的见证。这份喜乐既是神对信徒的命令，是滋养心灵与身体的属灵良药，更是与基督同受苦难的荣耀记号；当信徒在困境中仍持守这份喜乐时，便向世界见证了神的信实 —— 我们的平安与满足，不在于外在的境遇，而在于那位掌管永恒的真神。</p>
+</li>
+<li><p>从真理根基来看：喜乐的源头是神永不改变的爱与主权，而这份源头本身就是一份永不落空的盼望。当我们因《诗篇》30:5“一宿虽然有哭泣，早晨便必欢呼” 的应许喜乐时，实则是在持守 “苦难是暂时，恩典是永恒” 的盼望；当我们靠《腓立比书》4:13“我靠着那加给我力量的，凡事都能做” 得胜时，就是在践行 “神的恩典够我用” 的盼望。</p>
+</li>
+</ol>
+
+          <p style="text-indent: 2em">愿</p>
+          <p>以马内利！</p>
+        </div>
+        <p style="text-align: right">
+          赵正杨、李新科、徐佳恩
+        </p>
+        <p style="text-align: right">
+          2026年01月11日
+        </p>
+      </div>
+
+      <fieldset class="card__color-picker">
+        <legend>Select a color:</legend>
+
+        <input type="radio" id="red" name="color" value="red" />
+        <label for="red" onclick="colorClick('#f3b2af')">Red</label>
+
+        <input type="radio" id="blue" name="color" value="blue" />
+        <label for="blue" onclick="colorClick('#b1f4fd')">Blue</label>
+
+        <input type="radio" id="green" name="color" value="green" />
+        <label for="green" onclick="colorClick('#d5fec5')">Green</label>
+
+        <input type="radio" id="yellow" name="color" value="yellow" />
+        <label for="yellow" onclick="colorClick('#feffbe')">Yellow</label>
+
+        <input type="radio" id="orange" name="color" value="orange" />
+        <label for="orange" onclick="colorClick('#f9d7ac')">Orange</label>
+      </fieldset>
+      <div class="love">
+        <div class="hearts">
+          <div class="heart heart--is-yellow heart--top-left"></div>
+          <div
+            class="heart heart--with-dots heart--is-green heart--left-center"
+          ></div>
+          <div
+            class="heart heart--with-dots heart--is-red heart--top-center"
+          ></div>
+          <div class="heart heart--is-pink heart--bottom-center"></div>
+          <div class="heart heart--is-orange heart--bottom-right"></div>
+          <div
+            class="heart heart--is-blue heart--with-lines heart--top-right"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function colorClick(color) {
+    const cardList = document.querySelectorAll('.card')
+    const dark = document.documentElement.classList.contains('dark-mode')
+    const baseBg = dark ? '#232733' : '#e4e4e4'
+    cardList.forEach((item) => {
+      item.style.background = `repeating-linear-gradient(transparent 0 calc(1.2rem - 1px), ${color} 0 1.2rem)`
+      item.style.backgroundColor = baseBg
+    })
+  }
+  Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+    dragToClose: true,
+    Toolbar: true,
+    closeButton: 'top',
+    Image: {
+      zoom: true,
+    },
+    on: {
+      initCarousel: (fancybox) => {
+        const slide = fancybox.Carousel.slides[fancybox.Carousel.page]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+      'Carousel.change': (fancybox, carousel, to, from) => {
+        const slide = carousel.slides[to]
+        fancybox.$container.style.setProperty(
+          '--bg-image',
+          `url("${slide.$thumb.src}")`
+        )
+      },
+    },
+  })
+</script>
+
+<style>
+  #noneimg img {
+    display: none;
+    z-index: 9999;
+    /* width: 600px !important; */
+    min-width: 0%;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 0px;
+    position: fixed;
+    box-shadow: 0 0 0px #c3c3c300 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    #noneimg img {
+      max-width: 88%;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+  fieldset {
+    --gap: 9px;
+    position: absolute;
+    top: calc(20px - var(--gap));
+    right: -5px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+
+    legend {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: 0;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: var(--bg-color);
+      margin: var(--gap) 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      font-size: 0;
+      box-shadow: -2px 1px 3px rgba(0 0 0 / 0.2);
+      cursor: pointer;
+      transform: translate(0, 0) scaleX(1);
+      transform-origin: left center;
+      filter: brightness(90%);
+      transition-property: transform filter;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+
+      &:hover {
+        transform: translate(0, 0) scaleX(1.25);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 5px solid var(--bg-color);
+        border-right: 5px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 5px solid transparent;
+        filter: brightness(62%);
+        transition-property: border-right filter;
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+      }
+
+      &:hover:after {
+        border-right: 12px solid transparent;
+      }
+    }
+
+    input:checked + label,
+    input:focus + label {
+      transform: translate(0, 0) scaleX(1.25);
+      filter: brightness(100%);
+
+      &:after {
+        border-right: 12px solid transparent;
+        filter: brightness(50%);
+      }
+    }
+
+    label:nth-of-type(1) {
+      --bg-color: #f3b2af;
+    }
+
+    label:nth-of-type(2) {
+      --bg-color: #b1f4fd;
+    }
+
+    label:nth-of-type(3) {
+      --bg-color: #d5fec5;
+    }
+
+    label:nth-of-type(4) {
+      --bg-color: #feffbe;
+    }
+
+    label:nth-of-type(5) {
+      --bg-color: #f9d7ac;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-content {
+    margin-top: 0 !important;
+  }
+
+  .card_container {
+    min-height: 200px;
+  }
+
+  .card blockquote {
+    background-color: transparent !important;
+  }
+
+  .card code {
+    background: transparent !important;
+    font-weight: bold !important;
+    color: red !important;
+  }
+
+  .love {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card {
+    position: relative;
+    width: calc(100%);
+    background: repeating-linear-gradient(
+      transparent 0 calc(1.2rem - 1px),
+      #eecfd7 0 1.2rem
+    );
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 0 0 6px rgba(255 255 255 / 0.1) inset,
+      2px 4px 10px 0 rgba(0 0 0 / 0.025);
+    font-family: 'Caveat', serif;
+  }
+
+  .card__content {
+    padding: 1.3rem 3rem 0 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    p {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  .hearts {
+    width: 100%;
+    height: 100%;
+  }
+
+  .heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    clip-path: path(
+      'M12 20a1 1 0 0 1-.437-.1C11.214 19.73 3 15.671 3 9a5 5 0 0 1 8.535-3.536l.465.465.465-.465A5 5 0 0 1 21 9c0 6.646-8.212 10.728-8.562 10.9A1 1 0 0 1 12 20z'
+    );
+    background: #a00;
+    transform: scale(0);
+    animation: 30s pop 0.5s linear forwards;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      transition-property: background;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(1, 1, 0.5, 1.3333);
+    }
+  }
+
+  .heart--with-dots:after {
+    transform: translate(-50%, -50%) rotate(36deg);
+    background-image: radial-gradient(#efefef 20%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+  }
+
+  .heart--with-lines:after {
+    background-image: repeating-linear-gradient(
+      35deg,
+      rgba(255 255 255 / 0.25),
+      rgba(255 255 255 / 0.25) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    background-position: center;
+    background-size: auto;
+  }
+
+  .heart--is-yellow:after {
+    --bg-color: #e7b843;
+  }
+
+  .heart--is-green:after {
+    --bg-color: #229587;
+  }
+
+  .heart--is-red:after {
+    --bg-color: #d44835;
+  }
+
+  .heart--is-pink:after {
+    --bg-color: #ce546d;
+  }
+
+  .heart--is-blue:after {
+    --bg-color: #58b7ce;
+  }
+
+  .heart--is-orange:after {
+    --bg-color: #e8874e;
+  }
+
+  /* 完成 */
+  .heart--top-left {
+    left: -30px;
+    top: 50%;
+    rotate: -7deg;
+    z-index: -1;
+    --scale: 4.6;
+    animation-delay: 0.1s;
+  }
+
+  /* 完成 */
+  .heart--top-center {
+    left: 0;
+    top: -20px;
+    rotate: -42deg;
+    z-index: 2;
+    --scale: 4.6;
+    animation-delay: 0.2s;
+  }
+
+  /* 完成 */
+  .heart--top-right {
+    right: -30px;
+    top: 0;
+    rotate: 10deg;
+    z-index: -1;
+    --scale: 3.6;
+    animation-delay: 0.3s;
+  }
+
+  /* 完成 */
+  .heart--left-center {
+    left: -20px;
+    bottom: 0;
+    rotate: -23deg;
+    z-index: -1;
+    --scale: 6.2;
+    animation-delay: 0.2s;
+  }
+
+  .heart--bottom-center {
+    --scale: 4.2;
+    right: -10px;
+    bottom: 0;
+    rotate: 40deg;
+    animation-delay: 0.3s;
+  }
+
+  .heart--bottom-right {
+    right: -30px;
+    top: 50%;
+    rotate: 12deg;
+    z-index: -1;
+    --scale: 5.4;
+    animation-delay: 0.4s;
+  }
+
+  body:has(#red:checked) .heart:after {
+    --bg-color: #d44835;
+  }
+
+  body:has(#blue:checked) .heart:after {
+    --bg-color: #58b7ce;
+  }
+
+  body:has(#green:checked) .heart:after {
+    --bg-color: #229587;
+  }
+
+  body:has(#yellow:checked) .heart:after {
+    --bg-color: #e7b843;
+  }
+
+  body:has(#orange:checked) .heart:after {
+    --bg-color: #e8874e;
+  }
+
+  @keyframes pop {
+    0 {
+      transform: scale(0);
+    }
+    1% {
+      transform: scale(var(--scale));
+    }
+    2%,
+    34%,
+    64%,
+    100% {
+      transform: scale(var(--scale)) translate(0, 0);
+    }
+    10%,
+    42%,
+    72% {
+      transform: scale(var(--scale)) translate(-1px, -1px);
+    }
+    18%,
+    50%,
+    80% {
+      transform: scale(var(--scale)) translate(-1px, 2px);
+    }
+    26%,
+    58%,
+    88% {
+      transform: scale(var(--scale)) translate(1px, 1px);
+    }
+  }
+</style>
+
+    
+    <div class="post-paging">
+     
+  <a href="/2026/01/25/task/%E5%B8%B8%E5%B8%B8%E8%AD%A6%E9%86%92/">
+    <div class="post-paging-last">
+      <span>上一篇</span>
+      <p>常常警醒</p>
+    </div>
+  </a>
+     
+  <a href="/2025/12/28/task/%E6%B4%BB%E5%87%BA%E9%A5%B6%E6%81%95%E7%9A%84%E7%94%9F%E5%91%BD/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>活出饶恕的生命</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+

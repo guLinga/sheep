@@ -1,0 +1,174 @@
+.site-gate-login {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.site-gate-login-card {
+  width: 100%;
+  max-width: min(100%, 40rem);
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: var(--color-card-bg, #fff);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.06));
+  container-type: inline-size;
+  container-name: site-gate-card;
+}
+.site-gate-login-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text, #1a1a1a);
+}
+.site-gate-login-hint {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--color-muted, #666);
+}
+.site-gate-login-form {
+  display: block;
+}
+.site-gate-pin {
+  width: 100%;
+  margin: 0 auto 0.35rem;
+}
+.site-gate-pin-rows {
+  display: grid;
+  width: 100%;
+  gap: 0.55rem;
+  justify-items: center;
+  align-items: center;
+  /* 仅两种排布：5 列 = 两行（中间空格不占格）；单行时 11 列含第 4–5 格间空格 */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.site-gate-pin-digit {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 3.35rem;
+  aspect-ratio: 1;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(1.05rem, 3.2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, #ddd);
+  background: var(--color-input-bg, #fff);
+  color: var(--color-text, #1a1a1a);
+}
+.site-gate-pin-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted, #888);
+  font-weight: 600;
+  user-select: none;
+  line-height: 1;
+  width: 100%;
+  max-width: 2.5rem;
+  min-height: 2.75rem;
+}
+.site-gate-pin-sep--space {
+  font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+  opacity: 0.9;
+  min-width: 1.1rem;
+}
+.site-gate-pin-sep--colon {
+  font-size: clamp(1.2rem, 4vw, 1.55rem);
+  opacity: 0.95;
+  padding: 0 0.05rem;
+}
+/* 两行时隐藏第 4–5 格间空格；须写在 .site-gate-pin-sep 之后，否则 display:flex 会盖住 none */
+.site-gate-pin-rows > .site-gate-pin-sep--rowgap {
+  display: none;
+}
+@container site-gate-card (min-width: 31.5rem) {
+  .site-gate-pin-rows {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+  .site-gate-pin-rows > .site-gate-pin-sep--rowgap {
+    display: flex;
+  }
+  .site-gate-pin-digit {
+    max-width: 3.85rem;
+    min-height: 3.2rem;
+    font-size: clamp(1.2rem, 2.4cqw, 1.5rem);
+    border-radius: 14px;
+  }
+  .site-gate-pin-sep {
+    max-width: 2.85rem;
+    min-height: 3.2rem;
+  }
+  .site-gate-pin-sep--space {
+    font-size: 1.1rem;
+  }
+  .site-gate-pin-sep--colon {
+    font-size: 1.7rem;
+  }
+}
+/* 不支持容器查询时：用视口近似同一逻辑 */
+@supports not (container-type: inline-size) {
+  @media (min-width: 36rem) {
+    .site-gate-pin-rows {
+      grid-template-columns: repeat(11, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+    .site-gate-pin-rows > .site-gate-pin-sep--rowgap {
+      display: flex;
+    }
+    .site-gate-pin-digit {
+      max-width: 3.85rem;
+      min-height: 3.2rem;
+      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+      border-radius: 14px;
+    }
+    .site-gate-pin-sep {
+      max-width: 2.85rem;
+      min-height: 3.2rem;
+    }
+    .site-gate-pin-sep--space {
+      font-size: 1.1rem;
+    }
+    .site-gate-pin-sep--colon {
+      font-size: 1.7rem;
+    }
+  }
+}
+.site-gate-pin-digit:focus {
+  outline: none;
+  border-color: var(--color-accent, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+.site-gate-login-error {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #dc2626;
+}
+html.dark-mode .site-gate-login-card {
+  background: var(--color-card-bg, #1e1e1e);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+html.dark-mode .site-gate-login-title {
+  color: var(--color-text, #f3f3f3);
+}
+html.dark-mode .site-gate-login-hint {
+  color: var(--color-muted, #a3a3a3);
+}
+html.dark-mode .site-gate-pin-sep {
+  color: var(--color-muted, #9ca3af);
+}
+html.dark-mode .site-gate-pin-digit {
+  background: #2a2a2a;
+  border-color: #404040;
+  color: #f3f3f3;
+}

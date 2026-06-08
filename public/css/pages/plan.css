@@ -1,0 +1,145 @@
+.plan-page .plan-main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+.plan-page .plan-page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a2233;
+  text-align: center;
+  margin: 0 0 32px;
+  letter-spacing: 0.04em;
+}
+.plan-page .plan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.plan-page .plan-day {
+  background: #fff;
+  border-radius: 0;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(50, 50, 50, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  border: 1px solid rgba(18, 24, 58, 0.06);
+  transform: translateY(0px);
+}
+.plan-page .plan-day:hover {
+  box-shadow: 0 8px 32px rgba(50, 50, 50, 0.1);
+  transform: translateY(-2px);
+}
+.plan-page .plan-day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(18, 24, 58, 0.08);
+  gap: 12px;
+}
+.plan-page .plan-day-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2233;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.plan-page .plan-day-sermon-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: #fa541c;
+  background-image: url('https://gulinga-github-io.pages.dev/image/common/耳机.png');
+  background-size: 70% 70%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.plan-page .plan-chapters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.plan-page .plan-chapter-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #d4380d;
+  background: #fff2e8;
+  border-radius: 0;
+}
+.planAudio-page .planAudio-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .planAudio-page .planAudio-list {
+    grid-template-columns: 1fr;
+  }
+}
+.planAudio-page .planAudio-item {
+  display: block;
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 4px 20px rgba(50, 50, 50, 0.06);
+  border: 1px solid rgba(18, 24, 58, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transform: translateY(0px);
+}
+.planAudio-page .planAudio-item:hover {
+  box-shadow: 0 8px 32px rgba(50, 50, 50, 0.1);
+  transform: translateY(-2px);
+}
+.planAudio-page .planAudio-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2233;
+  margin: 0 0 8px;
+}
+.planAudio-page .planAudio-item-excerpt {
+  font-size: 14px;
+  color: rgba(18, 24, 58, 0.7);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+.planAudio-page .planAudio-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.planAudio-page .planAudio-item-author {
+  font-size: 13px;
+  color: rgba(18, 24, 58, 0.65);
+}
+.planAudio-page .planAudio-item-date {
+  font-size: 13px;
+  color: rgba(18, 24, 58, 0.5);
+}
+.planAudio-page .planAudio-empty {
+  padding: 24px;
+  text-align: center;
+  color: rgba(18, 24, 58, 0.6);
+}
+.planAudio-page .planAudio-empty code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 8px;
+  border-radius: 0;
+  font-size: 13px;
+}
