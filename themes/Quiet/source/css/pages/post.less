@@ -55,10 +55,10 @@
           border-radius: 4px;
           background: rgba(18, 24, 58, 0.06);
           line-height: 20px;
-          -webkit-transition: background 0.5s;
-          -moz-transition: background 0.5s;
-          -o-transition: background 0.5s;
-          transition: ease-in-out;
+          -webkit-transition: background-color @durationFast @easeStandard;
+          -moz-transition: background-color @durationFast @easeStandard;
+          -o-transition: background-color @durationFast @easeStandard;
+          transition: background-color @durationFast @easeStandard;
           flex-grow: 0;
           &:hover {
             background: #bec8d3 !important;
@@ -68,10 +68,10 @@
             z-index: 4 !important;
             color: #333333;
             text-decoration: none;
-            -webkit-transition: color 0.5s;
-            -moz-transition: color 0.5s;
-            -o-transition: color 0.5s;
-            transition: ease-in-out;
+            -webkit-transition: color @durationFast @easeStandard;
+            -moz-transition: color @durationFast @easeStandard;
+            -o-transition: color @durationFast @easeStandard;
+            transition: color @durationFast @easeStandard;
           }
         }
       }
@@ -184,7 +184,7 @@
     &-info {
       margin: 60px 80px;
       font-size: 1.1rem;
-      transition: all 0.4s ease-in-out;
+      transition: margin @durationMedium @easeOutStrong;
     }
   }
   &-paging {
@@ -215,12 +215,11 @@
         background-size: 100% 100%;
         opacity: 0.4;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
+        transition: transform @durationMedium @easeOutStrong, box-shadow @durationMedium @easeOutStrong, opacity @durationFast @easeStandard;
         align-content: flex-start;
         justify-content: center;
         flex-direction: column;
         &:hover {
-          margin-top: -10px;
           box-shadow: 0 10px 40px 0 rgba(50, 50, 50, 0.1);
           opacity: 0.7;
         }
@@ -238,7 +237,7 @@
         background-size: 100% 100%;
         opacity: 0.4;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
+        transition: transform @durationMedium @easeOutStrong, box-shadow @durationMedium @easeOutStrong, opacity @durationFast @easeStandard;
         align-content: flex-end;
         flex-grow: 1;
         justify-content: center;
@@ -246,7 +245,6 @@
         align-items: flex-end;
         flex-basis: 0;
         &:hover {
-          margin-top: -10px;
           box-shadow: 0 10px 40px 0 rgba(50, 50, 50, 0.1);
           opacity: 0.7;
         }
@@ -258,6 +256,13 @@
         }
       }
     }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .post-paging a .post-paging-last:hover,
+  .post-paging a .post-paging-next:hover {
+    transform: translateY(-8px);
   }
 }
 

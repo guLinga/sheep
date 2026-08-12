@@ -4,7 +4,7 @@
     width: 900px;
     padding: 64px 40px;
     font-size: 1.1rem;
-    transition: all 0.4s ease-in-out;
+    transition: padding @durationMedium @easeOutStrong;
     p {
         font-size: 1.55rem;
         margin-bottom: 20px;
@@ -17,6 +17,7 @@
         text-decoration: none;
         color: #3C4858;
         padding: 20px;
+        transition: background @durationFast @easeStandard, color @durationFast @easeStandard;
         span {
             flex-grow: 1;
         }

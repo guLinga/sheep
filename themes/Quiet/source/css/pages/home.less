@@ -34,7 +34,7 @@
         box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
         flex-direction: column;
         top: 0;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        transition: border-color @durationFast @easeStandard, box-shadow @durationMedium @easeOutStrong;
         &:hover {
           cursor: pointer;
           border-color: rgba(139, 115, 85, 0.45);
@@ -115,7 +115,7 @@
         box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
         position: relative;
         top: 0;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        transition: border-color @durationFast @easeStandard, box-shadow @durationMedium @easeOutStrong;
         &:hover {
           cursor: pointer;
           border-color: rgba(139, 115, 85, 0.45);
@@ -133,7 +133,7 @@
         box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
         position: relative;
         top: 0;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        transition: border-color @durationFast @easeStandard, box-shadow @durationMedium @easeOutStrong;
         &:hover {
           cursor: pointer;
           border-color: rgba(139, 115, 85, 0.45);
@@ -315,7 +315,7 @@
           border: 1px solid @accentLine;
           background: @bgCard;
           box-sizing: border-box;
-          transition: border-color 0.2s ease, color 0.2s ease;
+          transition: border-color @durationFast @easeStandard, color @durationFast @easeStandard;
         }
         .previous:hover {
           cursor: pointer;
@@ -344,7 +344,7 @@
           border: 1px solid @accentLine;
           background: @bgCard;
           box-sizing: border-box;
-          transition: border-color 0.2s ease, color 0.2s ease;
+          transition: border-color @durationFast @easeStandard, color @durationFast @easeStandard;
           &:hover {
             cursor: pointer;
             border-color: rgba(139, 115, 85, 0.5);

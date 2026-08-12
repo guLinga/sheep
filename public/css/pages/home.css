@@ -32,7 +32,7 @@
   box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
   flex-direction: column;
   top: 0;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.24s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .home .main .post-card-display:hover {
   cursor: pointer;
@@ -113,7 +113,7 @@
   box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
   position: relative;
   top: 0;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.24s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .home .main .post-block-content1:hover {
   cursor: pointer;
@@ -131,7 +131,7 @@
   box-shadow: 0 4px 14px rgba(26, 34, 51, 0.06);
   position: relative;
   top: 0;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.24s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .home .main .post-block-content:hover {
   cursor: pointer;

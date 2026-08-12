@@ -14,7 +14,7 @@
       padding: 64px 80px;
       font-size: 1rem;
       flex-wrap: wrap;
-      transition: all 0.4s ease-in-out;
+      transition: padding @durationMedium @easeOutStrong;
       h2 {
         display: inline-block;
         width: 100%;
@@ -30,7 +30,7 @@
         & > span {
           background-color: rgba(96, 125, 139, 0.05);
           line-height: 2.4;
-          transition: all 0.15s;
+          transition: transform @durationPress @easeOutStrong, background-color @durationFast @easeStandard, color @durationFast @easeStandard;
           padding: 0 12px;
           margin-bottom: 15px;
           border-radius: 6px;
@@ -40,10 +40,8 @@
           font-weight: 400;
           font-size: 16px;
           &:hover {
-            top: -2px;
             background-color: #607d8b;
             color: #ffffff;
-            transition: all 0.3s ease-in-out;
           }
           & > i {
             text-align: center;
@@ -54,6 +52,12 @@
         }
       }
     }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tags-content-data a > span:hover {
+    transform: translateY(-2px);
   }
 }
 
