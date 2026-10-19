@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>迦南书简-那鸿书</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+<script>
+(function () {
+  var TOKEN = "change-me-to-a-long-random-string";
+  var BASE = "";
+  function normalizePath(path) {
+    var p = String(path).replace(/\/index\.html$/i, '');
+    if (p.length > 1 && p.slice(-1) === '/') p = p.slice(0, -1);
+    return p || '/';
+  }
+  var path = normalizePath(location.pathname);
+  var loginPath = normalizePath((BASE || '') + '/login');
+  if (path === loginPath) return;
+  try {
+    if (localStorage.getItem('site_gate_token') === TOKEN) return;
+  } catch (e) {}
+  var tail = location.pathname + location.search + location.hash;
+  location.replace((BASE || '') + '/login/?r=' + encodeURIComponent(tail));
+})();
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500&display=swap" />
+<link rel="shortcut icon" type="image/x-icon" href="/image/favicon.ico">
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/css/index.css">
+
+<meta property="og:description" content="那鸿书">
+<meta property="og:image" content="https://gulinga.github.io/image/logo.png">
+<!-- 
+<meta name="keywords" content="迦南书简">
+<meta name="description" content="描述">
+<meta property="og:description" content="那鸿书">
+ -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+
+<script src="/js/hljs.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+	<meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+	<body>
+		<div class="header">
+  <div class="header-top" id="header-top">
+    <div class="h-left">
+      <a href="/">
+        <img src="/image/logo.png" alt="Quiet" />
+      </a>
+    </div>
+    <div class="h-right">
+      <ul>
+         
+        <li>
+          <a href="/">
+            文章
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/picture">
+            相册
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/task">
+            任务
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/plan">
+            读经计划
+          </a>
+          <span class="dot"></span>
+        </li>
+          
+        <li>
+          <a href="/library">
+            图书馆
+          </a>
+          <span class="dot"></span>
+        </li>
+         
+      </ul>
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+    </div>
+    <div class="h-right-close">
+      <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+          fill="rgba(68,68,68,1)"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="topo">
+    <h2>迦南书简</h2>
+  </div>
+  <ul>
+    
+    <li>
+      <a href="/">文章</a>
+    </li>
+    
+    <li>
+      <a href="/picture">相册</a>
+    </li>
+    
+    <li>
+      <a href="/task">任务</a>
+    </li>
+    
+    <li>
+      <a href="/plan">读经计划</a>
+    </li>
+    
+    <li>
+      <a href="/library">图书馆</a>
+    </li>
+    
+  </ul>
+  <div class="theme-toggle-mobile-wrap">
+    <button type="button" class="theme-toggle" aria-label="切换暗黑模式" title="切换暗黑模式">
+  <svg class="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg class="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+</button>
+
+  </div>
+  <!-- <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+            <img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+        </a>
+        
+    </div> -->
+</div>
+<div class="shelter"></div>
+<style>
+  .shelter {
+    background-color: #333;
+    opacity: 0.5;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1998;
+  }
+  .sidebar {
+    width: 66%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 1999;
+    text-align: center;
+    box-shadow: -6px 0 20px rgba(98, 94, 94, 0.815);
+  }
+
+  .topo {
+    width: 100%;
+    height: 200px;
+    background: url(https://gulinga-github-io.pages.dev/image/common/pictureCover.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .topo h2 {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin: 0 0 10px 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+
+  .topo:before {
+    content: '';
+    background-image: url(/image/pattern.png);
+    background-repeat: repeat;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .sidebar ul {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    height: 50px;
+    list-style: none;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+    display: grid;
+    color: #5d606a;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .my_foot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .my_foot a {
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .my_foot a img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.h-right-close>svg').click(function () {
+      $('.sidebar').animate(
+        {
+          right: '0',
+        },
+        500
+      )
+      $('.shelter').fadeIn('slow')
+    })
+    $('.shelter').click(function (e) {
+      $('.sidebar').animate(
+        {
+          right: '-100%',
+        },
+        500
+      )
+      $('.shelter').fadeOut('slow')
+    })
+  })
+</script>
+
+
+<div class="post">
+    
+        <div
+  class="post-header-background post-header-img"
+  style="
+    background: url('https://gulinga-github-io.pages.dev/image/cover.png');
+  "
+>
+  <div class="post-header-background-content">
+    <ul class="post-header-tag">
+      
+    </ul>
+
+    <h1>那鸿书</h1>
+    <div class="post-header-info">
+      <div class="post-header-info-author">
+        
+        <svg
+          t="1604839279282"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="2901"
+          width="20"
+          height="20"
+        >
+          <path
+            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+            p-id="2902"
+            fill="#ffffff"
+          ></path>
+        </svg>
+        
+        <!-- <span class="post-header-info-author-text"> <a href="../../about">刘晓艳</a></span> -->
+        <span class="post-header-info-author-text"
+          >刘晓艳</span
+        >
+        <div class="post-header-info-author-categories">
+          
+        </div>
+        <p>2026-09-28 09:58:00</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+        <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    
+        <div id="aplayer-xYupTyCd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-xYupTyCd"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "那鸿书",
+              author: "刘晓艳",
+              url: "https://gulinga.github.io/sheep_video/planAudio/那鸿书.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+<p><strong>弟兄姊妹们，主内平安！</strong></p>
+<p>今天我们一起来领受《那鸿书》所带给我们的信息。我们先来做一个祷告：</p>
+<p><strong>祷告：</strong></p>
+<p>亲爱的天父，我们感谢你！谢谢你让先知那鸿借着描述历史事实，来警示今天的我们去面对你有一颗敬畏的心，也让我们能够对你的大能和应许有信心，对你的许可存一颗顺服的心。今天愿你帮助我们众人去领受《那鸿书》的智慧，求你与我们同在。愿将一切全然向你仰望交托。如此祷告，不是靠着自己，乃是靠着耶稣基督的圣名向天父所求。阿们！</p>
+<p><strong>分享信息：</strong></p>
+<p><strong>第一大部分：关于那鸿</strong></p>
+<p>“那鸿”的意思就是“安慰”。明明整卷书都是在论述审判尼尼微大城、亚述帝国，那为什么先知的名字是“安慰”呢？因为神的子民——这里特指犹大——受尽了亚述帝国的压迫，所以神借着审判尼尼微大城、亚述帝国，来安慰先知和他的子民。</p>
+<p><strong>第二大部分：那鸿的主题</strong></p>
+<p>一章9节经文说到：“尼尼微人哪，设何谋攻击耶和华呢？他必将你们灭绝净尽，灾难不再兴起。”我们可以知道《那鸿书》是分为两条线：第一条是明线——审判尼尼微大城；第二条是暗线——拯救犹大。因为拯救犹大这部分是借着尼尼微城被毁所显示的。</p>
+<p><strong>第三大部分：背景</strong></p>
+<p>先知那鸿是继先知约拿后的一个先知。在先知约拿那一代，尼尼微城人犯罪堕落，所以神差派他去尼尼微大城宣告审判日子要来临。后来全城人披麻蒙灰，彻底悔改，神怜悯了他们，又给了他们存活的机会。但是经过一百多年的时光，他们新的一代又变本加厉地犯罪，罪恶满盈。神就差遣先知那鸿去宣告这次审判——这次神的审判真的来临了。</p>
+<p><strong>第四大部分：正文</strong></p>
+<p><strong>第一个主题：我们的神是忌邪的神，是全然圣洁的神</strong></p>
+<p>一章2节经文说道：“耶和华是忌邪施报的神；耶和华施报大有忿怒，向他的敌人施报，向他的仇敌怀怒。”</p>
+<p>那神要将审判临到尼尼微城，也就是亚述帝国的原因有两方面：</p>
+<p>第一方面，是因为神是忌邪的。曾经亚述四处去侵略别国的时候，以为是他的偶像在背后帮助他，所以后来亚述帝国就大兴土木，去建造属于他们自己的偶像。不仅如此，甚至还让列国百姓都去拜他的偶像。</p>
+<p>另一方面，是因为亚述的残暴。虽然说当时犹大拜偶像得罪了上帝，然而神借着亚述帝国去管教犹大，但是亚述那样残忍地对待列国的俘虏——就是要他们做苦工、为做坚固的城墙，甚至还肆意杀害他们。由此我们看到《那鸿书》当中记载的亚述帝国落在永生神手里的可怕。</p>
+<p>这里还有一个例子作为补充：主耶稣昔日对逼迫教会的扫罗说：“扫罗，扫罗，你为什么逼迫我？你用脚踢刺是难的。”你看希律王，他把彼得抓进去，先是把雅各杀了，后来也想要把彼得杀了，但是彼得蒙天使拯救出来了。后来希律王就骄傲，他自以为是，结果神就预备了一只虫子咬他，他就死掉了。</p>
+<p><strong>应用：</strong> 基督徒有时候会软弱、会失败。当神兴起环境来管教我们的时候，不免会有不信者钻空子来欺辱信徒。但是我们要知道，我们是属主的。属主的儿女会受到苦待，是因为神的管教或是外人的逼迫，但请相信有一天神会惩罚他们、为我们申冤，因为逼迫我们的就是在逼迫基督。所以正如《申命记》32章35节所说的：“伸冤在我，我必报应。”</p>
+<p><strong>总结：</strong> 神是忌邪的，神在实践当中启示他自己，显明他的威严、公义与可畏。所以我们要敬畏他，远离恶事，也不欺负别人，要弃绝一切不洁、不义、污秽和无形的偶像。也要相信神是那《那鸿书》一章3节所说的“万不以有罪的为无罪”，因为他要鉴察并审判。</p>
+<p><strong>第二个主题：倚靠耶和华</strong></p>
+<p>《那鸿书》一章7节说：“耶和华本为善，在患难的日子为人的保障，并且认得那些投靠他的人。”</p>
+<p>先在这里举一些正面例子：</p>
+<p><strong>第一个，被掳的以色列民。</strong> 他们在亚述、尼尼微做奴仆，但是因着他们倚靠神，神就保守他们，所以当亚述灭亡的时候，他们是平安的。</p>
+<p><strong>第二个，出逃的犹大国。</strong> 亚述帝国在希西家做王的时候，派大军来围困了耶路撒冷，但是希西家和全体官员一同祷告、依靠耶和华，于是神就做了他们的避难所，差遣一位天使把亚述营的十八万五千精兵杀掉，然后亚述就蒙羞回国，犹大也因着靠着耶和华得了胜。</p>
+<p>接下来是一个反面例子：<strong>尼尼微大城。</strong> 据历史记载，尼尼微大城是非常坚固的，原因有两个：第一个是他们的城墙很高，而且还很厚；第二个，整个城墙都被一条很大的河流包裹，所以一般敌军没有办法直接攻进去。因为有河流，所以就无法用梯子；如果用船只的话，恐怕会被上面在城墙上的人用箭射伤。所以整个尼尼微大城的人都以此夸口。但是他们绝对想不到的是，他们引以为傲的大河，最终会成为毁灭他们的利器——神使河水涨溢，高过城墙，利用水压把城墙压倒，于是敌人就趁机冲进去，最后尼尼微大城被灭。</p>
+<p><strong>应用：</strong> 一切都在神的掌管当中，所以无论人怎样计算，神只要兴起一点环境，就能够毁灭人的计划。所以我们不要依靠自己的小聪明，而是要转向去倚靠耶和华。因为我们作为基督徒，如果平时都不倚靠耶和华，又在患难的时候凭自己的方法，那么最终是得不着拯救的；反之，如果我们无论平时还是患难时都一直依靠他，那我们就会蒙拯救。所以我们要做一个投靠他、信靠他的人，如此才能在患难中仍有平安。</p>
+<p><strong>第三个主题：一切都有神的许可与安排</strong></p>
+<p><strong>第一，神的许可。</strong> 北国已经被亚述帝国灭了，只剩下被亚述帝国压迫、夺土地的犹大。在这样的背景之下，神说“我虽然使你受苦”。好像从人的角度来看，犹大所受的苦明明都是亚述帝国一直以来的攻击的结果呀，那在这里为什么神会这样说呢？那是因为前面我刚刚提到的——当时犹大拜偶像，所以神兴起了亚述帝国去管教犹大。</p>
+<p><strong>第二，神的应许。</strong> 尽管说是神授权让亚述帝国去攻打犹大，以此来管教犹大，但是当希西家做王的时候，犹大全国都归向了神，也很敬虔。可是此时亚述人还是照样攻打，甚至比以前更甚。面对这样的困境，神说“却不再使你受苦，必从你颈项上折断他的轭，扭开他的绳索”。最后这个应许也应验了：尼尼微大城、亚述帝国被灭，犹大得了拯救。</p>
+<p><strong>应用：</strong> 很多时候，当我们遇到一些苦难的时候，都会觉得是自己运气不好，比如说“我好倒霉啊”。但是我们要知道的是，若不是上帝的许可，就是我们的一根头发也不会掉在地上。一切临到我们的环境都有上帝的许可。他让我们受苦，那我们就坦然接受，降服在神大能的膀臂之下。亚述帝国作为第一大国，还是那样的强盛，神都可以使城覆灭、使犹大得拯救，所以我们不要看环境，而是要在心里相信他的大能，相信他的一切安排都有他的美意。</p>
+<p><strong>结束祷告：</strong></p>
+<p>天父，我们知道你是不轻易发怒的神，你有着丰盛的慈爱和怜悯。当我们犯罪得罪你的时候，你给我们悔改的机会；你让我们来到你的面前，向你陈明我们的罪孽，于是你又给了我们存活的机会，因为你盼望着万人得救，不愿一人沉沦。然而我们又去犯罪得罪你，然后又向你回转，又犯罪，以此为循环。但是你又是公义的神，你不会任凭你的百姓落在罪恶当中，因此我们不得轻看你管教的杖，要及时离弃罪恶，好使我们里面有清洁的心、正直的灵。更要在你未来之先，抓紧时间去回应你启示的属性，向着你圣洁的国度而去努力，也能够去爱你、敬畏你、信靠你。</p>
+<p>虽然我们所经历的并非像尼尼微大城所遭遇的审判，但是我们在这地上也会经历很多的灾祸、患难、管教等等。是啊，因为我们是属于你的，我们愿意相信一切都是你的许可，一切也都有你最好的安排。所以我们愿摒弃自己那可怜的小聪明，去做一生都信靠你、倚靠耶和华的人。也愿我们在顾自己的同时，也能够将这福音传扬下去，好使万民都听到你的福音，也能够因信得救，成为新造的人，从而去扩展你的国度，使你的名得着荣耀。</p>
+<p>主，我们很感谢你能够保守我们以上的时间，也希望我们以后每个人、每一天都能够有你同在，蒙你保守、看顾、监察与管教。因为我们愿将一切都全然向你仰望交托，愿意求主你来做工。孩子不配祷告，如此祷告不是靠着自己，乃是靠着耶稣基督的圣名向天父所求。阿们！</p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    
+    
+    
+    <div class="post-paging">
+     
+  <a href="/2026/10/03/planAudio/220/%E8%80%B6%E5%88%A9%E7%B1%B3%E4%B9%A64-6%E7%AB%A0/">
+    <div class="post-paging-last">
+      <span>上一篇</span>
+      <p>耶利米书4-6章</p>
+    </div>
+  </a>
+     
+  <a href="/2026/09/26/planAudio/214/%E5%88%97%E7%8E%8B%E7%BA%AA%E4%B8%8B20%E7%AB%A0/">
+    <div class="post-paging-next">
+      <span>下一篇</span>
+      <p>列王纪下20章</p>
+    </div>
+  </a>
+  
+</div>
+
+</div>
+		<div class="footer">
+  <!-- <div class="Copyright">
+		©2026 By 迦南书简. 主题：<a
+			style="text-decoration: none;display: contents; color: #898F9F;"
+			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://github.com/79E/hexo-theme-quiet">
+			<img src="https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imggithub.png" alt="Quiet主题">
+		</a>
+		
+	</div> -->
+</div>
+<!-- 
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script> -->
+  <!-- 
+    <script>
+        const data = '{"clientID":"02b3c","clientSecret":"adfc7b4","repo":"gimment","owner":"duneng","admin":"duneng"}'
+        const gitalk = new Gitalk({
+            ...JSON.parse( data),
+            id:location.pathname,
+            distractionFreeMode:false
+        })
+
+        if(Boolean('true')){
+            gitalk.render('gitalk-container')
+        }
+    </script>
+ -->
+
+<script>
+  console.log(
+    '\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n',
+    'color: #fadfa3; background: #030307; padding:5px 0;',
+    'background: #fadfa3; padding:5px 0;'
+  )
+</script>
+
+	</body>
+</html>
+
